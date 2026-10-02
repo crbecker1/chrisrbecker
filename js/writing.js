@@ -98,13 +98,18 @@
 
   function smallCard(a) {
     const t = tagInfo(a.tags[0]);
-    return el('li', { class: 'article' },
+    const flag = a.featured ? (a.featured === true ? 'Featured' : String(a.featured)) : '';
+    return el('li', { class: 'article' + (flag ? ' article--flagged' : '') },
+      flag ? el('span', { class: 'article__strip' }, flag) : '',
       el('a', { class: 'article__link', href: a.url, target: '_blank', rel: 'noopener', title: a.tags.join(' · ') },
         el('span', { class: 'article__icon tone-' + t.tone }, icon(t.icon)),
-        el('h3', { class: 'article__title' }, a.title),
-        a.excerpt ? el('p', { class: 'article__excerpt' }, a.excerpt) : '',
-        el('span', { class: 'visually-hidden' }, 'Tags: ' + a.tags.join(', ')),
-        cta()
+        el('div', { class: 'article__content' },
+          el('time', { class: 'article__date', datetime: a.date }, fmtDate(a.date)),
+          el('h3', { class: 'article__title' }, a.title),
+          a.excerpt ? el('p', { class: 'article__excerpt' }, a.excerpt) : '',
+          el('span', { class: 'visually-hidden' }, 'Tags: ' + a.tags.join(', ')),
+          cta()
+        )
       )
     );
   }
