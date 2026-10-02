@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chris R. Becker — Sr. UX/Product, Educator, Author, Mentor</title>
+  <meta name="description" content="Chris R. Becker is a senior UX and product designer, educator, author, and mentor helping teams and emerging designers solve real problems.">
+  <meta name="theme-color" content="#1a5bc4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Slab:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Icon sprite (placeholder icons) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-product" viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/><path d="m3 17.5 9 5 9-5" opacity=".5"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5v-16Z"/><path d="M4 21.5A2.5 2.5 0 0 1 6.5 19H20"/></symbol>
+    <symbol id="i-teach" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+    <symbol id="i-now" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <nav class="wrap nav" aria-label="Primary">
+      <a class="logo" href="#top" aria-label="Chris R. Becker — home">
+        <img class="logo__img" src="images/logo/Logo.svg" alt="" width="237" height="83">
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span></button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#top">Draw</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a class="btn btn--primary" href="#contact">Work with me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO: wireframe sketch tool -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="hero__intro">
+          <h2 id="hero-title">A Designer/educator whose curiosity drives human-centered design practices</h2>
+            <p class="eyebrow">Designing and educating about systems that are useful, usable, accessible, and delightful user experiences for all users. Extending the ethos of human-centered design and empathy based software development.</p>
+          <p class="hero__roles">Sr. UX/Product <b>/</b> Educator <b>/</b> Author <b>/</b> Mentor</p>
+        </div>
+
+        <div class="sketch" id="sketch">
+          <div class="sketch__tools" role="toolbar" aria-label="Wireframe tools">
+            <button class="tool" type="button" data-tool="pen" aria-pressed="true">
+              <svg viewBox="0 0 24 24"><use href="#i-pen"/></svg>Sketch
+            </button>
+            <button class="tool" type="button" data-tool="box" aria-pressed="false">
+              <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5"/></svg>Box
+            </button>
+            <button class="tool" type="button" data-tool="image" aria-pressed="false">
+              <svg viewBox="0 0 24 24"><use href="#i-image"/></svg>Image
+            </button>
+            <button class="tool" type="button" data-tool="button" aria-pressed="false">
+              <svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="8" rx="4"/></svg>Button
+            </button>
+            <button class="tool" type="button" data-tool="text" aria-pressed="false">
+              <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>Text
+            </button>
+            <span class="sketch__sep" aria-hidden="true"></span>
+            <button class="tool tool--action" type="button" id="undo">Undo</button>
+            <button class="tool tool--action" type="button" id="clear">Clear</button>
+          </div>
+
+          <div class="device">
+            <div class="device__bar" aria-hidden="true"><i></i><i></i><i></i><span class="device__url">yourproblem.app/sketch</span></div>
+            <div class="device__canvas" id="canvas-wrap">
+              <canvas id="board" role="img" aria-label="Drawing canvas. Use your mouse or finger to sketch your problem."></canvas>
+              <div class="sketch__hint" id="hint">Click and drag to sketch</div>
+            </div>
+          </div>
+
+          <p class="sketch__prompt">Draw your <span>current problem</span></p>
+          <div class="sketch__actions">
+            <button class="btn btn--primary" type="button" id="print-btn">Print</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK WITH ME -->
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <div class="wrap reveal">
+        <p class="eyebrow">Let’s collaborate</p>
+        <h2 id="work-title">Work with me</h2>
+        <a class="btn btn--primary btn--lg" href="#contact">Start a conversation</a>
+        <div class="work__sub">
+          <h3>Solving problems with me</h3>
+          <p>From fuzzy product questions to clear, testable direction. I partner with teams and emerging designers to frame the right problem, shape the experience, and ship work that holds up with real people.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">What I do</p>
+          <h2 id="services-title">Services &amp; places to explore</h2>
+          <p class="lede">Hands-on product design, writing, teaching, and mentorship — pick a path to learn more.</p>
+        </div>
+        <ul class="services">
+          <li class="reveal"><a class="service" href="product-work.html">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#i-product"/></svg></span>
+            <span class="service__body"><h3>Product Work</h3><p>Research, strategy, and interaction design for digital products.</p></span>
+            <span class="service__arrow" aria-hidden="true">→</span></a></li>
+          <li class="reveal"><a class="service" href="writing.html">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#i-pen"/></svg></span>
+            <span class="service__body"><h3>Articles + UX Writing</h3><p>Essays on design practice, plus microcopy and content strategy.</p></span>
+            <span class="service__arrow" aria-hidden="true">→</span></a></li>
+          <li class="reveal"><a class="service" href="books.html">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#i-book"/></svg></span>
+            <span class="service__body"><h3>My Books</h3><p>Practical guides for designers building careers and craft.</p></span>
+            <span class="service__arrow" aria-hidden="true">→</span></a></li>
+          <li class="reveal"><a class="service" href="teaching.html">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#i-teach"/></svg></span>
+            <span class="service__body"><h3>My Teaching &amp; Workshops</h3><p>University courses and team workshops in UX, UI, and product thinking.</p></span>
+            <span class="service__arrow" aria-hidden="true">→</span></a></li>
+          <li class="reveal"><a class="service" href="about.html">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#i-user"/></svg></span>
+            <span class="service__body"><h3>About Me</h3><p>My background, philosophy, and the work behind the work.</p></span>
+            <span class="service__arrow" aria-hidden="true">→</span></a></li>
+          <li class="reveal"><a class="service" href="now.html">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#i-now"/></svg></span>
+            <span class="service__body"><h3>Now</h3><p>What I’m focused on, reading, and building this season.</p></span>
+            <span class="service__arrow" aria-hidden="true">→</span></a></li>
+          <li class="reveal"><a class="service" href="#contact">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#i-mail"/></svg></span>
+            <span class="service__body"><h3>Contact</h3><p>Tell me what you’re working on — I read every message.</p></span>
+            <span class="service__arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section--tint" id="about" aria-labelledby="about-title">
+      <div class="wrap split">
+        <div class="split__text reveal">
+          <p class="eyebrow">About me</p>
+          <h2 id="about-title">Design is a practice, not a deliverable.</h2>
+          <p>I’m a senior UX and product designer who has spent my career moving between shipping products and teaching the people who will design the next ones. That loop keeps my work honest: what I teach has to survive contact with real teams, and what I build has to be explainable to a first-year student.</p>
+          <p>I believe in small, evidence-led steps, clear critique, and craft that serves people before it serves a portfolio. Whether I’m leading a discovery sprint or mentoring a career-changer, the goal is the same — better questions, clearer decisions, and work you’re proud to explain.</p>
+          <ul class="stats">
+            <li><strong>15+</strong><span>years in UX &amp; product</span></li>
+            <li><strong>1,000+</strong><span>students taught</span></li>
+            <li><strong>3</strong><span>books &amp; guides</span></li>
+          </ul>
+          <a class="btn btn--ghost" href="about.html">Read the full story</a>
+        </div>
+        <div class="reveal">
+          <div class="placeholder-img" role="img" aria-label="Placeholder for a portrait photo of Chris R. Becker">
+            <div><svg viewBox="0 0 24 24"><use href="#i-image"/></svg>Portrait placeholder<small>Replace with your photo (4:5)</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Kind words</p>
+          <h2 id="testimonials-title">What clients, students &amp; readers say</h2>
+          <p class="lede">Placeholder reviews — swap in real quotes from collaborators and book readers.</p>
+        </div>
+        <div class="quotes">
+          <figure class="quote reveal">
+            <span class="quote__tag">Client</span>
+            <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“Chris reframed our onboarding problem in a single workshop. We left with a prioritized roadmap and a research plan the whole team believed in.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">AM</span><span><strong>Alex Morgan</strong>VP Product, Fintech Startup</span></figcaption>
+          </figure>
+          <figure class="quote quote--book reveal">
+            <span class="quote__tag">Book review</span>
+            <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“The clearest, most practical guide to UX careers I’ve read. I’ve assigned it to every junior designer on my team.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">JR</span><span><strong>Jordan Reyes</strong>Design Manager, Verified Reader</span></figcaption>
+          </figure>
+          <figure class="quote quote--teal reveal">
+            <span class="quote__tag">Student</span>
+            <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“Chris’s critique style changed how I see my own work. Direct, kind, and always tied back to the user. I landed my first product role in the spring.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">SK</span><span><strong>Sam Kim</strong>Former Student, UX/UI Course</span></figcaption>
+          </figure>
+          <figure class="quote quote--book reveal">
+            <span class="quote__tag">Book review</span>
+            <div class="quote__stars" aria-label="4 out of 5 stars">★★★★☆</div>
+            <blockquote>“Equal parts craft manual and pep talk. The exercises alone are worth the price — I keep coming back to them.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">TP</span><span><strong>Taylor Price</strong>Product Designer</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--tint" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact">
+        <div class="reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Tell me about the problem.</h2>
+          <p class="lede">Share a few lines about your product, team, or class. I’ll reply within a few business days with next steps.</p>
+          <ul class="contact__list">
+            <li>Product consulting &amp; design leadership</li>
+            <li>Workshops, talks &amp; guest lectures</li>
+            <li>Mentorship for emerging designers</li>
+          </ul>
+        </div>
+        <form class="form reveal" id="contact-form" novalidate>
+          <div class="field">
+            <label for="c-name">Name</label>
+            <input id="c-name" name="name" type="text" autocomplete="name" required placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" required placeholder="What are you working on?"></textarea>
+          </div>
+          <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn--primary btn--lg" type="submit">Send message</button>
+          <p class="form__status" id="contact-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Print / email dialog -->
+  <dialog id="print-dialog" aria-labelledby="print-title">
+    <div class="dialog__body">
+      <button class="dialog__close" type="button" id="dialog-close" aria-label="Close">&times;</button>
+      <h2 id="print-title">Send me your drawing</h2>
+      <img class="dialog__preview" id="print-preview" alt="Preview of your drawing">
+      <form id="print-form" novalidate>
+        <div class="field">
+          <label for="p-name">Your name</label>
+          <input id="p-name" name="name" type="text" autocomplete="name" placeholder="Your name">
+        </div>
+        <div class="field">
+          <label for="p-email">Your email</label>
+          <input id="p-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label for="p-note">Note (optional)</label>
+          <textarea id="p-note" name="message" style="min-height:90px" placeholder="A sentence about the problem you sketched"></textarea>
+        </div>
+        <p class="lede" style="font-size:.9rem">A copy goes to you, and Chris is cc’d at crbecker1@gmail.com.</p>
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="dialog__actions">
+          <button class="btn btn--primary" type="submit" id="print-send">Email my drawing</button>
+          <button class="btn btn--ghost" type="button" id="print-download">Download PNG</button>
+          <button class="btn btn--ghost" type="button" id="print-window">Print</button>
+        </div>
+        <p class="form__status" id="print-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <a class="logo" href="#top" aria-label="Back to top">
+          <img class="logo__img" src="images/logo/Logo.svg" alt="" width="237" height="83">
+          <span class="logo__text">Chris R. Becker</span>
+        </a>
+        <ul class="social" aria-label="Social links">
+          <li><a href="https://www.linkedin.com/in/chrisrbecker/" rel="noopener" target="_blank">LinkedIn</a></li>
+          <li><a href="https://medium.com/@cbecker" rel="noopener" target="_blank">Medium</a></li>
+           <li><a href="https://www.instagram.com/sketchesbychrisrbecker/" rel="noopener" target="_blank">Instagram</a></li>
+          <li><a href="https://twitter.com/cbecker" rel="noopener" target="_blank">X</a></li>
+          <li><a href="https://github.com/chrisrbecker" rel="noopener" target="_blank">GitHub</a></li>
+          <li><a href="mailto:crbecker1@gmail.com">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="year">2026</span> Chris R. Becker. All rights reserved.</p>
+        <p>Site created <time datetime="2026-10-02">October 2, 2026</time></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
