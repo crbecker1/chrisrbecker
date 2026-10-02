@@ -1,6 +1,6 @@
 # Chris R. Becker
 
-**Senior UX designer · Author · Educator**
+Senior UX designer · Author · Educator
 
 The personal website of Chris R. Becker: a home for work and ideas across user experience, design education, and writing.
 
