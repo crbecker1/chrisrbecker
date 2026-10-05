@@ -20,7 +20,7 @@
 
   /* ---------- Mobile nav ---------- */
   const toggle = $('.nav__toggle');
-  const links = $('#nav-links');
+  const links = $('#nav-menu');
   if (toggle && links) {
     const setOpen = (open) => {
       toggle.setAttribute('aria-expanded', String(open));
@@ -32,7 +32,7 @@
   }
 
   /* ---------- Active nav link on scroll ---------- */
-  const navAnchors = $$('.nav__links a[href^="#"]:not(.btn)');
+  const navAnchors = $$('.nav__secondary a[href^="#"]');
   const targets = navAnchors.map((a) => $(a.getAttribute('href'))).filter(Boolean);
   if ('IntersectionObserver' in window && targets.length) {
     const spy = new IntersectionObserver((entries) => {

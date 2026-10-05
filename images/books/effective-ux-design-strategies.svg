@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" role="img" aria-label="Effective UX Design Strategies cover (placeholder)">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14438f"/><stop offset="1" stop-color="#0b2a5b"/></linearGradient></defs>
+  <rect width="300" height="450" fill="url(#g)"/><rect x="0" y="0" width="14" height="450" fill="#000" opacity=".18"/>
+  <rect x="40" y="80" width="60" height="6" fill="#ff9b7d"/><text x="40" y="150" font-family="Georgia,serif" font-weight="700" font-size="34" fill="#fff">EFFECTIVE</text><text x="40" y="194" font-family="Georgia,serif" font-weight="700" font-size="34" fill="#fff">UX DESIGN</text><text x="40" y="238" font-family="Georgia,serif" font-weight="700" font-size="34" fill="#fff">STRATEGIES</text>
+  <g fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"><rect x="40" y="300" width="110" height="80" rx="8"/><path d="M40 322h110"/><circle cx="215" cy="340" r="36"/></g>
+  <text x="40" y="420" font-family="monospace" font-size="11" fill="#fff" opacity=".7" letter-spacing="1.5">CHRIS R. BECKER</text>
+</svg>
