@@ -36,7 +36,8 @@
   host.appendChild(svg);
 
   // Layers, back to front: network lines, article cards, dots, bubbles, icons, labels.
-  const lineLayer = mk('g', { 'aria-hidden': 'true', class: 'idea-hero__lines' });
+  const lineLayer = mk('g', { 'aria-hidden': 'true', class: 'idea-hero__lines', fill: 'none' });
+  const gIntra = mk('g', {}, lineLayer), gSpoke = mk('g', {}, lineLayer), gInter = mk('g', {}, lineLayer);
   const cardLayer = mk('g', { 'aria-hidden': 'true' });
   const dotLayer = mk('g', { 'aria-hidden': 'true' });
   const dots = [];
@@ -55,12 +56,41 @@
       });
     }
   }
-  // Network: ring links between neighbouring dots, plus a few spokes to the centre.
-  const links = [];
+  // Network. Inside a topic: a ring, some chords, and spokes to the bubble centre.
+  // Between topics (rebuilt per layout): curved links that join the clusters into one mesh.
+  const intra = [], spokes = [];
+  let inter = [], interFor = null;
+  const link = (parent, color, w) => mk('path', { stroke: color, 'stroke-width': w || 1 }, parent);
   for (let i = 0; i < N; i++) {
     for (let k = 0; k < DOTS; k++) {
-      links.push({ i, a: k, b: (k + 1) % DOTS, el: mk('line', { stroke: TOPICS[i].color, 'stroke-width': 1 }, lineLayer) });
-      if (k % 3 === 0) links.push({ i, a: k, b: -1, el: mk('line', { stroke: TOPICS[i].color, 'stroke-width': 1 }, lineLayer) });
+      intra.push({ i, a: k, b: (k + 1) % DOTS, el: link(gIntra, TOPICS[i].color) });
+      if (k % 2 === 0) intra.push({ i, a: k, b: (k + 4) % DOTS, el: link(gIntra, TOPICS[i].color) });
+      if (k % 3 === 0) spokes.push({ i, a: k, el: link(gSpoke, TOPICS[i].color) });
+    }
+  }
+  function buildInter(rowCols) {
+    inter.forEach(l => l.el.remove());
+    inter = [];
+    const pairs = [];
+    for (let i = 0; i < N; i++) {
+      const row = Math.floor(i / rowCols);
+      if (i + 1 < N && Math.floor((i + 1) / rowCols) === row) pairs.push([i, i + 1, 1]);
+      if (i + 2 < N && Math.floor((i + 2) / rowCols) === row) pairs.push([i, i + 2, 2]);
+      if (rowCols < N && i + rowCols < N) pairs.push([i, i + rowCols, 1]);
+      if (rowCols < N && i + rowCols + 1 < N && (i + 1) % rowCols) pairs.push([i, i + rowCols + 1, 2]);
+    }
+    for (const [i, j, kind] of pairs) {
+      let dx = B[j].x - B[i].x, dy = B[j].y - B[i].y;
+      const m = Math.hypot(dx, dy) || 1; dx /= m; dy /= m;
+      const score = (d, sg) => sg * (d.ox * dx + d.oy * dy);
+      const pick = (t, sg) => dots.filter(d => d.i === t).sort((a, b) => score(b, sg) - score(a, sg));
+      const ai = pick(i, 1), bj = pick(j, -1);
+      const combos = kind === 1 ? [[0, 0], [1, 1], [2, 2], [0, 1], [1, 2]] : [[0, 1], [1, 0]];
+      combos.forEach(([x, y], n) => {
+        const a = ai[x], b = bj[y];
+        const sg = ((i + n) % 2 ? 1 : -1);
+        inter.push({ a, b, bow: sg * (kind === 1 ? 8 + n * 3 : 34 + n * 10), el: link(gInter, TOPICS[(n % 2) ? i : j].color, 1) });
+      });
     }
   }
 
@@ -136,6 +166,7 @@
       const rc = i % rowCols, rr = Math.floor(i / rowCols);
       B.push({ x: left + (rc + .5) * spacing, y: mobile ? rowMidY + (rr - .5) * 84 : rowMidY });
     }
+    buildInter(rowCols);
     ty = H - 44;
     tx0 = left + 8; tx1 = left + cw - 8;
     const mid = (tx0 + tx1) / 2;
@@ -196,7 +227,7 @@
       // Network ring around the bubble, contracting into a cluster as the bubble dissolves.
       const ang = d.k / DOTS * 6.2832 + d.i * 1.3 + spin * (d.i % 2 ? 1 : -1);
       const rad = p.r0 * (1.25 + (orb - 1.25) * ((d.k * .618 + d.i * .13) % 1));
-      const ox = lerp(Math.cos(ang) * rad, d.ox * p.r * .26, p2), oy = lerp(Math.sin(ang) * rad, d.oy * p.r * .26, p2);
+      const ox = lerp(Math.cos(ang) * rad, d.ox * p.r * .4, p2), oy = lerp(Math.sin(ang) * rad, d.oy * p.r * .4, p2);
       const c = d.k % bc, r = Math.floor(d.k / bc);
       const gx = G[d.i].x + (c - (bc - 1) / 2) * gapX, gy = G[d.i].y + (r - (br - 1) / 2) * gapY;
       d.x = lerp(p.x + ox, gx, p3); d.y = lerp(p.y + oy, gy, p3);
@@ -215,17 +246,26 @@
       d.card.setAttribute('opacity', (pCard * Math.max(o, .45)).toFixed(3));
     }
 
-    const lineO = .38 * (1 - ss(.08, .4, t));
-    lineLayer.setAttribute('visibility', lineO <= .002 ? 'hidden' : 'visible');
-    if (lineO > .002) {
-      for (const l of links) {
-        const a = dots[l.i * DOTS + l.a];
-        const bx = l.b < 0 ? P[l.i].x : dots[l.i * DOTS + l.b].x, by = l.b < 0 ? P[l.i].y : dots[l.i * DOTS + l.b].y;
-        l.el.setAttribute('x1', a.x.toFixed(1)); l.el.setAttribute('y1', a.y.toFixed(1));
-        l.el.setAttribute('x2', bx.toFixed(1)); l.el.setAttribute('y2', by.toFixed(1));
-      }
-      lineLayer.setAttribute('opacity', lineO.toFixed(3));
+    // Mesh: each topic's own network persists, spokes drop with the bubble,
+    // and links between topics grow in as the dots line up, then fade as articles form.
+    const fade = 1 - ss(.6, .9, t);
+    const oIntra = .4 * fade, oSpoke = .38 * (1 - p2), oInter = .5 * ss(.12, .45, t) * fade;
+    const q = (x1, y1, x2, y2, bow) => {
+      const mx = (x1 + x2) / 2, my = (y1 + y2) / 2, dx = x2 - x1, dy = y2 - y1, m = Math.hypot(dx, dy) || 1;
+      return `M${x1.toFixed(1)} ${y1.toFixed(1)}Q${(mx - dy / m * bow).toFixed(1)} ${(my + dx / m * bow).toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}`;
+    };
+    gIntra.setAttribute('opacity', oIntra.toFixed(3)); gIntra.setAttribute('visibility', oIntra > .003 ? 'visible' : 'hidden');
+    gSpoke.setAttribute('opacity', oSpoke.toFixed(3)); gSpoke.setAttribute('visibility', oSpoke > .003 ? 'visible' : 'hidden');
+    gInter.setAttribute('opacity', oInter.toFixed(3)); gInter.setAttribute('visibility', oInter > .003 ? 'visible' : 'hidden');
+    if (oIntra > .003) for (const l of intra) {
+      const a = dots[l.i * DOTS + l.a], b = dots[l.i * DOTS + l.b];
+      l.el.setAttribute('d', q(a.x, a.y, b.x, b.y, 0));
     }
+    if (oSpoke > .003) for (const l of spokes) {
+      const a = dots[l.i * DOTS + l.a];
+      l.el.setAttribute('d', q(a.x, a.y, P[l.i].x, P[l.i].y, 0));
+    }
+    if (oInter > .003) for (const l of inter) l.el.setAttribute('d', q(l.a.x, l.a.y, l.b.x, l.b.y, l.bow));
 
     const x = lerp(tx0, tx1, t);
     thumb.setAttribute('cx', x); thumb.setAttribute('cy', ty);
