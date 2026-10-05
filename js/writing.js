@@ -9,15 +9,14 @@
 
   // Tag name → icon symbol (in writing.html's sprite) and color tone
   const TAGS = [
-    { name: 'UX', icon: 't-ux', tone: 'blue' },
-    { name: 'Product', icon: 't-product', tone: 'teal' },
-    { name: 'Education', icon: 't-education', tone: 'orange' },
+    { name: 'UX/Product', icon: 't-ux', tone: 'blue' },
+    { name: 'Education', icon: 't-education', tone: 'blue' },
     { name: 'AI', icon: 't-ai', tone: 'blue' },
-    { name: 'DesignThinking', icon: 't-thinking', tone: 'orange' },
-    { name: 'User Research', icon: 't-research', tone: 'teal' },
+    { name: 'Design Thinking', icon: 't-thinking', tone: 'blue' },
+    { name: 'User Research', icon: 't-research', tone: 'blue' },
     { name: 'Design/Code', icon: 't-code', tone: 'blue' },
-    { name: 'Design Systems', icon: 't-systems', tone: 'teal' },
-    { name: 'Interaction Design', icon: 't-interaction', tone: 'orange' }
+    { name: 'Design Systems', icon: 't-systems', tone: 'blue' },
+    { name: 'Interaction Design', icon: 't-interaction', tone: 'blue' }
   ];
   const ALL = 'All';
   const tagInfo = (name) => TAGS.find((t) => t.name === name) || { name, icon: 't-all', tone: 'blue' };
@@ -98,9 +97,9 @@
 
   function smallCard(a) {
     const t = tagInfo(a.tags[0]);
-    const flag = a.featured ? (a.featured === true ? 'Featured' : String(a.featured)) : '';
+    const flag = a.featured ? (a.featured === true ? 'Featured' : String(a.featured)) : (a.topRated ? 'Top rated' : '');
     return el('li', { class: 'article' + (flag ? ' article--flagged' : '') },
-      flag ? el('span', { class: 'article__strip' }, flag) : '',
+      flag ? el('span', { class: 'article__strip' + (!a.featured ? ' article__strip--top' : '') }, flag) : '',
       el('a', { class: 'article__link', href: a.url, target: '_blank', rel: 'noopener', title: a.tags.join(' · ') },
         el('span', { class: 'article__icon tone-' + t.tone }, icon(t.icon)),
         el('div', { class: 'article__content' },
