@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Allē Grow Product Design Vision — Chris R. Becker</title>
+  <meta name="description" content="Case study: UX strategy and prototype ideation for Allē Grow, the early vision for Allē for Business, delivered with Bttr and Allergan Aesthetics in eight sprints.">
+  <meta name="theme-color" content="#1a5bc4">
+  <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Slab:wght@600;700&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <!-- Nav icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" id="nav-sprite">
+    <symbol id="n-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+    <symbol id="n-palette" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".6"/><circle cx="17.5" cy="10.5" r=".6"/><circle cx="8.5" cy="7.5" r=".6"/><circle cx="6.5" cy="12.5" r=".6"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.84-.44-1.12-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.55-2.5 5.55-5.55C21.97 6.01 17.46 2 12 2Z"/></symbol>
+    <symbol id="n-feather" viewBox="0 0 24 24"><path d="M12.67 19a2 2 0 0 0 1.42-.59l6.15-6.17a6 6 0 0 0-8.49-8.49L5.59 9.91A2 2 0 0 0 5 11.33V18a1 1 0 0 0 1 1h6.67Z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></symbol>
+    <symbol id="n-books" viewBox="0 0 24 24"><rect x="3" y="16.5" width="18" height="4.5" rx="1"/><rect x="5" y="11.5" width="15" height="4.5" rx="1"/><rect x="4" y="6.5" width="16" height="4.5" rx="1"/><path d="M7 18.75h2M9 13.75h2M8 8.75h2"/></symbol>
+    <symbol id="n-podium" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2"/><path d="M12 6.5V10"/><path d="M4 10h16"/><path d="M6.5 10l1 11h9l1-11"/></symbol>
+    <symbol id="n-stopwatch" viewBox="0 0 24 24"><circle cx="12" cy="14" r="8"/><path d="M12 10v4l2.5 2"/><path d="M10 2h4"/><path d="M12 2v4"/><path d="m19 6 1.5-1.5"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Icon sprite (placeholder icons) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-product" viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/><path d="m3 17.5 9 5 9-5" opacity=".5"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5v-16Z"/><path d="M4 21.5A2.5 2.5 0 0 1 6.5 19H20"/></symbol>
+    <symbol id="i-teach" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+    <symbol id="i-now" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></symbol>
+  </svg>
+  <header class="site-header">
+    <nav class="wrap nav" aria-label="Primary">
+      <a class="logo" href="index.html" aria-label="Chris R. Becker — home"><img class="logo__img" src="images/logo/Logo.svg" alt="" width="237" height="83"><span class="logo__text">Chris R. Becker</span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu"><span></span></button>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__links nav__primary">
+          <li><a href="about.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-user"/></svg>About</a></li>
+          <li><a href="product-work.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-palette"/></svg>Product Work</a></li>
+          <li><a href="writing.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-feather"/></svg>Writing</a></li>
+          <li><a href="books.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-books"/></svg>Books</a></li>
+          <li><a href="teaching.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-podium"/></svg>Teaching</a></li>
+          <li><a href="now.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-stopwatch"/></svg>Now</a></li>
+          <li><a class="btn btn--primary" href="index.html#contact">Work with me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <header class="cs-hero"><div class="wrap">
+      <p class="eyebrow"><a href="product-work.html" style="text-decoration:none">← All work</a></p>
+      <h1>Allē Grow: Product Design Vision</h1>
+      <p class="lede">How I led UX strategy and prototype ideation for the early vision of Allē for Business, and gave executives, internal teams, and B2B partners something concrete to believe in.</p>
+      <ul class="tags" aria-label="Focus areas"><li>UX</li><li>Product Design</li><li>Strategy</li><li>User Research</li></ul>
+      <dl class="cs-meta">
+        <div><dt>My role</dt><dd>Sr. Product/UX Designer<br><span>UX strategy and prototype ideation</span></dd></div>
+        <div><dt>Team</dt><dd>Bttr + Allē Grow team<br><span>7+ people: 1 PM, 1 Chief Design Officer, 4 UX, 1 UI</span></dd></div>
+        <div><dt>Timeline</dt><dd>8 two-week sprints (~16 weeks)<br><span>Q2/Q3 2021</span></dd></div>
+        <div><dt>Partners</dt><dd>Bttr, Allergan Aesthetics</dd></div>
+      </dl>
+    </div></header>
+    <div class="wrap cs-cover"><figure class="cs-fig reveal"><img src="images/case-studies/alle-grow/Alle-Preview.png" alt="Placeholder hero image for the Allē Grow case study" width="1200" height="800" loading="lazy"><figcaption>Hero image placeholder: the Allē Grow speculative prototype.</figcaption></figure></div>
+
+    <section class="cs-section cs-tldr" id="outcome-first" aria-labelledby="tldr-title"><div class="wrap cs-grid">
+      <div class="cs-label"><h2 id="tldr-title">The short version</h2></div>
+      <div class="cs-body">
+        <p class="cs-lead">In eight two-week sprints, I owned the UX strategy and prototype ideation for Allē Grow, the early name for the Allē for Business initiative. Senior executives gave the platform the green light.</p>
+        <p>The speculative prototype we built did two jobs. Inside Allergan, it was shared across teams as a north star vision. Outside, previews of its promotional materials showed B2B partners the value Allē could bring to their businesses.</p>
+        <ul class="cs-stats" aria-label="Headline results">
+          <li><strong>8</strong><span>two-week sprints, about 16 weeks</span></li>
+          <li><strong>Green light</strong><span>from senior executives for Allē for Business</span></li>
+          <li><strong>North star</strong><span>vision shared across Allergan teams</span></li>
+        </ul>
+        <p>The challenge was a familiar one. We had research, a live product, and a big ambition. What we didn't have yet was a shared picture of the experience Grow should become. My job was to help build it.</p>
+      </div>
+    </div></section>
+    <section class="cs-section cs-section--tabbed" id="problem" aria-labelledby="problem-title"><div class="wrap cs-grid">
+      <div class="cs-label"><p class="cs-tab"><span aria-hidden="true">P</span>Problem</p><h2 id="problem-title">What we were solving</h2></div>
+      <div class="cs-body">
+        <p>Allergan Aesthetics set out to improve its rewards program with Bttr. As the UX and product design consulting partner, our team helped stand up the Allē rewards program, including Alle.com, the Allē app, and the strategy for what came next. Grow was that next step. It was the early name for the Allē for Business initiative.</p>
+        <p>A new business initiative comes with a lot of open questions. We needed to understand the customer journey for Grow from three angles at once: what past research had already told us, what the product looked like today, and what it could become.</p>
+        <p>Underneath all of it sat one question. What does each customer persona need, where do they struggle, and how does that shape Grow's path into Beta and General Release?</p>
+        <figure class="cs-fig reveal"><img src="images/case-studies/alle-grow/Alle-Admin-Vision-Supplied-Wires.png" alt="Placeholder: current-state customer journey" width="1200" height="800" loading="lazy"><figcaption>Placeholder: the current-state customer journey.</figcaption></figure>
+
+      </div>
+    </div></section>
+    <section class="cs-section cs-section--tabbed" id="outcome" aria-labelledby="outcome-title"><div class="wrap cs-grid">
+      <div class="cs-label"><p class="cs-tab"><span aria-hidden="true">O</span>Outcome</p><h2 id="outcome-title">What success looked like</h2></div>
+      <div class="cs-body">
+        <p>We set out to discover the needs and challenges of each customer persona, using the Allē Insights Research Report that Bttr completed in May 2021 as our foundation. Then we would connect those needs to where Grow was headed.</p>
+        <p>I wanted the work to leave people with something they could react to, not a report they had to read. A vision to align on, and a prototype that made the possibilities easy to talk about with executives, product teams, and eventually business partners.</p>
+        <figure class="cs-embed">
+          <p class="cs-embed__label" id="proto-label"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18.5h2"/></svg>Mobile Prototype in Figma</p>
+          <div class="cs-embed__frame"><iframe title="Allē Grow mobile prototype in Figma" aria-labelledby="proto-label" loading="lazy" src="https://embed.figma.com/proto/aQcnOeSv9GbHStKsua6YKN/Grow-NEXTLab?page-id=729%3A4560&amp;type=design&amp;node-id=1453-31090&amp;viewport=-4990%2C-2410%2C0.15&amp;scaling=scale-down&amp;starting-point-node-id=1453%3A31090&amp;embed-host=share" allowfullscreen></iframe></div>
+          <figcaption>Interactive and shown at phone size (390 × 844). Click through it right here.</figcaption>
+        </figure>
+      </div>
+    </div></section>
+    <section class="cs-section cs-section--tabbed" id="scope" aria-labelledby="scope-title"><div class="wrap cs-grid">
+      <div class="cs-label"><p class="cs-tab"><span aria-hidden="true">S</span>Scope</p><h2 id="scope-title">What was in, what was out</h2></div>
+      <div class="cs-body">
+        <p>The work covered three connected pieces, delivered across eight sprints: a Grow vision, ideation, and a speculative prototype. I owned the UX strategy and the prototype ideation. The prototype was speculative by design. Its job was to explore and persuade, not to ship.</p>
+        <div class="cs-two">
+          <div class="cs-box"><h3>In scope</h3><ul><li>UX strategy for Grow</li><li>Product design vision</li><li>Ideation and concepts</li><li>Speculative prototype</li><li>Promotional materials for the prototype</li></ul></div>
+          <div class="cs-box"><h3>Out of scope</h3><ul><li>[Add what was intentionally left out, for example production design and build]</li></ul></div>
+        </div>
+      </div>
+    </div></section>
+    <section class="cs-section cs-section--tabbed" id="stakeholders" aria-labelledby="stakeholders-title"><div class="wrap cs-grid">
+      <div class="cs-label"><p class="cs-tab"><span aria-hidden="true">S</span>Stakeholders</p><h2 id="stakeholders-title">Who we worked with</h2></div>
+      <div class="cs-body">
+        <p>This was a partnership. Our wider Bttr consulting team of about 12 UX designers worked with Allergan Aesthetics' internal stakeholders and product teams to modernize and extend the Allē platform. On Grow, I worked day to day with a core team of seven or more.</p>
+        <ul class="cs-people">
+          <li><strong>Senior executives, Allergan Aesthetics</strong><span>The decision makers who green-lit the Allē for Business platform.</span></li>
+          <li><strong>Internal stakeholders and product teams</strong><span>The teams who would carry the vision forward as a north star.</span></li>
+          <li><strong>B2B partners</strong><span>The audience for the prototype's promotional materials.</span></li>
+          <li><strong>Bttr team</strong><span>One product manager, one Chief Design Officer, four UX designers, one UI designer, and me as Sr. Product/UX Designer.</span></li>
+        </ul>
+      </div>
+    </div></section>
+    <section class="cs-section cs-section--tabbed" id="timeline" aria-labelledby="timeline-title"><div class="wrap cs-grid">
+      <div class="cs-label"><p class="cs-tab"><span aria-hidden="true">T</span>Timeline</p><h2 id="timeline-title">8 sprints, about 16 weeks</h2></div>
+      <div class="cs-body">
+        <p>The work ran in Q2 and Q3 of 2021, in two-week agile sprints. We moved from understanding to ideas to something people could see and touch.</p>
+        <ol class="cs-sprints" aria-label="Eight sprints"><li><span class="cs-sprint">S1</span></li><li><span class="cs-sprint">S2</span></li><li><span class="cs-sprint">S3</span></li><li><span class="cs-sprint">S4</span></li><li><span class="cs-sprint">S5</span></li><li><span class="cs-sprint">S6</span></li><li><span class="cs-sprint">S7</span></li><li><span class="cs-sprint">S8</span></li></ol>
+        <ul class="cs-phases">
+          <li><strong>Vision</strong><span>[Sprints X–Y] Grounding the work in the May 2021 research, the current product, and the future of Grow.</span></li>
+          <li><strong>Ideation</strong><span>[Sprints X–Y] Exploring how each persona's needs could shape the experience.</span></li>
+          <li><strong>Speculative prototype</strong><span>[Sprints X–Y] Turning the strongest ideas into something people could react to.</span></li>
+        </ul>
+      </div>
+    </div></section>
+    <section class="cs-section cs-section--tabbed" id="artifacts" aria-labelledby="artifacts-title"><div class="wrap cs-grid">
+      <div class="cs-label"><p class="cs-tab"><span aria-hidden="true">A</span>Artifacts</p><h2 id="artifacts-title">What we made</h2></div>
+      <div class="cs-body">
+        <p>Each artifact had a job. Some helped the team think, and others helped people outside the team believe.</p>
+        <div class="cs-gallery">
+          <figure class="reveal"><img src="images/work/placeholder.svg" alt="Placeholder: UX strategy and vision" width="600" height="400" loading="lazy"><figcaption><strong>UX strategy and vision</strong>Placeholder. Replace with artifact.</figcaption></figure>
+          <figure class="reveal"><img src="images/work/placeholder.svg" alt="Placeholder: customer journey and persona needs" width="600" height="400" loading="lazy"><figcaption><strong>Customer journey and persona needs</strong>Placeholder. Replace with artifact.</figcaption></figure>
+          <figure class="reveal"><img src="images/work/placeholder.svg" alt="Placeholder: ideation concepts" width="600" height="400" loading="lazy"><figcaption><strong>Ideation concepts</strong>Placeholder. Replace with artifact.</figcaption></figure>
+          <figure class="reveal"><img src="images/work/placeholder.svg" alt="Placeholder: speculative prototype" width="600" height="400" loading="lazy"><figcaption><strong>Speculative prototype</strong>Placeholder. Replace with artifact.</figcaption></figure>
+          <figure class="reveal"><img src="images/work/placeholder.svg" alt="Placeholder: promotional materials for B2B partners" width="600" height="400" loading="lazy"><figcaption><strong>Promotional materials for B2B partners</strong>Placeholder. Replace with artifact.</figcaption></figure>
+        </div>
+      </div>
+    </div></section>
+    <section class="cs-section cs-section--tabbed" id="lessons" aria-labelledby="lessons-title"><div class="wrap cs-grid">
+      <div class="cs-label"><p class="cs-tab"><span aria-hidden="true">L</span>Lessons Learned</p><h2 id="lessons-title">What worked, and what I took from it</h2></div>
+      <div class="cs-body">
+        <p>I looked at what we learned two ways: against the business goals, and against what success meant for the people on the project.</p>
+        <h3>Business success</h3>
+        <p>Senior executives green-lit the Allē for Business platform. The prototype became a north star vision that was shared around Allergan teams, and its promotional materials were previewed for B2B partners to highlight the value the platform could bring to their businesses. [Add any numbers, such as partner interest or adoption, if you have them.]</p>
+        <h3>Stakeholder success</h3>
+        <p>Executives had something concrete to decide on. Internal teams had a shared direction. Partners could see the value for themselves. [Add a stakeholder quote if you have one.]</p>
+        <h3>What I took from it</h3>
+        <p><strong>Build on what you already know.</strong> The May 2021 research gave us a head start, so we spent our time on the future instead of re-learning the past.</p>
+        <p><strong>A prototype changes the conversation.</strong> People react to something they can see far faster than something they have to imagine.</p>
+        <p><strong>Design for more than one audience.</strong> The same work had to persuade executives, guide internal teams, and speak to partners. Each needed a different way in.</p>
+        <p><strong>What I'd do differently.</strong> [Add one honest reflection.]</p>
+      </div>
+    </div></section>
+    <section class="cs-section cs-close" aria-labelledby="close-title"><div class="wrap cs-grid">
+      <div class="cs-label"><h2 id="close-title">Where it landed</h2></div>
+      <div class="cs-body">
+        <p class="cs-lead">In about 16 weeks, I helped turn research and a live product into a vision people could believe in.</p>
+        <p>As the owner of UX strategy and prototype ideation, I built the speculative prototype that gave senior executives the confidence to green-light Allē for Business. It then served as a north star for Allergan teams and a way to show B2B partners what the platform could do for them.</p>
+        <p>The lasting lesson is simple. Good research earns you the right to be ambitious, and a concrete prototype is how you get everyone else to share that ambition.</p>
+        <p style="margin-top:2rem"><a class="btn btn--primary" href="index.html#contact">Work with me</a> <a class="btn btn--ghost" href="product-work.html">← Back to all work</a></p>
+      </div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap">
+    <div class="footer__top">
+      <a class="logo" href="index.html"><img class="logo__img" src="images/logo/Logo.svg" alt="" width="237" height="83"><span class="logo__text">Chris R. Becker</span></a>
+      <ul class="social" aria-label="Social links">
+          <li><a href="https://www.linkedin.com/in/chrisrbecker/" rel="noopener" target="_blank" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+          <li><a href="https://medium.com/@cbecker" rel="noopener" target="_blank" aria-label="Medium" title="Medium"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg></a></li>
+           <li><a href="https://www.instagram.com/sketchesbychrisrbecker/" rel="noopener" target="_blank" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.25"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a></li>
+          <li><a href="https://twitter.com/cbecker" rel="noopener" target="_blank" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></li>
+          <li><a href="https://github.com/chrisrbecker" rel="noopener" target="_blank" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
+          <li><a href="mailto:crbecker1@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li>
+          <li><a href="https://linktr.ee/crbecker1" rel="noopener" target="_blank" aria-label="Linktree" title="Linktree"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M13.736 5.853 17.5 2.1l2.4 2.44-3.85 3.64h5.4v3.4h-5.45l3.85 3.76-2.4 2.43-5.77-5.8-5.77 5.8-2.4-2.4 3.85-3.79H2.4v-3.4h5.4L3.95 4.54l2.4-2.44 3.76 3.75V0h3.63zm-3.63 10.67h3.63V24h-3.63z"/></svg></a></li>
+          <li><a href="https://www.youtube.com/@crbecker1" rel="noopener" target="_blank" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
+        </ul>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="year">2026</span> Chris R. Becker. All rights reserved.</p>
+      <p>Site created <time datetime="2026-10-02">October 2, 2026</time></p>
+    </div>
+      <p class="footer__credit">Made with love by Chris R. Becker with help from Claude Code + friends.</p>
+  </div></footer>
+</body>
+</html>
