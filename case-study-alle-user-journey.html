@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Allē Admin User Journey Maps — Chris R. Becker</title>
+  <meta name="description" content="Case study: user research and user journey maps for the Allē Admin customer support team, and a template that scaled across a 45+ person UX and product design organization.">
+  <meta name="theme-color" content="#1a5bc4">
+  <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Slab:wght@600;700&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <!-- Nav icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" id="nav-sprite">
+    <symbol id="n-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+    <symbol id="n-palette" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".6"/><circle cx="17.5" cy="10.5" r=".6"/><circle cx="8.5" cy="7.5" r=".6"/><circle cx="6.5" cy="12.5" r=".6"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.84-.44-1.12-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.55-2.5 5.55-5.55C21.97 6.01 17.46 2 12 2Z"/></symbol>
+    <symbol id="n-feather" viewBox="0 0 24 24"><path d="M12.67 19a2 2 0 0 0 1.42-.59l6.15-6.17a6 6 0 0 0-8.49-8.49L5.59 9.91A2 2 0 0 0 5 11.33V18a1 1 0 0 0 1 1h6.67Z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></symbol>
+    <symbol id="n-books" viewBox="0 0 24 24"><rect x="3" y="16.5" width="18" height="4.5" rx="1"/><rect x="5" y="11.5" width="15" height="4.5" rx="1"/><rect x="4" y="6.5" width="16" height="4.5" rx="1"/><path d="M7 18.75h2M9 13.75h2M8 8.75h2"/></symbol>
+    <symbol id="n-podium" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2"/><path d="M12 6.5V10"/><path d="M4 10h16"/><path d="M6.5 10l1 11h9l1-11"/></symbol>
+    <symbol id="n-stopwatch" viewBox="0 0 24 24"><circle cx="12" cy="14" r="8"/><path d="M12 10v4l2.5 2"/><path d="M10 2h4"/><path d="M12 2v4"/><path d="m19 6 1.5-1.5"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Icon sprite (placeholder icons) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-product" viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/><path d="m3 17.5 9 5 9-5" opacity=".5"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5v-16Z"/><path d="M4 21.5A2.5 2.5 0 0 1 6.5 19H20"/></symbol>
+    <symbol id="i-teach" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+    <symbol id="i-now" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></symbol>
+  </svg>
+  <header class="site-header">
+    <nav class="wrap nav" aria-label="Primary">
+      <a class="logo" href="index.html" aria-label="Chris R. Becker — home"><img class="logo__img" src="images/logo/Logo.svg" alt="" width="237" height="83"><span class="logo__text">Chris R. Becker</span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu"><span></span></button>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__links nav__primary">
+          <li><a href="about.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-user"/></svg>About</a></li>
+          <li><a href="product-work.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-palette"/></svg>Product Work</a></li>
+          <li><a href="writing.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-feather"/></svg>Writing</a></li>
+          <li><a href="books.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-books"/></svg>Books</a></li>
+          <li><a href="teaching.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-podium"/></svg>Teaching</a></li>
+          <li><a href="now.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-stopwatch"/></svg>Now</a></li>
+          <li><a class="btn btn--primary" href="index.html#contact">Work with me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <header class="cs-hero"><div class="wrap">
+      <p class="eyebrow"><a href="product-work.html" style="text-decoration:none">← All work</a></p>
+      <h1>Allē Admin: User Journey Maps</h1>
+      <p class="lede">How I used user research and journey mapping to help a 150+ person customer support team be heard, then turned the method into a template a whole design organization could use.</p>
+      <ul class="tags" aria-label="Focus areas"><li>UX</li><li>User Research</li><li>Strategy</li><li>Facilitation</li></ul>
+      <dl class="cs-meta">
+        <div><dt>My role</dt><dd>Sr. UX/Product Designer<br><span>User research and user journeys</span></dd></div>
+        <div><dt>Team</dt><dd>Bttr + Allē Admin squad<br><span>9+ people: 1 PM, 1 TPM, 4 front-end devs, 3 back-end devs</span></dd></div>
+        <div><dt>Timeline</dt><dd>~1.5 years<br><span>Allē Admin support, 2021 to 2023</span></dd></div>
+        <div><dt>Tools</dt><dd>Dovetail, Zoom, Airtable, Figma, FigJam</dd></div>
+      </dl>
+    </div></header>
+    <div class="wrap cs-cover"><figure class="cs-fig reveal"><img src="images/case-studies/Alle-User-Journey/01-User-Journey-Alle-Patient-Support.png" alt="Placeholder hero image for the Allē Admin user journey case study" width="1400" height="800" loading="lazy"><figcaption>Hero image placeholder: an Allē Admin user journey map.</figcaption></figure></div>
+
+    <section class="cs-section cs-tldr" id="outcome-first" aria-labelledby="tldr-title"><div class="wrap cs-grid">
+      <div class="cs-label"><h2 id="tldr-title">The short version</h2></div>
+      <div class="cs-body">
+        <p class="cs-lead">Over about a year and a half on Allē Admin, I used user research and user journey maps to put a 150+ person customer support team at the center of the squad's decisions. The journey map then grew into a template that I taught to 25+ designers and shared across a 45+ person UX and product design organization.</p>
+        <p>The support team handles about 25,000 customer calls a month. When the people doing that work are well understood, the product built for them gets better, and so does every conversation they have.</p>
+        <ul class="cs-stats" aria-label="Headline numbers">
+          <li><strong>150+</strong><span>support team members I designed for</span></li>
+          <li><strong>~25,000</strong><span>customer calls a month they handle</span></li>
+          <li><strong>25+</strong><span>designers I trained on the template</span></li>
+        </ul>
+        <p>The challenge was familiar. A busy squad of product and engineering was shipping fast, and the real work of the support team was easy to lose in the pace. My job was to make it visible and keep it that way.</p>
+      </div>
+    </div></section>
+    <section class="cs-section cs-section--tabbed" id="challenge" aria-labelledby="challenge-title"><div class="wrap cs-grid">
+      <div class="cs-label"><p class="cs-tab"><span aria-hidden="true">1</span>Challenge</p><h2 id="challenge-title">Putting the support team first</h2></div>
+      <div class="cs-body">
+        <p>From 2021 to 2023, Allergan Aesthetics worked with Bttr to improve its rewards program. As a Sr. UX/Product Design consultant, I helped establish the Allē rewards program. Allē Admin was my core responsibility, alongside Alle.com, the Allē app, and the strategy for what came next. Our wider consulting team of about 12 UX designers worked with internal stakeholders and product teams to modernize and extend the platform.</p>
+        <p>The users of Allē Admin are the Allē customer support team: more than 150 people managing roughly 25,000 customer calls a month. At that scale, small frictions add up fast. I wanted every design decision for Admin to start from how that team actually works, not from what we assumed.</p>
+        <p>I worked inside the Admin squad: one PM, one TPM, four front-end developers, and three back-end developers. Research and journey mapping were how I gave that group a shared view of the people we were building for.</p>
+      </div>
+    </div></section>
+    <section class="cs-section cs-section--tabbed" id="research" aria-labelledby="research-title"><div class="wrap cs-grid">
+      <div class="cs-label"><p class="cs-tab"><span aria-hidden="true">2</span>Research</p><h2 id="research-title">Listening, then making it reusable</h2></div>
+      <div class="cs-body">
+        <p>I started with the people. I gathered what the support team told us and organized it in Dovetail so it became searchable insight, not a pile of notes. [Add: how many sessions, who you spoke with, and the research methods.]</p>
+        <p>I used Zoom to talk with users, Dovetail to tag and synthesize, and Airtable to keep the details organized. The goal was never a report that sat in a folder. It was evidence the squad could point to when they made decisions.</p>
+        <figure class="cs-fig reveal"><img src="images/case-studies/Alle-User-Journey/ADL-Offer-Builder-Product-Feedback-–-Dovetail.png" alt="Dovetail research insights" width="1200" height="800" loading="lazy"><figcaption>Research synthesis in Dovetail.</figcaption></figure>
+        <figure class="cs-fig reveal"><img src="images/case-studies/Alle-User-Journey/CXone-recording_Christine-Wells_2023-04-18_20-17-UTC-_de8fa42f-e3ee-4105-86c4-7a4fceebcd9e-BO-–-Dovetail 2.png" alt="Dovetail research insights" width="1200" height="800" loading="lazy"><figcaption>Research synthesis in Dovetail.</figcaption></figure>
+        <figure class="cs-fig reveal"><img src="images/case-studies/Alle-User-Journey/CXone-recording_Kaity-Damron_2023-05-11_13-49-UTC-_4695add3-23e2-4475-aded-7047f219474e-–-Dovetail 2.png" alt="Dovetail research insights" width="1200" height="800" loading="lazy"><figcaption>Research synthesis in Dovetail.</figcaption></figure>
+        <figure class="cs-fig reveal"><img src="images/case-studies/Alle-User-Journey/CXone-recording_Kaity-Damron_2023-05-11_13-49-UTC-_4695add3-23e2-4475-aded-7047f219474e-–-Dovetail.png" alt="Dovetail research insights" width="1200" height="800" loading="lazy"><figcaption>Research synthesis in Dovetail.</figcaption></figure>
+      </div>
+    </div></section>
+    <section class="cs-section cs-section--tabbed" id="audit" aria-labelledby="audit-title"><div class="wrap cs-grid">
+      <div class="cs-label"><p class="cs-tab"><span aria-hidden="true">3</span>UX Audit</p><h2 id="audit-title">Mapping what already existed</h2></div>
+      <div class="cs-body">
+        <p>In parallel, I joined the work on information architecture updates and user flow mapping for the existing Allē products. I audited the flows in FigJam, which gave me a clear view of how the pieces connected while I supported the Admin squad.</p>
+        <p>That audit did a second job. It helped me, and the team around me, build a deeper understanding of the design system and where the products worked together or didn't.</p>
+        <figure class="cs-fig reveal"><img src="images/case-studies/Alle-User-Journey/Project-tags-–-Dovetail.png" alt="Placeholder: FigJam UX audit of existing Allē user flows" width="1200" height="800" loading="lazy"><figcaption>Placeholder: the UX audit in FigJam.</figcaption></figure>
+
+      </div>
+    </div></section>
+    <section class="cs-section cs-section--tabbed" id="journeys" aria-labelledby="journeys-title"><div class="wrap cs-grid">
+      <div class="cs-label"><p class="cs-tab"><span aria-hidden="true">4</span>Journey Maps</p><h2 id="journeys-title">Turning research into a shared story</h2></div>
+      <div class="cs-body">
+        <p>I brought the research and the audit together in user journey maps. Each one followed a role in the Allē for Business world through what they do, what they feel, and where the experience breaks down.</p>
+        <p>Four maps came out of this work: Allē for Business Owner Support, Allē for Business Admin Support, and two for Location Manager Support. [Confirm the four map titles. The site lists Location Manager Support twice.] Some were still in progress when I handed them off, and I kept them in the same shared format so they could keep growing.</p>
+        <div class="cs-gallery">
+          <figure class="reveal"><img src="images/case-studies/Alle-User-Journey/Alle-UJM/01 - User Journey - Allē 4 Business Owner Support.png" alt="Placeholder: Business Owner Support journey map" width="600" height="400" loading="lazy"><figcaption><strong>Business Owner Support</strong>Placeholder. Replace with artifact.</figcaption></figure>
+          <figure class="reveal"><img src="images/case-studies/Alle-User-Journey/Alle-UJM/02 - User Journey - Allē 4 Business Admin Support - WIP.png" alt="Placeholder: Business Admin Support journey map" width="600" height="400" loading="lazy"><figcaption><strong>Business Admin Support</strong>Placeholder. Replace with artifact.</figcaption></figure>
+          <figure class="reveal"><img src="images/case-studies/Alle-User-Journey/Alle-UJM/03 - User Journey - Allē 4 Location Manager Support - WIP.png" alt="Placeholder: Location Manager Support journey map" width="600" height="400" loading="lazy"><figcaption><strong>Location Manager Support</strong>Placeholder. Replace with artifact.</figcaption></figure>
+          <figure class="reveal"><img src="images/case-studies/Alle-User-Journey/Alle-UJM/04 - User Journey - Allē 4 Location Manager Support - WIP.png" alt="Placeholder: fourth journey map" width="600" height="400" loading="lazy"><figcaption><strong>[Fourth map title]</strong>Placeholder. Replace with artifact.</figcaption></figure>
+        </div>
+      </div>
+    </div></section>
+    <section class="cs-section cs-section--tabbed" id="education" aria-labelledby="education-title"><div class="wrap cs-grid">
+      <div class="cs-label"><p class="cs-tab"><span aria-hidden="true">5</span>Education</p><h2 id="education-title">Making the method a team habit</h2></div>
+      <div class="cs-body">
+        <p>The journey map worked, so I made it easy for others to use. I evolved it into a templated platform in Figma that the whole UX and product design team could pick up. I added instructional sections right in the resource file, so the guidance lives next to the work.</p>
+        <p>Then I taught it. I gave a presentation on how the template works, why it is effective, and how to use it well, to 25+ UX designers. I shared the template with the full 45+ person UX and product design organization.</p>
+        <div class="cs-gallery">
+          <figure class="reveal"><img src="images/case-studies/Alle-User-Journey/Edu/0-PROCESS.png" alt="User journey map template resource" width="600" height="338" loading="lazy"><figcaption><strong>User Journey Map Template Cover</strong>Team training resource</figcaption></figure>
+          <figure class="reveal"><img src="images/case-studies/Alle-User-Journey/Edu/1-PROCESS.png" alt="User journey map research" width="600" height="338" loading="lazy"><figcaption><strong>User Journey Map research role</strong>overview of the research phase</figcaption></figure>
+          <figure class="reveal"><img src="images/case-studies/Alle-User-Journey/Edu/2-UJM-GUIDE.png" alt="User journey mapping process" width="600" height="338" loading="lazy"><figcaption><strong>User Journey Map mapping</strong>Why mapping matters.</figcaption></figure>
+          <figure class="reveal"><img src="images/case-studies/Alle-User-Journey/Edu/3-UJM-Components.png" alt="User journey map template" width="600" height="338" loading="lazy"><figcaption><strong>User Journey Map template</strong>Sharing the template with the team.</figcaption></figure>
+          <figure class="reveal"><img src="images/case-studies/Alle-User-Journey/Edu/4-UJM-Components.png" alt="User Journey Map Education" width="600" height="338" loading="lazy"><figcaption><strong>User Journey Map Education</strong>Using the template effectively.</figcaption></figure>
+          <figure class="reveal"><img src="images/case-studies/Alle-User-Journey/Edu/5-UJM-Components.png" alt="User Journey Map Sharing" width="600" height="338" loading="lazy"><figcaption><strong>User Journey Map Sharing</strong>Sharing insights and learnings.</figcaption></figure>
+          <figure class="reveal"><img src="images/case-studies/Alle-User-Journey/Edu/6-UJM-Components.png" alt="User Journey Map Collaboration" width="600" height="338" loading="lazy"><figcaption><strong>User Journey Map Collaboration</strong>Collaborating on user journey maps.</figcaption></figure>
+          <figure class="reveal"><img src="images/case-studies/Alle-User-Journey/Edu/7-UJM-Components.png" alt="User Journey Map Components" width="600" height="338" loading="lazy"><figcaption><strong>User Journey Map Components</strong>Components of the user journey map.</figcaption></figure>
+          <figure class="reveal"><img src="images/case-studies/Alle-User-Journey/Edu/8-UJM-Components.png" alt="User Journey Map Components" width="600" height="338" loading="lazy"><figcaption><strong>User Journey Map Components continued</strong>Components of the user journey map.</figcaption></figure>
+        </div>
+
+
+      </div>
+    </div></section>
+    <section class="cs-section cs-section--tabbed" id="outcomes" aria-labelledby="outcomes-title"><div class="wrap cs-grid">
+      <div class="cs-label"><p class="cs-tab"><span aria-hidden="true">6</span>Outcomes</p><h2 id="outcomes-title">What changed</h2></div>
+      <div class="cs-body">
+        <ul class="cs-outcomes">
+          <li>Faster team onboarding and problem identification.</li>
+          <li>A more mature UX practice, with more UX artifacts people could share.</li>
+          <li>A stronger UX narrative and a clearer way to express customer feedback.</li>
+          <li>A user journey map template distributed to a 45+ person UX and product design organization.</li>
+          <li>A team educated on better UX artifacts, with human-centered principles at the core and a clear way to communicate opportunities.</li>
+        </ul>
+        <blockquote class="cs-quote">&ldquo;Human centered design is not a luxury that only big projects get to concentrate on. As UX designers, our role is to add clarity and visualize the problems that exist in our systems.&rdquo;<cite>Chris R. Becker</cite></blockquote>
+        <h3>What I took from it</h3>
+        <p><strong>Research earns its keep when people can reuse it.</strong> Dovetail turned conversations into evidence the squad could find and trust.</p>
+        <p><strong>A shared artifact beats a shared opinion.</strong> A journey map gave product, engineering, and design the same picture to point at.</p>
+        <p><strong>The best outcome is one that outlasts you.</strong> Turning my method into a template meant the practice kept going without me in the room.</p>
+      </div>
+    </div></section>
+    <section class="cs-section cs-close" aria-labelledby="close-title"><div class="wrap cs-grid">
+      <div class="cs-label"><h2 id="close-title">Where it landed</h2></div>
+      <div class="cs-body">
+        <p class="cs-lead">I started by listening to a 150+ person support team, and finished by giving a 45+ person design organization a better way to listen too.</p>
+        <p>User research and journey mapping gave the Admin squad a clear view of the people behind 25,000 calls a month. Turning that work into a template, and teaching it, multiplied its value well beyond one product.</p>
+        <p>What I learned is simple. Human-centered design isn't reserved for big projects. It is a habit, and the right shared tool makes it easier to practice.</p>
+        <p style="margin-top:2rem"><a class="btn btn--primary" href="index.html#contact">Work with me</a> <a class="btn btn--ghost" href="product-work.html">← Back to all work</a></p>
+      </div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap">
+    <div class="footer__top">
+      <a class="logo" href="index.html"><img class="logo__img" src="images/logo/Logo.svg" alt="" width="237" height="83"><span class="logo__text">Chris R. Becker</span></a>
+      <ul class="social" aria-label="Social links">
+          <li><a href="https://www.linkedin.com/in/chrisrbecker/" rel="noopener" target="_blank" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+          <li><a href="https://medium.com/@cbecker" rel="noopener" target="_blank" aria-label="Medium" title="Medium"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg></a></li>
+           <li><a href="https://www.instagram.com/sketchesbychrisrbecker/" rel="noopener" target="_blank" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.25"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a></li>
+          <li><a href="https://twitter.com/cbecker" rel="noopener" target="_blank" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></li>
+          <li><a href="https://github.com/chrisrbecker" rel="noopener" target="_blank" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
+          <li><a href="mailto:crbecker1@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li>
+          <li><a href="https://linktr.ee/crbecker1" rel="noopener" target="_blank" aria-label="Linktree" title="Linktree"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M13.736 5.853 17.5 2.1l2.4 2.44-3.85 3.64h5.4v3.4h-5.45l3.85 3.76-2.4 2.43-5.77-5.8-5.77 5.8-2.4-2.4 3.85-3.79H2.4v-3.4h5.4L3.95 4.54l2.4-2.44 3.76 3.75V0h3.63zm-3.63 10.67h3.63V24h-3.63z"/></svg></a></li>
+          <li><a href="https://www.youtube.com/@crbecker1" rel="noopener" target="_blank" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
+        </ul>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="year">2026</span> Chris R. Becker. All rights reserved.</p>
+      <p>Site created <time datetime="2026-10-02">October 2, 2026</time></p>
+    </div>
+      <p class="footer__credit">Made with love by Chris R. Becker with help from Claude Code + friends.</p>
+  </div></footer>
+</body>
+</html>
