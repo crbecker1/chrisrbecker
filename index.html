@@ -39,6 +39,9 @@
     <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
     <symbol id="i-now" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-mobile" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+    <symbol id="i-web" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M6.5 6.5h.01M9 6.5h.01"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
     <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></symbol>
   </svg>
 
@@ -64,6 +67,7 @@
       <ul class="wrap nav__links nav__secondary" aria-label="On this page">
         <li class="nav__label" aria-hidden="true">On the home page</li>
         <li><a href="#top">Draw</a></li>
+        <li><a href="#featured">Featured</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -73,7 +77,49 @@
 
   <main id="main">
 
-    <!-- HERO: wireframe sketch tool -->
+  
+    <!-- SERVICES -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">What I do</p>
+          <h2 id="services-title">Services</h2>
+          <p class="lede">Hands-on product design, writing, teaching, and mentorship. Pick a path to learn more.</p>
+        </div>
+        <ul class="services">
+          
+          <li class="reveal"><a class="service" href="product-work.html">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#n-palette"/></svg></span>
+            <span class="service__body"><h3>Product Work</h3><p>Research, strategy, and UX/Product Design case studies for digital + physical products.</p></span>
+            <span class="service__arrow" aria-hidden="true">→</span></a></li>
+          <li class="reveal"><a class="service" href="writing.html">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#n-feather"/></svg></span>
+            <span class="service__body"><h3>My Desk</h3><p>Articles + UX Writing on UX/Product design practice, covering topics from AI, Design Thinking, Design Education and more</p></span>
+            <span class="service__arrow" aria-hidden="true">→</span></a></li>
+          <li class="reveal"><a class="service" href="books.html">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#n-books"/></svg></span>
+            <span class="service__body"><h3>My Books</h3><p>Practical guides for designers building careers and craft.</p></span>
+            <span class="service__arrow" aria-hidden="true">→</span></a></li>
+          <li class="reveal"><a class="service" href="teaching.html">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#n-podium"/></svg></span>
+            <span class="service__body"><h3>My Teaching &amp; Workshops</h3><p>University courses and team workshops in UX, Design Thinking, and product best practices.</p></span>
+            <span class="service__arrow" aria-hidden="true">→</span></a></li>
+          <li class="reveal"><a class="service" href="about.html">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#n-user"/></svg></span>
+            <span class="service__body"><h3>About Me</h3><p>My background, philosophy, and the work behind the work.</p></span>
+            <span class="service__arrow" aria-hidden="true">→</span></a></li>
+          <li class="reveal"><a class="service" href="now.html">
+            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#n-stopwatch"/></svg></span>
+            <span class="service__body"><h3>What I am up to Now</h3><p>What I’m focused on, reading, and building lately.</p></span>
+            <span class="service__arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+        <p class="services__cta reveal"><a class="btn btn--ghost" href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>Get in touch</a></p>
+      </div>
+    </section>
+
+        <hr>
+    
+          <!-- HERO: wireframe sketch tool -->
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="wrap">
         <div class="hero__intro">
@@ -128,48 +174,33 @@
       </div>
     </section>
 
-   <hr>
-
-    <!-- SERVICES -->
-    <section class="section" id="services" aria-labelledby="services-title">
+    <!-- FEATURED WORK -->
+    <section class="section section--tint" id="featured" aria-labelledby="featured-title">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="eyebrow">What I do</p>
-          <h2 id="services-title">Services</h2>
-          <p class="lede">Hands-on product design, writing, teaching, and mentorship. Pick a path to learn more.</p>
+          <p class="eyebrow">Selected case studies</p>
+          <h2 id="featured-title">Featured work</h2>
         </div>
         <ul class="services">
-          
-          <li class="reveal"><a class="service" href="product-work.html">
-            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#n-palette"/></svg></span>
-            <span class="service__body"><h3>Product Work</h3><p>Research, strategy, and UX/Product Design case studies for digital + physical products.</p></span>
-            <span class="service__arrow" aria-hidden="true">→</span></a></li>
-          <li class="reveal"><a class="service" href="writing.html">
-            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#n-feather"/></svg></span>
-            <span class="service__body"><h3>My Desk</h3><p>Articles + UX Writing on UX/Product design practice, covering topics from AI, Design Thinking, Design Education and more</p></span>
-            <span class="service__arrow" aria-hidden="true">→</span></a></li>
-          <li class="reveal"><a class="service" href="books.html">
-            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#n-books"/></svg></span>
-            <span class="service__body"><h3>My Books</h3><p>Practical guides for designers building careers and craft.</p></span>
-            <span class="service__arrow" aria-hidden="true">→</span></a></li>
-          <li class="reveal"><a class="service" href="teaching.html">
-            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#n-podium"/></svg></span>
-            <span class="service__body"><h3>My Teaching &amp; Workshops</h3><p>University courses and team workshops in UX, Design Thinking, and product best practices.</p></span>
-            <span class="service__arrow" aria-hidden="true">→</span></a></li>
-          <li class="reveal"><a class="service" href="about.html">
-            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#n-user"/></svg></span>
-            <span class="service__body"><h3>About Me</h3><p>My background, philosophy, and the work behind the work.</p></span>
-            <span class="service__arrow" aria-hidden="true">→</span></a></li>
-          <li class="reveal"><a class="service" href="now.html">
-            <span class="service__icon"><svg viewBox="0 0 24 24"><use href="#n-stopwatch"/></svg></span>
-            <span class="service__body"><h3>What I am up to Now</h3><p>What I’m focused on, reading, and building lately.</p></span>
-            <span class="service__arrow" aria-hidden="true">→</span></a></li>
+          <li class="reveal"><a class="service" href="case-study-alle-grow.html">
+            <span class="service__icon" title="Mobile App"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-mobile"/></svg><span class="visually-hidden">Mobile App: </span></span>
+            <span class="service__body"><h3>Allē Grow: Product Design Vision</h3></span>
+            <span class="featured__more">Read more<span class="visually-hidden">: Allē Grow: Product Design Vision</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></a></li>
+          <li class="reveal"><a class="service" href="case-study-alle-user-journey.html">
+            <span class="service__icon" title="UX/Product"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-product"/></svg><span class="visually-hidden">UX/Product: </span></span>
+            <span class="service__body"><h3>Allē Admin: User Journey Maps</h3></span>
+            <span class="featured__more">Read more<span class="visually-hidden">: Allē Admin: User Journey Maps</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></a></li>
+          <li class="reveal"><a class="service" href="case-study-mac-30.html">
+            <span class="service__icon" title="Website"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-web"/></svg><span class="visually-hidden">Website: </span></span>
+            <span class="service__body"><h3>Macintosh 30-Year Anniversary</h3></span>
+            <span class="featured__more">Read more<span class="visually-hidden">: Macintosh 30-Year Anniversary</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></a></li>
         </ul>
-        <p class="services__cta reveal"><a class="btn btn--ghost" href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>Get in touch</a></p>
+        <p class="services__cta reveal"><a class="btn btn--ghost" href="product-work.html">See more work</a></p>
       </div>
     </section>
 
-        <hr>
+   <hr>
+
    
      <!-- WORK WITH ME -->
     <section class="section work" id="work" aria-labelledby="work-title">
