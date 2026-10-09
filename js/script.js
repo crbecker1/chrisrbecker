@@ -140,7 +140,7 @@
   function drawOp(c, op, cw, ch) {
     c.lineCap = 'round'; c.lineJoin = 'round';
     if (op.type === 'pen') {
-      c.strokeStyle = INK; c.lineWidth = 2.5;
+      c.strokeStyle = ORANGE; c.lineWidth = 2.5;
       c.beginPath();
       op.pts.forEach(([x, y], i) => (i ? c.lineTo(x * cw, y * ch) : c.moveTo(x * cw, y * ch)));
       if (op.pts.length === 1) c.lineTo(op.pts[0][0] * cw + .1, op.pts[0][1] * ch);
