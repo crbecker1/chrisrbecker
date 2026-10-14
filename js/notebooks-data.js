@@ -705,7 +705,234 @@
           ]
         }
       ] },
-      { id: 'ux-ui', title: 'UX/UI', bg: '#0e8c8a', fg: '#fff', width: 42, height: 168, spreads: [] },
+      { id: 'ux-ui', title: 'UX/UI', bg: '#0e8c8a', fg: '#fff', width: 42, height: 168, spreads: [
+        {
+          title: 'The spectrum of UX',
+          caption: 'Where UX sits.',
+          images: [
+            pic('ux-ui', '01-UX-UI-UX-Spectrum-Venn.gif', 'Venn diagram titled The Spectrum of User Experience', 'The spectrum of user experience', 'contain')
+          ]
+        },
+        {
+          title: 'What is UX?',
+          caption: 'The disciplines inside it.',
+          images: [
+            pic('ux-ui', '02-UX-UI-UX-Venn.jpg', 'Venn diagram of design, interface design, information architecture, and interaction design with UX at the center', 'What sits inside UX', 'contain'),
+            pic('ux-ui', '03-UX-UI-What-Is-UX.jpeg', 'A diagram of the disciplines of user experience', 'What is user experience?', 'contain')
+          ]
+        },
+        {
+          title: 'Venns',
+          caption: 'Where the circles overlap.',
+          images: [
+            pic('ux-ui', '04-UX-UI-Good-Infodesign-Venn.png', 'Venn diagram of what makes good information design', 'What makes good information design', 'contain'),
+            pic('ux-ui', '05-UX-UI-Critical-Design-Thinking.jpg', 'Venn diagram of critical thinking and design thinking', 'Critical thinking and design thinking', 'contain'),
+            pic('ux-ui', '06-UX-UI-Fundamentals-Of-Experience-Design.png', 'Infographic on the fundamentals of experience design', 'Fundamentals of experience design', 'contain')
+          ]
+        },
+        {
+          title: 'Journeys and decisions',
+          caption: 'How people choose.',
+          images: [
+            pic('ux-ui', '07-UX-UI-Design-As-Meaningful-Interaction.jpg', 'Slide on design as meaningful interaction in layers', 'Design as meaningful interaction', 'contain'),
+            pic('ux-ui', '08-UX-UI-Experience-Map.jpg', 'An experience map for a social game', 'An experience map for a social game', 'contain'),
+            pic('ux-ui', '09-UX-UI-Customer-Journey-Cycle.jpg', 'A customer journey purchase cycle in hexagons', 'A customer journey, as a cycle', 'contain'),
+            pic('ux-ui', '10-UX-UI-Consumer-Decision.jpg', 'Chart of rational and emotional factors in a consumer decision', 'Rational and emotional decisions', 'contain')
+          ]
+        },
+        {
+          title: 'Habits',
+          caption: 'How behavior sticks.',
+          images: [
+            pic('ux-ui', '11-UX-UI-Hook-Model.png', 'The Hook Model with trigger, action, variable reward, and investment', 'The Hook Model', 'contain'),
+            pic('ux-ui', '12-UX-UI-Path-To-Habit.png', 'Five steps from disrupt to maintain a new behavior', 'Disrupt, activate, reinforce, train, maintain', 'contain'),
+            pic('ux-ui', '13-UX-UI-Habit-Automaticity.png', 'Graph of how habits become automatic over days', 'How habits become automatic', 'contain'),
+            pic('ux-ui', '14-UX-UI-Habits-Venn.gif', 'Venn diagram of knowledge, skill, and desire forming habits', 'Knowledge, skill, and desire', 'contain'),
+            pic('ux-ui', '15-UX-UI-Valley-Of-Paradox.png', 'Curves of association and dissociation across a valley of paradox', 'The valley of paradox', 'contain')
+          ]
+        },
+        {
+          title: 'Sketching first',
+          caption: 'Pencil before pixels.',
+          images: [
+            pic('ux-ui', '16-UX-UI-Sketch-Before-Design.webp', 'Pencil wireframe sketches on paper', 'Sketch before you design', 'contain'),
+            pic('ux-ui', '17-UX-UI-Notebook-App-Sketches.jpg', 'A notebook with mobile app wireframes sketched in it', 'Sketching an app in a notebook', 'contain'),
+            pic('ux-ui', '18-UX-UI-Storyboard-Sketches.jpg', 'Storyboard sketches for an interaction perspective', 'Storyboarding an interaction', 'contain'),
+            pic('ux-ui', '19-UX-UI-Storyboarding-Sketchnote.jpg', 'A sketchnote about storyboarding as a design tool', 'A sketchnote on storyboarding', 'contain'),
+            pic('ux-ui', '20-UX-UI-Sketch-To-Screen.png', 'Sketched page layouts becoming web design elements', 'From sketch to screen', 'contain'),
+            pic('ux-ui', '21-UX-UI-Wireframe-Flow-Sketch.png', 'A wireframe flow sketched on a page', 'A wireframe flow', 'contain')
+          ]
+        },
+        {
+          title: 'Grids, forms, and fidelity',
+          caption: 'From rough to refined.',
+          images: [
+            pic('ux-ui', '22-UX-UI-Low-High-Fidelity.png', 'Low fidelity and high fidelity wireframes side by side', 'Low and high fidelity wireframes', 'contain'),
+            pic('ux-ui', '23-UX-UI-Fidelity-Differences.png', 'Thumbnail comparing low and high fidelity wireframes', 'Low versus high fidelity', 'contain'),
+            pic('ux-ui', '24-UX-UI-Grid-Sketch.jpg', 'A pale grid sketch for a page', 'A grid sketch', 'contain'),
+            pic('ux-ui', '25-UX-UI-Pink-Column-Grid.jpg', 'A web layout with a pink column grid overlay', 'A column grid, overlaid', 'contain'),
+            pic('ux-ui', '26-UX-UI-Do-Not-Want-Form.jpg', 'A gift complaint form headed Do Not Want', 'The Do Not Want form', 'contain'),
+            pic('ux-ui', '27-UX-UI-Campfire-Notes.jpeg', 'A sketch of a campfire with notes on active and passive inspiration', 'Campfire, step three', 'contain'),
+            pic('ux-ui', '28-UX-UI-While-Do-While.jpg', 'Flowcharts of a while loop and a do-while loop', 'While and do-while', 'contain'),
+            pic('ux-ui', '29-UX-UI-Green-Circle-Grid.gif', 'A green circle on a grid beside shape options', 'A circle on a grid', 'contain')
+          ]
+        },
+        {
+          title: 'Ubiquitous computing',
+          caption: 'Everything connected.',
+          images: [
+            pic('ux-ui', '30-UX-UI-Ubicomp-Diagram.jpg', 'A diagram of ubiquitous computing', 'Ubiquitous computing', 'contain')
+          ]
+        },
+        {
+          title: 'Layers',
+          caption: 'Separating the concerns.',
+          images: [
+            pic('ux-ui', '31-UX-UI-Layered-Architecture.jpg', 'Diagram of application architecture in presentation, business, and data layers', 'Layered architecture', 'contain'),
+            pic('ux-ui', '32-UX-UI-Layer-Diagram.jpeg', 'A layered system diagram in green, orange, and red', 'A layered system', 'contain')
+          ]
+        },
+        {
+          title: 'Systems and process',
+          caption: 'How the parts fit.',
+          images: [
+            pic('ux-ui', '33-UX-UI-Systems-Map.jpeg', 'A dense map of a complex system', 'A complex system, mapped', 'contain'),
+            pic('ux-ui', '34-UX-UI-Users-Tech-Business.png', 'Pyramid with users, technology, and business at the corners', 'Users, technology, business', 'contain'),
+            pic('ux-ui', '35-UX-UI-Process-Loops.png', 'Diagram of adaptive and iterative loops through exploration', 'Adaptive and iterative loops', 'contain')
+          ]
+        },
+        {
+          title: 'John Dewey',
+          caption: 'On learning by doing.',
+          images: [
+            pic('ux-ui', '36-UX-UI-Dewey-Not-Preparation.jpg', 'Quote: Education is not preparation for life; education is life itself. John Dewey', 'John Dewey, education is life itself', 'contain'),
+            pic('ux-ui', '37-UX-UI-Dewey-Teach-Today.jpg', 'Quote: If we teach today\'s students as we taught yesterday\'s, we rob them of tomorrow. John Dewey', 'John Dewey, we rob them of tomorrow', 'contain'),
+            pic('ux-ui', '38-UX-UI-Dewey-Desire-To-Learn.jpg', 'Quote: The most important attitude that can be formed is that of desire to go on learning. John Dewey', 'John Dewey, the desire to go on learning', 'contain'),
+            pic('ux-ui', '39-UX-UI-Dewey-Responsibility.jpg', 'Quote on education having no more serious responsibility. John Dewey', 'John Dewey, on responsibility', 'contain')
+          ]
+        },
+        {
+          title: 'Learning and values',
+          caption: 'Ladders, chains, and maps.',
+          images: [
+            pic('ux-ui', '40-UX-UI-Dewey-Give-Pupils-Something.png', 'Quote: Give the pupils something to do, not something to learn. John Dewey', 'John Dewey, something to do', 'contain'),
+            pic('ux-ui', '41-UX-UI-Ladder-Of-Inference.jpg', 'A ladder of inference drawn inside a person', 'The ladder of inference', 'contain'),
+            pic('ux-ui', '42-UX-UI-Means-End-Chain.jpg', 'Pyramid of values, consequences, and attributes', 'A means-end chain', 'contain'),
+            pic('ux-ui', '43-UX-UI-Hierarchical-Value-Map.jpeg', 'A hierarchical value map of boxes and links', 'A hierarchical value map', 'contain'),
+            pic('ux-ui', '44-UX-UI-Inclusive-Design.jpeg', 'Inclusive design grid of permanent, temporary, and situational impairments', 'Inclusive design, by Microsoft', 'contain')
+          ]
+        },
+        {
+          title: 'Interaction and affordance',
+          caption: 'What the object says it can do.',
+          images: [
+            pic('ux-ui', '45-UX-UI-Gesture-Card.jpg', 'A chart of touch gestures: tap, drag, flick, pinch, spread, press', 'Touch gestures', 'contain'),
+            pic('ux-ui', '46-UX-UI-Device-Interactions.jpeg', 'Icons for coherence, synchronization, screen sharing, and device shifting', 'How devices work together', 'contain'),
+            pic('ux-ui', '47-UX-UI-Remote-Affordance.jpeg', 'Two remote controls with handwritten labels taped on', 'Remote affordances, relabeled', 'contain'),
+            pic('ux-ui', '48-UX-UI-Dashboard-UI.jpg', 'A dashboard with dials and charts', 'A dashboard', 'contain'),
+            pic('ux-ui', '49-UX-UI-UI-Controls.webp', 'A colorful set of sliders, dials, and switches', 'Controls and sliders', ''),
+            pic('ux-ui', '50-UX-UI-Information-Scent.jpg', 'Diagram of information scent and effort', 'Information scent', 'contain')
+          ]
+        },
+        {
+          title: 'Websites, part one',
+          caption: 'Sites worth studying.',
+          images: [
+            pic('ux-ui', '51-UX-UI-Qubiq-Site.jpg', 'A cyan FAQ page for Qubiq with a hexagon logo', 'Qubiq, FAQ page', 'contain'),
+            pic('ux-ui', '52-UX-UI-Business-Design-Site.jpg', 'A website on a monitor about transformative business design', 'A business design site', 'contain'),
+            pic('ux-ui', '53-UX-UI-Mark-Shale-Site.jpg', 'An orange and black web page for Mark Shale', 'Mark Shale', 'contain'),
+            pic('ux-ui', '54-UX-UI-TOW-Site.jpg', 'A white web page shown on a monitor', 'A gallery site on a monitor', 'contain'),
+            pic('ux-ui', '55-UX-UI-Detail-Site.jpg', 'A dark website with an olive photograph', 'A site in olive and amber', ''),
+            pic('ux-ui', '56-UX-UI-Lucid-Site.png', 'A cream website with the word Lucid', 'Lucid', 'contain'),
+            pic('ux-ui', '57-UX-UI-Hip-Store-Site.jpg', 'A menswear store web page with photos in a grid', 'The Hip Store', 'contain'),
+            pic('ux-ui', '58-UX-UI-Work-Clients-Site.jpg', 'A gray and orange studio site with navigation tabs', 'A studio site', 'contain')
+          ]
+        },
+        {
+          title: 'Websites, part two',
+          caption: 'More sites and screens.',
+          images: [
+            pic('ux-ui', '59-UX-UI-Christian-Woo-Site.jpg', 'A web page of a craftsman at a bench', 'A craftsmanship site', 'contain'),
+            pic('ux-ui', '60-UX-UI-Steven-Holl-Site.png', 'A website for an architecture studio over a mountain valley', 'Steven Holl Architects', 'contain'),
+            pic('ux-ui', '61-UX-UI-News-Site.jpg', 'A dark news website with sports photos', 'A news site', 'contain'),
+            pic('ux-ui', '62-UX-UI-Imac-Site.jpg', 'A coral and white website on an iMac', 'A site on an iMac', 'contain'),
+            pic('ux-ui', '63-UX-UI-Bonobos-Checkout.png', 'The Bonobos checkout page', 'Bonobos checkout', 'contain'),
+            pic('ux-ui', '64-UX-UI-Eastfield-Site.jpg', 'A website welcoming people to Eastfield Village on an iMac', 'Eastfield Village', 'contain'),
+            pic('ux-ui', '65-UX-UI-Magazine-Spread.jpg', 'A magazine spread with two portraits and text columns', 'A magazine spread', 'contain'),
+            pic('ux-ui', '66-UX-UI-Postcards-Infographic.jpg', 'A pale blue infographic with big numbers 169 and 347', 'An infographic in blue', 'contain')
+          ]
+        },
+        {
+          title: 'Icons and marks',
+          caption: 'Small symbols with a big job.',
+          images: [
+            pic('ux-ui', '67-UX-UI-Iconwerk-Set.png', 'A set of small interface icons on white', 'An interface icon set', 'contain'),
+            pic('ux-ui', '68-UX-UI-Gold-Icons-Furniture.jpg', 'Gold line icons of furniture on black', 'Furniture icons', ''),
+            pic('ux-ui', '69-UX-UI-Gold-Icons-Weather.jpg', 'Gold line icons of weather on black', 'Weather icons', ''),
+            pic('ux-ui', '70-UX-UI-Gold-Icons-Tools.jpg', 'Gold line icons of tools on black', 'Tool icons', ''),
+            pic('ux-ui', '71-UX-UI-Outdoor-Icons.jpg', 'Black icons of camping and outdoors gear', 'Outdoor icons', 'contain'),
+            pic('ux-ui', '72-UX-UI-Vintage-Logos.jpg', 'A grid of small vintage logos', 'Vintage logos', 'contain'),
+            pic('ux-ui', '73-UX-UI-Logo-Sheet.jpg', 'A dense black and white sheet of logos and marks', 'A sheet of marks', 'contain'),
+            pic('ux-ui', '74-UX-UI-Bat-Pattern.jpg', 'A pattern of black bat silhouettes', 'A bat pattern', 'contain')
+          ]
+        },
+        {
+          title: 'Shapes and strangeness',
+          caption: 'Odd images I keep.',
+          images: [
+            pic('ux-ui', '75-UX-UI-Futurists-Collage.jpg', 'A collage of a bearded man over a modernist building with an elk', 'Futurist collage', ''),
+            pic('ux-ui', '76-UX-UI-Camaro-Speedometer.jpg', 'A round speedometer from a 1967 Camaro', 'A 1967 Camaro speedometer', ''),
+            pic('ux-ui', '77-UX-UI-Tined-Geometry.jpg', 'A pale line drawing of a double pyramid', 'A geometric line drawing', ''),
+            pic('ux-ui', '78-UX-UI-Fibonacci-Spiral.png', 'A Fibonacci spiral drawn in squares', 'The Fibonacci spiral', 'contain'),
+            pic('ux-ui', '79-UX-UI-TV-Promo-Collage.jpg', 'A collage of TV promo frames with faces', 'A TV promo collage', ''),
+            pic('ux-ui', '80-UX-UI-Repeated-Faces.jpg', 'Repeated portraits of a woman in a grid on black', 'Faces, repeated', ''),
+            pic('ux-ui', '81-UX-UI-Hand-Strings.jpeg', 'A black and white hand with strings above it', 'A hand on strings', ''),
+            pic('ux-ui', '82-UX-UI-Houdini-Collage.jpg', 'A collage of animals and hands', 'A collage in pale blue', '')
+          ]
+        },
+        {
+          title: 'Time, loops, and objects',
+          caption: 'Cycles and things.',
+          images: [
+            pic('ux-ui', '83-UX-UI-Computer-Sketches.png', 'Old sketches of computer interfaces and a monitor', 'Early computer interface sketches', 'contain'),
+            pic('ux-ui', '84-UX-UI-Feedback-Loop.jpg', 'A teal feedback loop diagram', 'A feedback loop', 'contain'),
+            pic('ux-ui', '85-UX-UI-Time-Diagram.jpg', 'A diagram of future, past, here, now, and elsewhere', 'Past, future, here, elsewhere', 'contain'),
+            pic('ux-ui', '86-UX-UI-Signpost-Distances.png', 'A signpost listing distances to cities around the world', 'A signpost to everywhere', ''),
+            pic('ux-ui', '87-UX-UI-Glowing-Molecules.jpg', 'Glowing molecules on black', 'Glowing molecules', ''),
+            pic('ux-ui', '88-UX-UI-Parking-Graphic.png', 'Graphic of parking meters beside a poster and a diagram', 'A parking system', 'contain'),
+            pic('ux-ui', '89-UX-UI-Turntable.jpg', 'A white turntable with a clear lid', 'A turntable', ''),
+            pic('ux-ui', '90-UX-UI-Striped-Sphere.gif', 'An orange striped sphere on black', 'A striped sphere', '')
+          ]
+        },
+        {
+          title: 'People and ideas',
+          caption: 'Faces, books, and a good question.',
+          images: [
+            pic('ux-ui', '91-UX-UI-Boss-And-Leader.jpeg', 'Illustration comparing a boss driving workers and a leader pulling with them', 'Boss and leader', 'contain'),
+            pic('ux-ui', '92-UX-UI-Club-Pencils.jpg', 'Pencils stamped with club names in a row', 'Club pencils', 'contain'),
+            pic('ux-ui', '93-UX-UI-Corita-Rules.jpg', 'Orange sheet listing ten rules for an art department', 'Corita Kent, the art department rules', 'contain'),
+            pic('ux-ui', '94-UX-UI-Functional-Graphic-Design.jpg', 'The book cover of Functional Graphic Design in the 20s', 'Functional Graphic Design in the 20s', 'contain'),
+            pic('ux-ui', '95-UX-UI-TV-With-Wires.jpg', 'A black and white photo of a small TV with wires', 'A TV with wires', ''),
+            pic('ux-ui', '96-UX-UI-Norman-Klein.jpg', 'A black ink caricature of a tall man', 'An ink caricature', ''),
+            pic('ux-ui', '97-UX-UI-Chalkboard-Student.jpg', 'A student in glasses at a chalkboard', 'A student at the chalkboard', ''),
+            pic('ux-ui', '98-UX-UI-Landscape.jpg', 'A pastel landscape with a lake and mountains', 'A landscape', '')
+          ]
+        },
+        {
+          title: 'Rules, jokes, and spirals',
+          caption: 'The last odds and ends.',
+          images: [
+            pic('ux-ui', '99-UX-UI-Developers-Comic.jpeg', 'A comic of developers talking about code and variables', 'A developer comic', 'contain'),
+            pic('ux-ui', '100-UX-UI-We-Design-Everything.jpg', 'A black sign listing what a studio designs and for how much', 'We design everything', 'contain'),
+            pic('ux-ui', '101-UX-UI-Interactive-Narrative-Venn.png', 'Venn diagram of ludology, narratology, and game design', 'Interactive narrative design', 'contain'),
+            pic('ux-ui', '102-UX-UI-Vitsoe-Ten-Principles.jpeg', 'Ten principles for good design on a teal page', 'Dieter Rams, ten principles', 'contain'),
+            pic('ux-ui', '103-UX-UI-Thinking-At-A-Desk.jpeg', 'A sketch of a person at a computer with thoughts in a cloud', 'A person thinking at a computer', 'contain'),
+            pic('ux-ui', '104-UX-UI-Misty-Window.jpg', 'A misted window with a faint drawing', 'A misted window', ''),
+            pic('ux-ui', '105-UX-UI-Spiral-Model.png', 'A spiral model of software development', 'The spiral model', 'contain'),
+            pic('ux-ui', '106-UX-UI-APARTS.jpg', 'A sheet reading APARTS with prompts for each letter', 'APARTS', 'contain')
+          ]
+        }
+      ] },
       { id: 'weird-stuff', title: 'Weird Stuff', bg: 'repeating-linear-gradient(45deg, #d8a21f 0 8px, #b8860f 8px 16px)', fg: '#1a1304', width: 50, height: 176, spreads: [] }
     ]
   };
