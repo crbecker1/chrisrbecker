@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/script.js" defer></script>
   <script src="js/sandbox.js" defer></script>
+  <script src="js/notebooks-data.js" defer></script>
+  <script src="js/shelf-scene.js" defer></script>
   <script src="js/notebooks.js" defer></script>
 </head>
 <body>
@@ -80,29 +82,27 @@
       </div>
     </section>
 
+    <section class="iso-hero" id="bmw2002" aria-labelledby="iso-title">
+      <div class="wrap">
+        <p class="eyebrow">Experiment</p>
+        <h2 id="iso-title">BMW 2002, in glowing isometric</h2>
+        <p class="iso-hero__lede">Click the car to explode it into parts, then try the lamps, signals, and brake. Keys work too: E, L, arrows, space, H, and D.</p>
+        <div class="iso-hero__frame">
+          <iframe id="iso-frame" src="experiments/bmw2002.html" title="Interactive isometric BMW 2002: explode the car, switch the lamps and signals" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
     <section class="shelf-room" aria-labelledby="shelf-title">
       <div class="wrap">
-        <div class="bookcase">
-          <div class="bookcase__inner">
-            <div class="bookcase__crown">
-              <img class="bookcase__logo" src="images/logo/Logo.svg" alt="" width="237" height="83">
-              <div>
-                <h2 id="shelf-title">The thinking shelf</h2>
-                <p>Pick a book. Open it and scroll through the pages.</p>
-              </div>
-            </div>
-            <div class="shelf" role="group" aria-label="Sketchbooks, by year">
-              <p class="shelf__tag">Sketchbooks</p>
-              <div class="shelf__books" id="shelf-sketch"></div>
-              <div class="shelf__board" aria-hidden="true"></div>
-            </div>
-            <div class="shelf" role="group" aria-label="Books that inspire me">
-              <p class="shelf__tag">Inspiration</p>
-              <div class="shelf__books" id="shelf-inspo"></div>
-              <div class="shelf__board" aria-hidden="true"></div>
-            </div>
-          </div>
+        <div class="shelf-head">
+          <h2 id="shelf-title">The My Desk Brain</h2>
+          <p>Sketchbooks and how I think on the top shelf, the inspiration books that shaped me below. <b> Pick one to open it.</b></p>
         </div>
+        <div class="scene" id="shelf-scene"></div>
+          <br> 
+          <hr>
+          <p> My office looks noting like this but with your help it could. <b> Keep exploring.</b></p>
       </div>
     </section>
 
@@ -125,6 +125,7 @@
         <nav class="reader__map" id="reader-map" aria-label="Jump to a spread"></nav>
       </div>
     </dialog>
+   
   </main>
   <footer class="site-footer"><div class="wrap">
     <div class="footer__top">
@@ -146,5 +147,15 @@
     </div>
       <p class="footer__credit">Made with love by Chris R. Becker with help from Claude Code + friends.</p>
   </div></footer>
+  <script>
+    // Fit the BMW frame to its content (the page inside reports its height).
+    (function () {
+      var f = document.getElementById('iso-frame');
+      if (!f) return;
+      window.addEventListener('message', function (e) {
+        if (e.source === f.contentWindow && e.data && e.data.type === 'iso-embed-height') f.style.height = e.data.height + 'px';
+      });
+    })();
+  </script>
 </body>
 </html>

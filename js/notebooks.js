@@ -1,20 +1,15 @@
 /* The thinking shelf: two shelves of books. Click one to open it as a strip of spreads you can scroll sideways.
-
-   HOW TO ADD YOUR CONTENT
-   Each book has up to 20 spreads. Each spread looks like this:
-     { title: 'Spread title',
-       caption: 'A line or two about the page.',
-       images: [ { src: 'images/notebooks/page-01.jpg', alt: 'What the image shows' } ],   // 1 to 10 images
-       links:  [ { label: 'Where to read more', href: 'https://example.com' } ] }
-   Replace a book's `spreads` array (or the placeholder() call) with your own list. */
+   Your content (books, spines, spreads, images, links) lives in notebooks-data.js. This file only draws it. */
 (function () {
   'use strict';
-  const MAX_SPREADS = 20, MAX_IMAGES = 10;
+  const MAX_SPREADS = 20;
+  const LAYOUTS = [1, 2, 3, 4, 5, 6, 8];   // images per spread that have a layout
+  const fitCount = (n) => LAYOUTS.filter((x) => x <= n).pop() || 1;
   const IMG = 'images/work/placeholder.svg';
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const COUNTS = [3, 1, 4, 2, 6, 5, 8, 10, 7, 9, 2, 4];
+  const COUNTS = [1, 2, 3, 4, 5, 6, 8];
 
   // Placeholder spreads with 1 to 10 images each, so every layout can be previewed.
   function placeholder(n, offset) {
@@ -23,57 +18,26 @@
       return {
         title: `Spread ${i + 1}`,
         caption: 'Placeholder caption. Add a line or two about what is on these pages.',
-        images: Array.from({ length: c }, (__, k) => ({ src: IMG, alt: `Placeholder image ${k + 1}` })),
+        images: Array.from({ length: c }, (__, k) => ({ src: IMG, alt: `Placeholder image ${k + 1}`, caption: 'Image caption' })),
         links: i % 2 ? [{ label: 'Link title', href: '' }] : []
       };
     });
   }
 
-  // ---- Books ------------------------------------------------------------
-  const SKETCH = [];
-  [2026, 2025, 2024, 2023, 2022].forEach((year, yi) => {
-    [['Q3/4', 'h2'], ['Q1/2', 'h1']].forEach(([label, key], hi) => {
-      const n = yi * 2 + hi;
-      SKETCH.push({ id: `sketch-${year}-${key}`, kind: 'sketch', year, label, title: `${year} · ${label}`, sub: 'Sketchbook', w: 42 + ((n * 3) % 9), spreads: placeholder(8 + (n % 5), n) });
-    });
-  });
+  // ---- Books (from notebooks-data.js) -------------------------------------
+  const DATA = window.NOTEBOOK_DATA || { sketchbooks: [], shelf: [] };
+  const withSpreads = (b, i) => (b.spreads && b.spreads.length ? b.spreads : placeholder(6 + (i % 5), i));
+  const SKETCH = DATA.sketchbooks.map((b, i) => ({ id: b.id, kind: 'sketch', year: b.year, label: b.label, title: `${b.year} · ${b.label}`, sub: 'Sketchbook', w: b.width || 44, spreads: withSpreads(b, i) }));
+  const SHELF = DATA.shelf.map((b, i) => ({ id: b.id, kind: 'shelf', title: b.title, sub: 'Inspiration', bg: b.bg, fg: b.fg, w: b.width || 42, h: b.height || 170, spreads: withSpreads(b, i + 3) }));
 
-  const SHELF = [
-    { id: 'art', title: 'Art', bg: '#c23b17', fg: '#fff', h: 172, w: 44 },
-    { id: 'architecture', title: 'Architecture', bg: '#4a5a75', fg: '#fff', h: 186, w: 52 },
-    { id: 'design', title: 'Design', bg: '#1a5bc4', fg: '#fff', h: 160, w: 38 },
-    { id: 'space', title: 'Space', bg: 'radial-gradient(circle at 30% 20%, #fff 0 1px, transparent 1.5px) 0 0 / 18px 22px, radial-gradient(circle at 70% 60%, #9fd8ff 0 1px, transparent 1.5px) 0 0 / 24px 26px, #1b1a4a', fg: '#fff', h: 180, w: 46 },
-    { id: 'writing', title: 'Writing', bg: '#e8dcc0', fg: '#2a2218', h: 150, w: 36 },
-    { id: 'ux-ui', title: 'UX/UI', bg: '#0e8c8a', fg: '#fff', h: 168, w: 42 },
-    { id: 'weird-stuff', title: 'Weird Stuff', bg: 'repeating-linear-gradient(45deg, #d8a21f 0 8px, #b8860f 8px 16px)', fg: '#1a1304', h: 176, w: 50 }
-  ].map((b, i) => Object.assign(b, { kind: 'shelf', sub: 'Inspiration', spreads: placeholder(6 + (i % 4), i * 3) }));
-
-  SKETCH.concat(SHELF).forEach((b) => { b.spreads = b.spreads.slice(0, MAX_SPREADS); b.spreads.forEach((s) => { s.images = s.images.slice(0, MAX_IMAGES); }); });
+  SKETCH.concat(SHELF).forEach((b) => { b.spreads = b.spreads.slice(0, MAX_SPREADS); b.spreads.forEach((s) => { s.images = s.images.slice(0, fitCount(s.images.length)); }); });
   const BY_ID = {};
   SKETCH.concat(SHELF).forEach((b) => { BY_ID[b.id] = b; });
 
-  // ---- Shelves ----------------------------------------------------------
-  const rowSketch = document.getElementById('shelf-sketch');
-  const rowInspo = document.getElementById('shelf-inspo');
-  if (!rowSketch || !rowInspo) return;
-
-  SKETCH.forEach((b) => {
-    const el = document.createElement('button');
-    el.type = 'button'; el.className = 'book book--sketch'; el.dataset.id = b.id;
-    el.style.setProperty('--w', b.w + 'px'); el.style.setProperty('--h', '190px');
-    el.setAttribute('aria-label', `Open sketchbook ${b.year}, ${b.label}`);
-    el.innerHTML = `<span class="book__band"></span><span class="book__label">${b.year} ${b.label}</span><span class="book__band book__band--b"></span>`;
-    rowSketch.appendChild(el);
-  });
-  SHELF.forEach((b) => {
-    const el = document.createElement('button');
-    el.type = 'button'; el.className = 'book book--cloth'; el.dataset.id = b.id;
-    el.style.setProperty('--w', b.w + 'px'); el.style.setProperty('--h', b.h + 'px');
-    el.style.setProperty('--bg', b.bg); el.style.setProperty('--fg', b.fg);
-    el.setAttribute('aria-label', `Open book: ${b.title}`);
-    el.innerHTML = `<span class="book__title">${esc(b.title)}</span>`;
-    rowInspo.appendChild(el);
-  });
+  // ---- Shelves (an isometric scene, drawn by shelf-scene.js) ----------------
+  const scene = document.getElementById('shelf-scene');
+  if (!scene || !window.ShelfScene) return;
+  window.ShelfScene.build(scene, { sketch: SKETCH, shelf: SHELF });
 
   // ---- Reader -----------------------------------------------------------
   const dlg = document.getElementById('reader');
@@ -110,8 +74,8 @@
   }
 
   function spreadHtml(b, s, i, total) {
-    const n = Math.min(s.images.length, MAX_IMAGES);
-    const imgs = s.images.map((im) => `<figure><img src="${esc(im.src)}" alt="${esc(im.alt || '')}" loading="lazy" width="600" height="450"></figure>`).join('');
+    const n = fitCount(s.images.length);
+    const imgs = s.images.map((im) => `<figure${im.fit === 'contain' ? ' class="is-contain"' : ''}><img src="${esc(im.src)}" alt="${esc(im.alt || '')}" loading="lazy" width="600" height="450">${im.caption ? `<figcaption>${esc(im.caption)}</figcaption>` : ''}</figure>`).join('');
     const links = (s.links || []).map((l) => (l.href
       ? `<li><a href="${esc(l.href)}" target="_blank" rel="noopener">${esc(l.label)}<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>`
       : `<li><span class="is-placeholder">${esc(l.label)}</span></li>`)).join('');
@@ -142,7 +106,7 @@
       const r = fromEl.getBoundingClientRect();
       dlg.style.setProperty('--ox', `${r.left + r.width / 2}px`);
       dlg.style.setProperty('--oy', `${r.top + r.height / 2}px`);
-      document.querySelectorAll('.book.is-out').forEach((x) => x.classList.remove('is-out'));
+      document.querySelectorAll('.sbook.is-out').forEach((x) => x.classList.remove('is-out'));
       fromEl.classList.add('is-out');
     }
     if (!dlg.open) { dlg.showModal(); document.documentElement.classList.add('reader-open'); }
@@ -186,16 +150,18 @@
   function close() { if (dlg.open) dlg.close(); }
   dlg.addEventListener('close', () => {
     document.documentElement.classList.remove('reader-open');
-    document.querySelectorAll('.book.is-out').forEach((x) => x.classList.remove('is-out'));
+    document.querySelectorAll('.sbook.is-out').forEach((x) => x.classList.remove('is-out'));
     history.replaceState(null, '', location.pathname + location.search);
     book = null;
     if (opener && document.contains(opener)) opener.focus({ preventScroll: true });
   });
 
   // Events
-  document.querySelectorAll('.shelf__books').forEach((row) => row.addEventListener('click', (e) => {
-    const b = e.target.closest('.book'); if (b) open(b.dataset.id, 0, b);
-  }));
+  scene.addEventListener('click', (e) => { const b = e.target.closest('.sbook'); if (b) open(b.dataset.id, 0, b); });
+  scene.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const b = e.target.closest('.sbook'); if (b) { e.preventDefault(); open(b.dataset.id, 0, b); }
+  });
   document.getElementById('reader-close').addEventListener('click', close);
   dlg.addEventListener('click', (e) => { if (e.target === dlg) close(); });
   document.getElementById('reader-prev').addEventListener('click', () => go(active - 1));
@@ -219,7 +185,7 @@
   function fromHash() {
     const p = new URLSearchParams(location.hash.slice(1));
     const id = p.get('book');
-    if (id && BY_ID[id]) open(id, Math.max(0, (parseInt(p.get('spread'), 10) || 1) - 1), document.querySelector(`.book[data-id="${id}"]`));
+    if (id && BY_ID[id]) open(id, Math.max(0, (parseInt(p.get('spread'), 10) || 1) - 1), document.querySelector(`.sbook[data-id="${id}"]`));
   }
   window.addEventListener('hashchange', () => { if (!dlg.open) fromHash(); });
   fromHash();

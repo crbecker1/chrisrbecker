@@ -1,0 +1,64 @@
+function GCB_loadScript(url,success){var script=document.createElement('script');script.src=url;var head=document.getElementsByTagName('head')[0],done=false;head.appendChild(script);script.onload=script.onreadystatechange=function(){if(!done&&(!this.readyState||this.readyState=='loaded'||this.readyState=='complete')){done=true;success();script.onload=script.onreadystatechange=null;head.removeChild(script);}};}
+function GCB_disableRightClick(){document.addEventListener('contextmenu',function(event){event.preventDefault();});}
+function GCB_main(){console.group('%c🛡️ Blocky: Fraud Country Blocker by Effective Apps','background: linear-gradient(90deg, #F05A28 0%, #BA461B 100%); color: #ffffff; font-weight: 700; font-size: 14px; padding: 4px 8px; border-radius: 6px;');console.log('%c🚫 Block visitors by country or specific IP address in 1 click\n🤖 AI-powered advanced bot protection: Filter scammers and spy tools\n🌍 Redirect visitors to specific domains based on their geolocation country\n🔒 Works directly in the Checkout page for all plans\n\nLearn more at https://apps.shopify.com/blocky-simple-country-blocker?utm_source=browser-console&utm_medium=console&utm_campaign=gcb (Need help? Contact us at support@effectify.io)','font-size: 14px;');console.groupEnd();if(window.GCB_SCRIPT_INJECTED===undefined){window.isLs=GCB_isLSAvailable();window.GCB_SCRIPT_INJECTED=true;if('5'==='7'&&null===GCB_getLsWithExpiry('gcb_payg_i')){jQuery.get('https://app.blocky-app.com/ri/d03e2a8025e211f18bcc3acd9b92884f.js');GCB_setLsWithExpiry('gcb_payg_i','true',604800000);}
+window.GCB_BLOCKED_COUNTRIES='CN,BR,VN,IQ,DO,SG,IN';window.GCB_BLOCKED_IPS='';window.GCB_WHITELISTED_IPS='222.254.34.182';window.EFFECTIVE_APPS_GCB_BLOCKED_MESSAGE=`<head></head><body style="background-color: #FFFFFF;"><p style="text-align: center;"><span style="font-size: 36px;">Restricted Access</span></p>
+<p style="text-align: center;"><span style="font-size: 18px;">Access to this store is currently restricted in your region.</span></p>
+<div id="gtx-trans" style="position: absolute; left: -51px; top: 107.832px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div></body>`;window.EFFECTIVE_APPS_GCB_IB_BLOCKED=false;window.EFFECTIVE_APPS_GCB_CB_BLOCKED=false;if('False'==='True'){GCB_disableRightClick();}
+if(location.href.indexOf('gcb_preview=true')>-1){blockPage(false);return;}
+if(location.href.indexOf('gcb_override=true')>-1&&'True'==='True'){GCB_setLsWithExpiry('gcb_override','true',300000);}
+if((typeof Shopify!=='undefined'&&Shopify.hasOwnProperty('designMode')&&Shopify.designMode)||document.getElementById('admin-bar-iframe')!==null||document.getElementById('PBarNextFrame')!==null||document.getElementById('PBarNextFrameWrapper')!==null){return;}
+if('True'==='True'&&GCB_getLsWithExpiry('gcb_override')==='true'){return;}
+if('False'==='True'){GCB_superBlocker();}
+if('True'==='True'||'False'==='True'){try{GCB_getGeolocationCountry(runCBCRLogic);}
+catch(err){}}
+else{GCB_getGeolocationCountry(function(geolocationCountry,ipAddress){GCB_lIp(ipAddress,geolocationCountry,false);})}
+if('False'==='True'){try{GCB_getIPAddress(runIBLogic);}
+catch(err){}}
+else{GCB_getIPAddress(function(ipAddress,geolocationCountry){GCB_lIp(ipAddress,geolocationCountry,false);})}}}
+function GCB_rCr(callback){jQuery.get('https://app.blocky-app.com/rcr/d03e2a8025e211f18bcc3acd9b92884f');callback();}
+function GCB_rCb(){jQuery.get('https://app.blocky-app.com/rcb/d03e2a8025e211f18bcc3acd9b92884f');}
+function GCB_rIb(){jQuery.get('https://app.blocky-app.com/rib/d03e2a8025e211f18bcc3acd9b92884f');}
+function blockPage(saveLS=true){window.GCB_BLOCKED_PAGE_INTERVAL=setInterval(function(){document.querySelector("html").innerHTML=window.EFFECTIVE_APPS_GCB_BLOCKED_MESSAGE;},1000);if(saveLS){GCB_setLsWithExpiry('effective_apps_gcb_blocked','true',604800000);}}
+function runCBCRLogic(geolocationCountry,ipAddress){if('False'==='True'){let redirectionRules=JSON.parse('[]');for(var i=0;i<redirectionRules.length;i++){var rule=redirectionRules[i];if(rule['countries'].indexOf(geolocationCountry)>-1){if(location.href.indexOf(rule['url'])===-1){GCB_rCr(function(){location.href=rule['url'];});}
+break;}}}
+if('True'==='True'){let blockedCountries=window.GCB_BLOCKED_COUNTRIES.split(',');let whitelistedIpAddresses=window.GCB_WHITELISTED_IPS.split(',');if(whitelistedIpAddresses.indexOf(ipAddress)>-1){GCB_lIp(ipAddress,geolocationCountry,false);return;}
+else if(window.GCB_WHITELISTED_IPS.indexOf("*")>-1){for(let whitelistedIpPattern of whitelistedIpAddresses){var wlIpPattern=whitelistedIpPattern.replaceAll('*','(\\d{1,3})').replaceAll('.','\\.');var wlIpRegex=new RegExp(wlIpPattern,'gm');if(ipAddress.match(wlIpRegex)!==null){GCB_lIp(ipAddress,geolocationCountry,false);return;}}}
+if(blockedCountries.indexOf(geolocationCountry)>-1&&window.EFFECTIVE_APPS_GCB_IB_BLOCKED===false){window.EFFECTIVE_APPS_GCB_CB_BLOCKED=true;GCB_rCb();blockPage();GCB_lIp(ipAddress,geolocationCountry,true);return;}
+else{GCB_lIp(ipAddress,geolocationCountry,false);return;}}}
+function GCB_lIp(ip_address,country_code,was_blocked){if('False'==='True'&&GCB_getLsWithExpiry('already_reported')===null){browser=GCB_getBrowserType();var fd=new FormData();fd.append("browser",browser);fd.append("ip_address",ip_address);fd.append("country_code",country_code);fd.append("was_blocked",was_blocked);navigator.sendBeacon('https://app.blocky-app.com/li/d03e2a8025e211f18bcc3acd9b92884f',fd);GCB_setLsWithExpiry('already_reported','true',3600000);}}
+function runIBLogic(ipAddress,geolocationCountry){let blockedIpAddresses=window.GCB_BLOCKED_IPS.split(',');let whitelistedIpAddresses=window.GCB_WHITELISTED_IPS.split(',');if(whitelistedIpAddresses.indexOf(ipAddress)>-1){GCB_lIp(ipAddress,geolocationCountry,false);return;}
+else if(window.GCB_WHITELISTED_IPS.indexOf("*")>-1){for(let whitelistedIpPattern of whitelistedIpAddresses){var wlIpPattern=whitelistedIpPattern.replaceAll('*','(\\d{1,3})').replaceAll('.','\\.');var wlIpRegex=new RegExp(wlIpPattern,'gm');if(ipAddress.match(wlIpRegex)!==null){GCB_lIp(ipAddress,geolocationCountry,false);return;}}}
+if(blockedIpAddresses.indexOf(ipAddress)>-1&&window.EFFECTIVE_APPS_GCB_CB_BLOCKED===false){window.EFFECTIVE_APPS_GCB_IB_BLOCKED=true;GCB_rIb();GCB_lIp(ipAddress,geolocationCountry,true);blockPage();return;}
+else if(window.GCB_BLOCKED_IPS.indexOf("*")>-1&&window.EFFECTIVE_APPS_GCB_CB_BLOCKED===false){for(let blockedIpPattern of blockedIpAddresses){var bIpPattern=blockedIpPattern.replaceAll('*','(\\d{1,3})').replaceAll('.','\\.');var blockedIpRegex=new RegExp(bIpPattern,'gm');if(ipAddress.match(blockedIpRegex)!==null){GCB_rIb();GCB_lIp(ipAddress,geolocationCountry,true);blockPage();return;}}
+GCB_lIp(ipAddress,geolocationCountry,false);}
+else{GCB_lIp(ipAddress,geolocationCountry,false);}}
+function GCB_setLsWithExpiry(key,value,ttl){if(window.isLs===false){return false;}
+const now=new Date()
+const item={value:value,expiry:now.getTime()+ttl,}
+localStorage.setItem(key,JSON.stringify(item))}
+function GCB_getLsWithExpiry(key){if(window.isLs===false){return null;}
+const itemStr=localStorage.getItem(key)
+if(!itemStr){return null}
+const item=JSON.parse(itemStr)
+const now=new Date()
+if(now.getTime()>item.expiry){localStorage.removeItem(key)
+return null}
+return item.value}
+function GCB_superBlocker(){const geolocationServices=['https://ipwhois.app/json/','https://ip-api.io/json','https://ipapi.co/json','https://get.geojs.io/v1/ip/geo.json'];let intervalCounter=0;window.GCB_COUNTRY_SUPER_BLOCKER_INTERVAL=setInterval(function(){for(let service of geolocationServices){try{if(['https://ip-api.io/json','https://ipapi.co/json'].indexOf(service)>-1&&intervalCounter>2){continue;}
+jQuery.getJSON(service).then(function(response){const countryCode=response.country_code;const ipAddress=response.ip;if(ipAddress===undefined||countryCode===undefined){return;}
+if('True'==='True'){runCBCRLogic(countryCode,ipAddress);}
+if('False'==='True'){runIBLogic(ipAddress,countryCode);}
+if('False'==='True'){try{jQuery.getJSON('https://app.blocky-app.com/cini/').then(function(response){if(response.result===true){document.querySelector("html").innerHTML=window.EFFECTIVE_APPS_GCB_BLOCKED_MESSAGE;}});jQuery.getJSON('https://app.blocky-app.com/ci/'+ipAddress).then(function(response){if(response.result===true){document.querySelector("html").innerHTML=window.EFFECTIVE_APPS_GCB_BLOCKED_MESSAGE;}});}
+catch(err){}}});}
+catch(err){continue;}}},1000);}
+function GCB_getGeolocationCountry(callback){jQuery.getJSON('https://ipv4.geojs.io/v1/ip/geo.json',function(result){callback(result.country_code,result.ip);});}
+function GCB_getIPAddress(callback){jQuery.getJSON('https://ipv4.geojs.io/v1/ip/geo.json',function(result){callback(result.ip,result.country_code);});}
+function GCB_getBrowserType(){try{const userAgent=navigator.userAgent.toLowerCase();if(userAgent.includes("chrome")&&!userAgent.includes("edg")&&!userAgent.includes("opr")&&!userAgent.includes("brave")){if(navigator.brave){return"b";}
+return"c";}else if(userAgent.includes("brave")){return"b";}else if(userAgent.includes("firefox")){return"ff";}else if(userAgent.includes("safari")&&!userAgent.includes("chrome")&&!userAgent.includes("chromium")){return"s";}else if(userAgent.includes("edg")){return"e";}else if(userAgent.includes("opr")||userAgent.includes("opera")){return"o";}else if(userAgent.includes("trident")||userAgent.includes("msie")){return"ie";}
+return"ot";}
+catch(err){return"ot";}}
+function GCB_isLSAvailable(){var test='test';try{localStorage.setItem(test,test);localStorage.removeItem(test);return true;}catch(e){return false;}}
+if(typeof jQuery==='undefined'){GCB_loadScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js',GCB_main);}
+else{GCB_main();}

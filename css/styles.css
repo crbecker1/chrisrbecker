@@ -727,30 +727,19 @@ dialog::backdrop { background: rgba(11, 42, 91, .55); backdrop-filter: blur(3px)
 .sandbox__count { font-family: var(--font-mono); font-size: .78rem; white-space: nowrap; }
 @media (max-width: 700px) { .sandbox__title { display: none; } .sandbox__ctrl { margin-left: auto; } }
 
-/* The thinking shelf ------------------------------------------------------ */
+/* The thinking shelf: an isometric scene ---------------------------------- */
 .shelf-room { padding-block: clamp(2rem, 5vw, 3.5rem); }
-.bookcase { padding: 14px; border-radius: 12px; background: repeating-linear-gradient(90deg, #7b4f2e 0 7px, #724827 7px 14px); box-shadow: 0 18px 40px rgba(11, 42, 91, .3); }
-.bookcase__inner { background: linear-gradient(180deg, #0e2f66, #0b2a5b); border-radius: 4px; box-shadow: inset 0 0 50px rgba(0, 0, 0, .5); overflow: hidden; }
-.bookcase__crown { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, .12); }
-.bookcase__logo { height: 44px; width: auto; flex: none; }
-.bookcase__crown h2 { margin: 0; font-size: 1.4rem; color: #fff; }
-.bookcase__crown p { margin: .15rem 0 0; font-size: .9rem; color: rgba(255, 255, 255, .72); }
-.shelf { position: relative; padding: 0 1.5rem; }
-.shelf__tag { margin: 0; padding-top: .9rem; font: 400 .7rem/1 var(--font-mono); letter-spacing: .1em; text-transform: uppercase; color: rgba(255, 255, 255, .5); }
-.shelf__books { display: flex; align-items: flex-end; gap: 3px; min-height: 220px; padding: 1.25rem .25rem 0; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; }
-.shelf__board { height: 18px; margin-inline: -1.5rem; background: linear-gradient(180deg, #b27849, #8a5a3a 45%, #6d4426); box-shadow: 0 8px 14px rgba(0, 0, 0, .55), inset 0 1px 0 rgba(255, 255, 255, .25); }
-.book { position: relative; flex: none; width: var(--w); height: var(--h); padding: 0; border: 0; cursor: pointer; border-radius: 4px 4px 1px 1px; transform-origin: bottom center; transition: transform .25s var(--ease), opacity .25s, filter .25s; }
-.book:hover, .book:focus-visible { transform: translateY(-14px); }
-.book:focus-visible { outline: 3px solid var(--logo-blue); outline-offset: 3px; }
-.book.is-out { transform: translateY(-26px); opacity: .45; }
-.book--sketch { background: linear-gradient(90deg, #2a2a2a 0, #151515 14%, #0c0c0c 70%, #050505); box-shadow: inset 3px 0 4px rgba(255, 255, 255, .08), inset -3px 0 5px rgba(0, 0, 0, .7), 1px 0 2px rgba(0, 0, 0, .5); }
-.book__band { position: absolute; left: 0; right: 0; top: 12px; height: 3px; background: rgba(255, 255, 255, .13); }
-.book__band--b { top: auto; bottom: 12px; }
-.book__label { position: absolute; left: 50%; top: 26%; transform: translateX(-50%); writing-mode: vertical-rl; padding: 7px 4px; background: #f4efe4; color: #111; font: 600 11px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; border-radius: 1px; box-shadow: 0 1px 2px rgba(0, 0, 0, .6); }
-.book--cloth { background: var(--bg); color: var(--fg); box-shadow: inset 3px 0 4px rgba(255, 255, 255, .16), inset -3px 0 5px rgba(0, 0, 0, .3), 1px 0 2px rgba(0, 0, 0, .5); }
-.book--cloth::before, .book--cloth::after { content: ""; position: absolute; left: 0; right: 0; height: 3px; background: currentColor; opacity: .35; }
-.book--cloth::before { top: 14px; } .book--cloth::after { bottom: 14px; }
-.book__title { position: absolute; inset: 0; display: grid; place-items: center; writing-mode: vertical-rl; font: 400 1.05rem/1 var(--font-display); letter-spacing: .05em; white-space: nowrap; }
+.shelf-head { max-width: 860px; margin: 0 auto 1.25rem; }
+.shelf-head h2 { margin-bottom: .25rem; }
+.shelf-head p { margin: 0; color: var(--ink-soft); }
+.scene { max-width: 860px; margin-inline: auto; border-radius: 18px; overflow-x: auto; background: #f4f8fe; box-shadow: var(--shadow-md); }
+.scene__svg { display: block; width: 100%; min-width: 560px; height: auto; }
+.sbook { cursor: pointer; outline: none; transition: transform .2s var(--ease), opacity .2s, filter .2s; }
+.sbook:hover, .sbook:focus-visible { transform: translate(6px, 3px); filter: brightness(1.18); }
+.sbook.is-out { transform: translate(12px, 6px); opacity: .4; }
+.sbook__ring { fill: none; stroke: var(--logo-blue); stroke-width: 2.2; opacity: 0; pointer-events: none; }
+.sbook:focus-visible .sbook__ring { opacity: 1; }
+.sbook text { pointer-events: none; }
 
 /* Reader */
 .reader { border: 0; padding: 0; width: 100%; height: 100%; max-width: none; max-height: none; background: rgba(6, 18, 40, .86); backdrop-filter: blur(6px); color: #fff; }
@@ -788,16 +777,19 @@ dialog::backdrop { background: rgba(11, 42, 91, .55); backdrop-filter: blur(3px)
 .share__btn:hover { background: var(--blue-900); color: var(--logo-blue); border-color: var(--blue-900); }
 .share__btn.is-done { background: var(--teal-600); color: #fff; border-color: var(--teal-600); }
 .share__btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
-.spread__pages { --cols: 2; --rows: 2; position: relative; z-index: 1; flex: 1 1 0; min-height: 0; display: grid; gap: .6rem; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); grid-template-rows: repeat(var(--rows), minmax(0, 1fr)); }
-.spread__pages.n1 { --cols: 1; --rows: 1; }
-.spread__pages.n2 { --cols: 2; --rows: 1; }
-.spread__pages.n3 { --cols: 3; --rows: 1; }
-.spread__pages.n4 { --cols: 2; --rows: 2; }
-.spread__pages.n5, .spread__pages.n6 { --cols: 3; --rows: 2; }
-.spread__pages.n7, .spread__pages.n8 { --cols: 4; --rows: 2; }
-.spread__pages.n9, .spread__pages.n10 { --cols: 5; --rows: 2; }
-.spread__pages figure { margin: 0; display: grid; min-height: 0; background: #fff; padding: 5px; border: 1px solid var(--line); box-shadow: 0 2px 6px rgba(11, 42, 91, .12); }
-.spread__pages img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; background: var(--blue-100); }
+.spread__pages { --rows: 2; position: relative; z-index: 1; flex: 1 1 0; min-height: 0; display: grid; gap: .5rem; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: repeat(var(--rows), minmax(0, 1fr)); }
+.spread__pages::after { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 26px; transform: translateX(-50%); pointer-events: none; z-index: 3; background: linear-gradient(90deg, transparent, rgba(11, 42, 91, .28) 50%, transparent); }
+/* Layouts: 1 | 2 | 2+1 | 2+2 | 3+2 | 3+3 | 4+4 */
+.spread__pages > figure { grid-column: span 6; position: relative; margin: 0; min-height: 0; overflow: hidden; border-radius: 3px; background: var(--blue-100); box-shadow: 0 2px 8px rgba(11, 42, 91, .2); }
+.spread__pages.n1, .spread__pages.n2 { --rows: 1; }
+.spread__pages.n1 > figure { grid-column: span 12; }
+.spread__pages.n3 > figure:nth-child(3) { grid-column: span 12; }
+.spread__pages.n5 > figure:nth-child(-n+3), .spread__pages.n6 > figure { grid-column: span 4; }
+.spread__pages.n8 > figure { grid-column: span 3; }
+.spread__pages img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; }
+.spread__pages > figure.is-contain { background: #fff; }
+.spread__pages > figure.is-contain img { object-fit: contain; }
+.spread__pages figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.4rem .65rem .45rem; color: #fff; font-size: .75rem; line-height: 1.3; background: linear-gradient(transparent, rgba(6, 24, 58, .85)); pointer-events: none; }
 .spread__foot { flex: none; position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem 1.25rem; padding-top: .85rem; }
 .spread__foot p { flex: 1 1 260px; margin: 0; font-size: .95rem; color: var(--ink-soft); }
 .spread__links { display: flex; flex-wrap: wrap; gap: .4rem .9rem; margin: 0; padding: 0; list-style: none; }
@@ -811,19 +803,21 @@ dialog::backdrop { background: rgba(11, 42, 91, .55); backdrop-filter: blur(3px)
 .reader__map button.is-on { background: var(--logo-blue); color: var(--blue-900); border-bottom-color: var(--orange-500); }
 html.reader-open { overflow: hidden; }
 @media (max-width: 767px) {
-  .bookcase { padding: 8px; }
-  .bookcase__crown { padding: .8rem 1rem; } .bookcase__logo { height: 34px; }
-  .shelf { padding: 0 1rem; } .shelf__board { margin-inline: -1rem; }
-  .shelf__books { min-height: 210px; }
   .reader__strip { --sw: 92vw; }
   .reader__nav { display: none; }
   .reader__count { display: none; }
   .spread { padding: .75rem .9rem 1rem; }
   .spread__head { flex-wrap: wrap; }
-  .spread__pages.n3 { --cols: 2; --rows: 2; }
-  .spread__pages.n5, .spread__pages.n6 { --cols: 2; --rows: 3; }
-  .spread__pages.n7, .spread__pages.n8, .spread__pages.n9 { --cols: 3; --rows: 3; }
-  .spread__pages.n10 { --cols: 3; --rows: 4; }
-  .spread__pages.n2 { --cols: 1; --rows: 2; }
+  .spread__pages > figure { grid-column: span 6 !important; }
+  .spread__pages.n1 > figure, .spread__pages.n2 > figure, .spread__pages.n3 > figure, .spread__pages.n5 > figure:last-child { grid-column: span 12 !important; }
+  .spread__pages.n2 { --rows: 2; } .spread__pages.n3 { --rows: 3; } .spread__pages.n5 { --rows: 3; }
+  .spread__pages.n6 { --rows: 3; } .spread__pages.n8 { --rows: 4; }
 }
 @media (prefers-reduced-motion: reduce) { .reader__panel { animation: none; } .book { transition: none; } }
+
+/* BMW 2002 isometric experiment hero */
+.iso-hero { padding-block: clamp(2rem, 5vw, 3.5rem); background: var(--blue-900); color: #fff; }
+.iso-hero h2 { color: #fff; margin-bottom: .35rem; }
+.iso-hero__lede { max-width: 62ch; margin: 0 0 1.5rem; color: rgba(255, 255, 255, .78); }
+.iso-hero__frame { border-radius: 18px; overflow: hidden; box-shadow: 0 20px 50px rgba(0, 0, 0, .45); background: #0c0d0e; }
+.iso-hero__frame iframe { display: block; width: 100%; height: 780px; border: 0; }
