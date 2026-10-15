@@ -933,7 +933,256 @@
           ]
         }
       ] },
-      { id: 'weird-stuff', title: 'Weird Stuff', bg: 'repeating-linear-gradient(45deg, #d8a21f 0 8px, #b8860f 8px 16px)', fg: '#1a1304', width: 50, height: 176, spreads: [] }
+      { id: 'weird-stuff', title: 'Weird Stuff', bg: 'repeating-linear-gradient(45deg, #d8a21f 0 8px, #b8860f 8px 16px)', fg: '#1a1304', width: 50, height: 176, spreads: [
+        {
+          title: 'The first thing',
+          caption: 'Where weird starts.',
+          images: [
+            pic('weirdstuff', '01-Weird-Motor-Homunculus.png', 'Diagram of the motor homunculus on the brain', 'The motor homunculus', 'contain')
+          ]
+        },
+        {
+          title: 'Ideas',
+          caption: 'What an idea looks like.',
+          images: [
+            pic('weirdstuff', '02-Weird-Idea-And-Ontology.jpg', 'A book cover with a head full of gears and drawings', 'Idea and Ontology', 'contain'),
+            pic('weirdstuff', '03-Weird-Idea-Flow-Chart.jpeg', 'A flow chart asking if you have an idea', 'An idea, as a flow chart', 'contain')
+          ]
+        },
+        {
+          title: 'Bill Murray',
+          caption: 'A man and a bicycle.',
+          images: [
+            pic('weirdstuff', '04-Weird-Bill-Murray-Bike.jpeg', 'Bill Murray in a suit carrying a bicycle', 'Bill Murray, with a bike', ''),
+            pic('weirdstuff', '05-Weird-Bill-Murray-Portrait.jpg', 'Bill Murray in a polka dot shirt with pens in his pocket', 'Bill Murray', ''),
+            pic('weirdstuff', '06-Weird-Zissou-Boombox.jpg', 'Bill Murray in a pale blue suit holding a boombox', 'Steve Zissou', '')
+          ]
+        },
+        {
+          title: 'Wes Anderson',
+          caption: 'Symmetry, and the color wheel.',
+          images: [
+            pic('weirdstuff', '07-Weird-Bottle-Rocket.jpg', 'Criterion cover for Bottle Rocket in pink', 'Bottle Rocket', 'contain'),
+            pic('weirdstuff', '08-Weird-Royal-Tenenbaums-Illustration.jpg', 'Illustrated cover for The Royal Tenenbaums', 'The Royal Tenenbaums', 'contain'),
+            pic('weirdstuff', '09-Weird-Tenenbaums-Tennis.jpg', 'A tennis player sitting on a court in front of a crowd', 'Richie Tenenbaum', ''),
+            pic('weirdstuff', '10-Weird-Royal-Couple.jpg', 'Gwyneth Paltrow and Luke Wilson looking at each other', 'Margot and Richie', '')
+          ]
+        },
+        {
+          title: 'More worlds',
+          caption: 'Same palette, more worlds.',
+          images: [
+            pic('weirdstuff', '11-Weird-Rushmore-Waiter.jpg', 'A waiter in a bowtie from Rushmore', 'Rushmore', ''),
+            pic('weirdstuff', '12-Weird-Picture-Frame-Family.jpg', 'A family posing inside a large ornate frame', 'A family, framed', ''),
+            pic('weirdstuff', '13-Weird-Life-Aquatic.jpg', 'Poster for The Life Aquatic with Steve Zissou', 'The Life Aquatic', ''),
+            pic('weirdstuff', '14-Weird-Muppets-Backstage.jpg', 'Kermit with a director behind the scenes', 'Muppets, behind the scenes', ''),
+            pic('weirdstuff', '15-Weird-Floral-Shirt.jpg', 'A man in a floral shirt in front of matching floral wallpaper', 'Matching the wallpaper', 'contain')
+          ]
+        },
+        {
+          title: 'Movies I watch again',
+          caption: 'Stills and posters.',
+          images: [
+            pic('weirdstuff', '16-Weird-Clockwork-Orange.jpg', 'Four men in white outfits and bowlers from A Clockwork Orange', 'A Clockwork Orange', ''),
+            pic('weirdstuff', '17-Weird-Batman-Batmobile.jpg', 'Black and white photo of Batgirl next to the Batmobile', 'Batgirl and the Batmobile', ''),
+            pic('weirdstuff', '18-Weird-Back-To-The-Future.jpg', 'Doc Brown and Marty McFly in a still from Back to the Future', 'Back to the Future', ''),
+            pic('weirdstuff', '19-Weird-Blade-Runner.jpg', 'A still from Blade Runner', 'Blade Runner', ''),
+            pic('weirdstuff', '20-Weird-Elf-Elevator.gif', 'Buddy the Elf in an elevator with a man in a suit', 'Elf, in the elevator', ''),
+            pic('weirdstuff', '21-Weird-Karate-Kid.jpg', 'Mr. Miyagi and Daniel in a magazine photo', 'The Karate Kid', '')
+          ]
+        },
+        {
+          title: 'Cats',
+          caption: 'Cats, in clothes and out.',
+          images: [
+            pic('weirdstuff', '22-Weird-Cat-In-A-Suit.jpg', 'A cat\'s head on a portrait of a man in a brown suit', 'A cat in a suit', ''),
+            pic('weirdstuff', '23-Weird-Walking-Cats.jpg', 'A man walking two cats on leashes in a park', 'Walking the cats', ''),
+            pic('weirdstuff', '24-Weird-Cat-Swimsuit.jpg', 'A swimsuit with a cat on it, worn with a sun hat', 'A cat on a swimsuit', ''),
+            pic('weirdstuff', '25-Weird-Fiendish-Feline.jpg', 'A vintage-style card for a fiendish feline', 'Fiendish feline', ''),
+            pic('weirdstuff', '26-Weird-Cat-Halo.jpg', 'Cat faces in a ring of roses over a galaxy', 'Cats, in a rainbow wreath', ''),
+            pic('weirdstuff', '27-Weird-Cat-With-Banjo.jpeg', 'A vintage photo of a cat holding a banjo', 'A cat with a banjo', ''),
+            pic('weirdstuff', '28-Weird-Space-Cat.jpg', 'A cat in an astronaut helmet over an upside-down landscape', 'A space cat', ''),
+            pic('weirdstuff', '29-Weird-Dog-High-Five.jpg', 'A man giving a high five to a standing dog', 'A high five', '')
+          ]
+        },
+        {
+          title: 'Tigers and beasts',
+          caption: 'Animals with attitude.',
+          images: [
+            pic('weirdstuff', '30-Weird-Tiger-Glasses.jpg', 'A neon tiger wearing glasses on black', 'A tiger in glasses', ''),
+            pic('weirdstuff', '31-Weird-Tiger-Illustration.gif', 'An orange and green tiger head on pale yellow', 'A tiger, illustrated', ''),
+            pic('weirdstuff', '32-Weird-Tiger-In-Space.jpg', 'A tiger in a starfield with a joke about space', 'A tiger in space', ''),
+            pic('weirdstuff', '33-Weird-Tiger-Plate.jpg', 'A green plate with a tiger in a suit at its center', 'A tiger on a plate', ''),
+            pic('weirdstuff', '34-Weird-Gorilla-Hug.jpg', 'Two people sitting with a gorilla against a pink backdrop', 'Gorilla hug', ''),
+            pic('weirdstuff', '35-Weird-Monkey-Smoking.jpg', 'Black and white photo of a monkey in a sweatshirt', 'A monkey in a sweatshirt', ''),
+            pic('weirdstuff', '36-Weird-Bear-Sleeping-Bag.jpg', 'A bear-shaped sleeping bag shown from several angles', 'A bear sleeping bag', ''),
+            pic('weirdstuff', '37-Weird-Red-Chicken.jpg', 'A rooster in a bright red sweater on green', 'A rooster in a sweater', '')
+          ]
+        },
+        {
+          title: 'Strange characters',
+          caption: 'Cast of misfits.',
+          images: [
+            pic('weirdstuff', '38-Weird-Dinosaur-Toy.jpg', 'A vintage black and white photo of a toy dinosaur', 'A toy dinosaur', ''),
+            pic('weirdstuff', '39-Weird-Dog-With-Pipe.jpg', 'A black dog holding a pipe in its mouth', 'A dog with a pipe', ''),
+            pic('weirdstuff', '40-Weird-Party-Dolphin.jpg', 'A cowboy water-skiing on a dolphin', 'Dolphin water-ski', ''),
+            pic('weirdstuff', '41-Weird-Copy-Paste-Twins.jpg', 'Two babies in shirts labeled copy and paste', 'Copy and paste', ''),
+            pic('weirdstuff', '42-Weird-Mr-Krabs-Money.jpg', 'Mr. Krabs saying Hello, I like money', 'Hello, I like money', 'contain'),
+            pic('weirdstuff', '43-Weird-Dread-Pirate-Roberts.jpg', 'The Dread Pirate Roberts with a sword', 'The Dread Pirate Roberts', ''),
+            pic('weirdstuff', '44-Weird-Bandoliers.jpg', 'Two men in sombreros and bandoliers', 'Two amigos', ''),
+            pic('weirdstuff', '45-Weird-Soldiers-And-Yeti.jpg', 'A group of old-time soldiers with a furry creature', 'A yeti in the ranks', '')
+          ]
+        },
+        {
+          title: 'Pop',
+          caption: 'Pop culture, loud.',
+          images: [
+            pic('weirdstuff', '46-Weird-Mr-T-Christmas.jpg', 'Mr. T and Nancy Reagan on a couch at Christmas', 'Mr. T and Nancy Reagan', ''),
+            pic('weirdstuff', '47-Weird-Mr-T.jpg', 'Black and white portrait of Mr. T with gold rings', 'Mr. T', ''),
+            pic('weirdstuff', '48-Weird-Nike-Breakdance.jpg', 'A vintage Nike ad of breakdancers in bright jackets', 'A vintage Nike ad', 'contain'),
+            pic('weirdstuff', '49-Weird-Superman.jpg', 'A man in a Superman costume smiling', 'Superman', ''),
+            pic('weirdstuff', '50-Weird-Elvis-Shotgun.jpg', 'Elvis holding a shotgun among a crowd', 'Elvis', ''),
+            pic('weirdstuff', '51-Weird-Neon-1980.jpg', 'A 1980s illustration of a man holding a ball', '1980', 'contain'),
+            pic('weirdstuff', '52-Weird-Awesome-Party.jpg', 'Text over a photo: I bet this party was awesome', 'I bet this party was awesome', 'contain'),
+            pic('weirdstuff', '53-Weird-Lazer-Pony.png', 'A woman between two white horses with neon lines', 'Lazer pony', '')
+          ]
+        },
+        {
+          title: 'Space-age',
+          caption: 'Robots and rockets.',
+          images: [
+            pic('weirdstuff', '54-Weird-Space-Car.jpg', 'A group in space-age clothes beside a white concept car', 'The space car', ''),
+            pic('weirdstuff', '55-Weird-Red-Robot.jpg', 'A red robot with yellow eyes and a toy-like chest', 'A robot', ''),
+            pic('weirdstuff', '56-Weird-Voltron.jpg', 'Voltron, the red and blue robot, in a heroic pose', 'Voltron', ''),
+            pic('weirdstuff', '57-Weird-Space-Invaders.gif', 'Pixel space invaders arranged in a pyramid', 'Space invaders', 'contain'),
+            pic('weirdstuff', '58-Weird-Pac-Man-Planets.jpg', 'Pac-Man chasing a line of planets', 'Pac-Man and the planets', 'contain')
+          ]
+        },
+        {
+          title: 'Machines and tech',
+          caption: 'Old computers and odd gadgets.',
+          images: [
+            pic('weirdstuff', '59-Weird-Apple-I.jpg', 'The Apple I computer with a keyboard', 'The Apple I', 'contain'),
+            pic('weirdstuff', '60-Weird-Steve-Jobs-Memorial.png', 'An online memorial to Steve Jobs with a column of icons', 'An online memorial', 'contain'),
+            pic('weirdstuff', '61-Weird-Calculators.jpg', 'A grid of vintage calculators', 'Calculators', 'contain'),
+            pic('weirdstuff', '62-Weird-Carbon-Copy.jpg', 'A tall white copier machine', 'Carbon copy', 'contain'),
+            pic('weirdstuff', '63-Weird-The-Wizard.jpeg', 'A cartoon of a user and a developer with the wizard behind the speech computer', 'What the user sees', 'contain'),
+            pic('weirdstuff', '64-Weird-Computer-T-Shirts.jpg', 'A 1980s ad for computer t-shirts: user friendly and PC compatible', 'Computer t-shirts', 'contain'),
+            pic('weirdstuff', '65-Weird-Ball-Of-String.jpg', 'A glowing ball of string linking experience, design, and product', 'A ball of string', 'contain'),
+            pic('weirdstuff', '66-Weird-Ganson-Gadget.jpg', 'A mechanical gadget made of a bicycle wheel and rods', 'A Ganson gadget', 'contain')
+          ]
+        },
+        {
+          title: 'Motion and old science',
+          caption: 'Strobes, spirals, and wires.',
+          images: [
+            pic('weirdstuff', '67-Weird-Phenakistoscope.jpg', 'A phenakistoscope disk with dancing couples', 'A phenakistoscope', ''),
+            pic('weirdstuff', '68-Weird-Golf-Stroboscope.jpg', 'A golfer\'s swing captured in a spiral of exposures', 'A swing, in strobe', ''),
+            pic('weirdstuff', '69-Weird-Picasso-Light.gif', 'Picasso drawing with light in his studio, 1949', 'Picasso, drawing with light', ''),
+            pic('weirdstuff', '70-Weird-Stroboscope-Diagram.png', 'A diagram of measuring shaft speed with a stroboscope', 'Measuring speed with a strobe', 'contain'),
+            pic('weirdstuff', '71-Weird-Tesla-Wireless.png', 'A diagram of Tesla\'s wireless power theory from 1919', 'Tesla, wireless power', 'contain'),
+            pic('weirdstuff', '72-Weird-Warped-Space.gif', 'A black and white warped cylinder pattern', 'Warped space', 'contain'),
+            pic('weirdstuff', '73-Weird-Symmetry-Loops.gif', 'A line drawing of interlocking loops', 'Symmetry', 'contain'),
+            pic('weirdstuff', '74-Weird-Wire-Tunnel.jpg', 'A black wire mesh tunnel on white', 'A wire tunnel', 'contain')
+          ]
+        },
+        {
+          title: 'Charts and jokes',
+          caption: 'Diagrams with a punchline.',
+          images: [
+            pic('weirdstuff', '75-Weird-Extended-Bell-Curve.gif', 'A bell curve with a loch ness monster hump', 'The extended bell curve', 'contain'),
+            pic('weirdstuff', '76-Weird-Pyramid-Joke.gif', 'A triangle chart: pick two', 'A pyramid of choices', 'contain'),
+            pic('weirdstuff', '77-Weird-Pick-Two.jpg', 'A triangle chart: intelligent, emotionally stable, good looking, pick two', 'Pick two', 'contain'),
+            pic('weirdstuff', '78-Weird-Horse-Narwhal.jpg', 'A Venn diagram with a horse and a narwhal', 'A horse and a narwhal', 'contain'),
+            pic('weirdstuff', '79-Weird-Girls-Are-Evil.jpg', 'A handwritten math proof that girls equal evil', 'A proof', 'contain'),
+            pic('weirdstuff', '80-Weird-Modern-Art-Equation.gif', 'Text: Modern art equals I could do that plus yeah but you didn\'t', 'Modern art, an equation', 'contain'),
+            pic('weirdstuff', '81-Weird-Alchemy-Symbols.jpg', 'Basic alchemy symbols for fire, water, air, and earth', 'Basic alchemy symbols', 'contain'),
+            pic('weirdstuff', '82-Weird-Art-College-Attitude.jpg', 'A yellow poster about what art college gave the speaker', 'Art college', 'contain')
+          ]
+        },
+        {
+          title: 'Letters and signs',
+          caption: 'Type with a personality.',
+          images: [
+            pic('weirdstuff', '83-Weird-Denver-Nuggets.gif', 'The Denver Nuggets mascot logo', 'Denver Nuggets', 'contain'),
+            pic('weirdstuff', '84-Weird-Yes-No-Letters.jpg', 'Giant letters spelling YES and NO', 'Yes, no', 'contain'),
+            pic('weirdstuff', '85-Weird-Hand-Hash.jpg', 'A cartoon glove with a hashtag', 'A glove with a hashtag', 'contain'),
+            pic('weirdstuff', '86-Weird-Fin-Script.jpg', 'White script lettering that reads fin on black', 'Fin', ''),
+            pic('weirdstuff', '87-Weird-GED-Cubes.jpg', 'Letters G, E, and D as lit 3D cubes', 'GED', 'contain'),
+            pic('weirdstuff', '88-Weird-Eleven.gif', 'Two amplifier knobs labeled Volume I and Volume II', 'These go to eleven', 'contain'),
+            pic('weirdstuff', '89-Weird-Gay-As-This.jpg', 'A pop poster with the line but dammit, you\'re trying', 'But dammit, you\'re trying', 'contain'),
+            pic('weirdstuff', '90-Weird-Play-With-Synthesizers.jpg', 'Text over stars: lets play with synthesizers', 'Let\'s play with synthesizers', 'contain')
+          ]
+        },
+        {
+          title: 'Illustration and design',
+          caption: 'Drawn, printed, and exploded.',
+          images: [
+            pic('weirdstuff', '91-Weird-Ship-In-A-Bottle.jpg', 'A black and white ship inside a bottle', 'A ship in a bottle', 'contain'),
+            pic('weirdstuff', '92-Weird-Bicycle-Exploded.jpg', 'An exploded line drawing of a bicycle', 'A bicycle, exploded', 'contain'),
+            pic('weirdstuff', '93-Weird-Brew-You.jpg', 'A poster for Brew plus You with a drinking figure', 'Brew + You', 'contain'),
+            pic('weirdstuff', '94-Weird-Gingers.gif', 'A poster of gingers in different poses', 'Gingers', 'contain'),
+            pic('weirdstuff', '95-Weird-Burger-Explosion.jpg', 'A hamburger floating in layers on black', 'A burger, exploded', 'contain'),
+            pic('weirdstuff', '96-Weird-Handdrawn-Icons.jpg', 'A dense sheet of hand-drawn icons', 'Hand-drawn icons', 'contain'),
+            pic('weirdstuff', '97-Weird-Homer-Simpson-Poster.jpg', 'A yellow Simpsons poster with a Homer silhouette', 'Homer, in a map', 'contain'),
+            pic('weirdstuff', '98-Weird-Wig-Glasses.jpg', 'A bob wig with sunglasses on pale blue', 'Wig and shades', '')
+          ]
+        },
+        {
+          title: 'Photos with a twist',
+          caption: 'Odd photographs.',
+          images: [
+            pic('weirdstuff', '99-Weird-Facebook-Sistine.png', 'A Facebook page over The Creation of Adam', 'Facebook, Sistine edition', 'contain'),
+            pic('weirdstuff', '100-Weird-Chair-Balance.jpg', 'A woman balancing on a chair on a chair', 'Balance', ''),
+            pic('weirdstuff', '101-Weird-Floating-Car.png', 'An amphibious car floating on a lake', 'A floating car', ''),
+            pic('weirdstuff', '102-Weird-John-Sink.jpg', 'A mint sink with letters spelling John', 'A very specific sink', ''),
+            pic('weirdstuff', '103-Weird-Face-Lines.jpg', 'Two portraits with their features overpainted', 'Faces, overpainted', ''),
+            pic('weirdstuff', '104-Weird-Waiters.jpg', 'Illustrated grid of waiters and diners', 'Waiters', ''),
+            pic('weirdstuff', '105-Weird-Paper-Folding.webp', 'Paper fan shapes folded on a grid', 'Folding paper', 'contain'),
+            pic('weirdstuff', '106-Weird-Glitch-City.jpeg', 'A glitched stripe image of a person on a city street', 'A glitched city', '')
+          ]
+        },
+        {
+          title: 'Odd objects',
+          caption: 'Things, found and made.',
+          images: [
+            pic('weirdstuff', '107-Weird-Giant-Clothespin.jpg', 'A giant clothespin standing in a field', 'A giant clothespin', ''),
+            pic('weirdstuff', '108-Weird-Plant-Target.jpg', 'A hanging plant framed like a price label', 'Target, companion planting', ''),
+            pic('weirdstuff', '109-Weird-Pepsi-Machine.jpg', 'A pink Pepsi vending machine', 'A pink Pepsi machine', 'contain'),
+            pic('weirdstuff', '110-Weird-Norman-Door.jpg', 'A cartoon of a Norman door marked push', 'A Norman door', ''),
+            pic('weirdstuff', '111-Weird-Hazard-Data-Sheet.jpg', 'A yellow hazard data sheet in black and yellow', 'Hazardous materials data sheet', 'contain'),
+            pic('weirdstuff', '112-Weird-Sucked-Me.jpg', 'A giant drain in a reservoir', 'A very large drain', '')
+          ]
+        },
+        {
+          title: 'Ads and glitches',
+          caption: 'Cars, shoes, and static.',
+          images: [
+            pic('weirdstuff', '113-Weird-Funny-Car-Ad.jpg', 'A vintage car on a desert with flying figures', 'A very funny car ad', 'contain'),
+            pic('weirdstuff', '114-Weird-Nike-Dunk.jpg', 'A colorful Nike dunk sneaker on black', 'A Nike dunk', 'contain'),
+            pic('weirdstuff', '115-Weird-Glitch-Face.png', 'A glitched color-field image of a face', 'A glitch, from AIGA', 'contain'),
+            pic('weirdstuff', '116-Weird-Brain-Illustration.png', 'A head with a network of lines among people', 'The thinking head', 'contain'),
+            pic('weirdstuff', '117-Weird-Kck-Jump.jpg', 'A group jumping through a tunnel', 'Jump', ''),
+            pic('weirdstuff', '118-Weird-Moon-Bum.jpg', 'A retro poster: A woman\'s bum is like the moon', 'A woman\'s bum is like the moon', 'contain'),
+            pic('weirdstuff', '119-Weird-Happy-Thing.jpg', 'A felt plush with colored triangles and legs', 'A happy thing', 'contain'),
+            pic('weirdstuff', '120-Weird-Hipster-Patch.jpg', 'A Pabst patch with the words I\'m a hipster', 'A hipster patch', 'contain')
+          ]
+        },
+        {
+          title: 'Left of center',
+          caption: 'The last odds and ends.',
+          images: [
+            pic('weirdstuff', '121-Weird-Airplane-Drawing.jpg', 'A line drawing of an airplane', 'An airplane, in lines', 'contain'),
+            pic('weirdstuff', '122-Weird-Bacteria.jpeg', 'A neon green drawing about bacteria in your mouth', 'Bacteria', 'contain'),
+            pic('weirdstuff', '123-Weird-Bad-Guy.jpg', 'A target print of a man aiming a gun', 'A bad guy, as a target', ''),
+            pic('weirdstuff', '124-Weird-Andy-In-Labyrinth.jpeg', 'A woman in a labyrinth pattern', 'A labyrinth', 'contain'),
+            pic('weirdstuff', '125-Weird-Bomb-Cloud.jpg', 'A mushroom cloud over a desert', 'A mushroom cloud', 'contain'),
+            pic('weirdstuff', '126-Weird-Jesus-With-Rifle.jpg', 'A painting of Jesus with a rifle in a landscape', 'Jesus with a rifle', ''),
+            pic('weirdstuff', '127-Weird-Nuns-With-Guns.jpg', 'Five nuns holding rifles', 'Nuns with rifles', ''),
+            pic('weirdstuff', '128-Weird-Surreal-Pistol.jpg', 'A revolver on white with small marginal text', 'A surreal pistol', '')
+          ]
+        }
+      ] }
     ]
   };
   window.NOTEBOOK_PIC = pic;
