@@ -821,3 +821,12 @@ html.reader-open { overflow: hidden; }
 .iso-hero__lede { max-width: 62ch; margin: 0 0 1.5rem; color: rgba(255, 255, 255, .78); }
 .iso-hero__frame { border-radius: 18px; overflow: hidden; box-shadow: 0 20px 50px rgba(0, 0, 0, .45); background: #0c0d0e; }
 .iso-hero__frame iframe { display: block; width: 100%; height: 780px; border: 0; }
+
+.cs-fig--wide img { aspect-ratio: auto; height: auto; object-fit: contain; background: #fff; box-shadow: var(--shadow-sm); border: 1px solid var(--line); }
+.cs-gallery--contain img { object-fit: contain; background: #fff; border: 1px solid var(--line); }
+
+.cs-awards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-block: 1.25rem 1.75rem; }
+.cs-awards figure { margin: 0; }
+.cs-awards img { display: block; width: 100%; height: auto; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .5rem; }
+.cs-awards figcaption { margin-top: .5rem; font-size: .85rem; color: var(--ink-soft); }
+@media (max-width: 767px) { .cs-awards { grid-template-columns: 1fr; } }
