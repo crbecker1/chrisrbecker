@@ -837,3 +837,9 @@ html.reader-open { overflow: hidden; }
 .cs-hero__img { margin: 0; }
 .cs-hero__img img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); background: var(--blue-100); box-shadow: var(--shadow-md); }
 @media (max-width: 860px) { .cs-hero__grid { grid-template-columns: 1fr; } .cs-hero__img { order: 2; } }
+.cs-hero__img--fit img { aspect-ratio: auto; height: auto; object-fit: contain; background: #fff; border: 1px solid var(--line); }
+
+/* Show images whole, at their own height */
+.cs-gallery--natural { align-items: start; }
+.cs-gallery--natural img { aspect-ratio: auto; height: auto; object-fit: contain; background: #fff; border: 1px solid var(--line); }
+.cs-fig--tall img { max-width: 560px; margin-inline: auto; }
