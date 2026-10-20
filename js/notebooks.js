@@ -88,8 +88,8 @@
 
   function chipHtml(b) {
     return b.kind === 'sketch'
-      ? `<span class="chip chip--sketch"><span>${b.year} ${b.label}</span></span>`
-      : `<span class="chip" style="background:${b.bg};color:${b.fg}"></span>`;
+      ? `<span class="rchip rchip--sketch"><span>${b.year} ${b.label}</span></span>`
+      : `<span class="rchip" style="background:${b.bg};color:${b.fg}"></span>`;
   }
 
   function open(id, spreadIndex, fromEl) {

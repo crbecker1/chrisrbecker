@@ -46,8 +46,8 @@
     return svg;
   };
   const newTab = () => el('span', { class: 'visually-hidden' }, ' (opens in a new tab)');
-  const cta = () => el('span', { class: 'article__cta' }, 'Read more', icon('i-arrow'), newTab());
-
+  // Every article leaves the site for Medium, so the CTA says so.
+  const cta = () => el('span', { class: 'article__cta' }, 'Read on Medium', icon('i-external'), newTab());
   /* ---------- Filter buttons ---------- */
   const count = (name) => (name === ALL ? articles.length : articles.filter((a) => a.tags.includes(name)).length);
 
