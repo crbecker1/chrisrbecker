@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Teaching &amp; Workshops — Chris R. Becker</title>
-  <meta name="description" content="University courses and team workshops in UX, UI, and product thinking.">
+  <meta name="description" content="Teaching, workshops and mentoring in UX, UI, design systems and AI: samples, institutions, speaking and ADPList reviews.">
   <meta name="theme-color" content="#1a5bc4">
   <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Andada+Pro:wght@400&family=Space+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/script.js" defer></script>
+  <script src="js/video-facade.js" defer></script>
 </head>
 <body>
   <!-- Nav icon sprite -->
@@ -45,31 +46,120 @@
       <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu"><span></span></button>
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__links nav__primary">
-          <li><a href="about.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-user"/></svg>About</a></li>
-          <li><a href="product-work.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-palette"/></svg>Product Work</a></li>
-          <li><a href="writing.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-feather"/></svg>Writing</a></li>
+          <li><a href="product-work.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-palette"/></svg>UX/Product Work</a></li>
+          <li><a href="writing.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-feather"/></svg>Desk</a></li>
           <li><a href="books.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-books"/></svg>Books</a></li>
           <li><a href="teaching.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-podium"/></svg>Teaching</a></li>
           <li><a href="now.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-stopwatch"/></svg>Now</a></li>
+          <li><a href="about.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-user"/></svg>About</a></li>
           <li><a class="btn btn--primary" href="index.html#contact">Work with me</a></li>
         </ul>
       </div>
     </nav>
   </header>
   <main id="main">
-    <section class="page-hero"><div class="wrap">
-      <p class="eyebrow"><a href="index.html#services" style="text-decoration:none">← All services</a></p>
-      <h1>My Teaching &amp; Workshops</h1>
-      <p class="lede">University courses and team workshops in UX, UI, and product thinking.</p>
+    <section class="page-hero tc-hero"><div class="wrap">
+      <p class="eyebrow cs-back"><a href="index.html#services" style="text-decoration:none">← All services</a></p>
+      <div class="tc-hero__grid">
+        <div class="tc-hero__text">
+          <h1>My Teaching &amp; Workshops</h1>
+          <p class="lede">Designing and educating about design systems that are useful, usable, accessible, and delightful.</p>
+          <p class="eyebrow eyebrow--plain">Featured lecture</p>
+          <h2 class="tc-hero__title">How Information Architecture (IA) helps us navigate rapid changes</h2>
+          <p>A lecture and Q&amp;A for World IA Day (WAID 2025) at ArtCenter College of Design.</p>
+          <p class="tc-sample__btn"><a class="btn btn--ghost" href="https://medium.com/user-experience-design-1/ux-scenarios-genai-fb25d100a98a?sk=2eb7985bb9148a88085728b0c4d43390" rel="noopener" target="_blank">Read the workshop article</a></p>
+        </div>
+        <div class="tc-frame"><button class="vf" type="button" data-provider="youtube" data-id="XnI7Do1CSbw" data-title="WAID 2025 lecture on information architecture" data-watch="https://www.youtube.com/watch?v=XnI7Do1CSbw" style="background-image:url(images/teaching/yt-XnI7Do1CSbw.jpg)" aria-label="Play video: WAID 2025 lecture on information architecture"><span class="vf__play" aria-hidden="true"></span></button></div>
+      </div>
     </div></section>
-    <section class="section"><div class="wrap">
-<p>I teach at Otis College of Art and Design, with affiliations at ArtCenter College of Design and Santa Monica College. I also run workshops for teams.</p>
-<div class="cards">
-<article class="card"><span class="tag">University</span><h3>UX / UI courses</h3><p>Studio-based courses on research, interaction design, and prototyping with industry-style briefs.</p></article>
-<article class="card"><span class="tag">Workshop</span><h3>Problem framing sprint</h3><p>A half-day session that turns a vague challenge into a clear problem statement and first experiments.</p></article>
-<article class="card"><span class="tag">Mentorship</span><h3>1:1 portfolio reviews</h3><p>Focused feedback for emerging designers preparing for their next step.</p></article>
-</div>
-      <p style="margin-top:3rem"><a class="btn btn--primary" href="index.html#contact">Work with me</a></p>
+
+    <section class="section tc-section" aria-labelledby="tc-inst"><div class="wrap">
+      <h2 id="tc-inst">Sharing knowledge at</h2>
+      <p class="tc-intro">I teach UX, UI, design systems and AI-assisted design in university programs, bootcamps, and team workshops.</p>
+      <ul class="tc-logos" aria-label="Institutions">
+        <li class="is-current"><a class="tc-logos__link" href="https://otis.edu/faculty/chris-becker.html" rel="noopener" target="_blank"><span class="tc-logos__tag">Currently teaching</span><img src="images/teaching/U6-Otis-logo.png" alt="Otis College of Art and Design" width="719" height="1121" loading="lazy"><span class="tc-logos__name">Otis College of Art and Design</span><span class="tc-logos__cta">View my faculty profile <span aria-hidden="true">↗</span></span></a></li>
+        <li class="is-current"><a class="tc-logos__link" href="https://www.smc.edu/academics/academic-departments/interaction-design/" rel="noopener" target="_blank"><span class="tc-logos__tag">Currently teaching</span><img src="images/teaching/U7-SMC-logo.svg" alt="Santa Monica College" width="104" height="89" loading="lazy"><span class="tc-logos__name">Santa Monica College, IxD</span><span class="tc-logos__cta">View the IxD program <span aria-hidden="true">↗</span></span></a></li>
+        <li class="is-current"><a class="tc-logos__link" href="https://www.artcenter.edu/about/get-to-know-artcenter/people/detail.html?breadcrumb=565f1aae4d9b6fce4bd8c5f2&amp;accdID=0174746" rel="noopener" target="_blank"><span class="tc-logos__tag">Currently teaching</span><img src="images/teaching/U3-ArtCenter-Logo.png" alt="ArtCenter College of Design" width="264" height="88" loading="lazy"><span class="tc-logos__name">ArtCenter College of Design</span><span class="tc-logos__cta">View my faculty profile <span aria-hidden="true">↗</span></span></a></li>
+        <li class="is-current"><a class="tc-logos__link" href="https://app.designlab.com/crbecker1/" rel="noopener" target="_blank"><span class="tc-logos__tag">Currently teaching</span><img src="images/teaching/U8-Designlab-logo.svg" alt="Designlab" width="183" height="40" loading="lazy"><span class="tc-logos__name">Designlab</span><span class="tc-logos__cta">View my mentor profile <span aria-hidden="true">↗</span></span></a></li>
+        <li><img src="images/teaching/U1-UCLA-ext-logo.png" alt="UCLA Extension" width="264" height="88" loading="lazy"><span class="tc-logos__name">UCLA Extension</span></li>
+        <li><img src="images/teaching/U2-UCI-ext-logo.png" alt="UC Irvine Extension" width="264" height="88" loading="lazy"><span class="tc-logos__name">UC Irvine Extension</span></li>
+        <li><img src="images/teaching/U4-LMU-logo.png" alt="Loyola Marymount University" width="264" height="88" loading="lazy"><span class="tc-logos__name">Loyola Marymount University</span></li>
+        <li><img src="images/teaching/U5-UT-Austin-logo.png" alt="UT Austin" width="264" height="88" loading="lazy"><span class="tc-logos__name">UT Austin</span></li>
+      </ul>
+      <article class="tc-resource reveal" aria-labelledby="tc-resource-title">
+        <div class="tc-frame"><button class="vf" type="button" data-provider="wistia" data-id="cniug2lgpp" data-title="Using Generative AI to improve UX Scenarios" data-watch="https://optimalworkshop-1.wistia.com/medias/cniug2lgpp" style="background-image:url(images/teaching/wistia-cniug2lgpp.jpg)" aria-label="Play video: Using Generative AI to improve UX Scenarios"><span class="vf__play" aria-hidden="true"></span></button></div>
+        <div class="tc-resource__text">
+          <p class="eyebrow eyebrow--plain">Resource from Optimal Workshop</p>
+          <h3 id="tc-resource-title">Using Generative AI to improve UX Scenarios</h3>
+          <p>A talk and Q&amp;A on how AI-powered tools can generate UX scenarios and build worlds faster, with a case study using FigJam, Visual Electric AI and ChatGPT. Recorded for Optimal Workshop, about 54 minutes.</p>
+          <p class="tc-sample__btn"><a class="btn btn--ghost" href="https://optimalworkshop-1.wistia.com/medias/cniug2lgpp" rel="noopener" target="_blank">Watch on Optimal Workshop</a> <a class="btn btn--ghost" href="https://medium.com/user-experience-design-1/ux-scenarios-genai-fb25d100a98a?sk=2eb7985bb9148a88085728b0c4d43390" rel="noopener" target="_blank">Read the article</a></p>
+        </div>
+      </article>
+      <article class="tc-resource tc-resource--flip reveal" aria-labelledby="tc-glare-title">
+        <a class="tc-resource__thumb" href="https://glare.zurb.com/interviews/chris-becker#ai-is-reshaping-user-research-and-design-practices" rel="noopener" target="_blank" aria-label="Open the interview on ZURB Glare"><img src="images/teaching/glare-interview.jpg" alt="Video call between the host of Glaringly Obvious and Chris Becker" width="1280" height="720" loading="lazy"><span class="vf__play" aria-hidden="true"></span></a>
+        <div class="tc-resource__text">
+          <p class="eyebrow eyebrow--plain">Podcast from ZURB Glare</p>
+          <h3 id="tc-glare-title">Glaringly Obvious: Bring UX scenarios to life with AI</h3>
+          <p>A podcast interview on how AI is reshaping user research and design practices, and how teams can use it to build and visualize UX scenarios.</p>
+          <p class="tc-sample__btn"><a class="btn btn--ghost" href="https://glare.zurb.com/interviews/chris-becker#ai-is-reshaping-user-research-and-design-practices" rel="noopener" target="_blank">Watch the interview</a></p>
+        </div>
+      </article>
+    </div></section>
+
+    <section class="section tc-section tc-section--alt" aria-labelledby="tc-samples"><div class="wrap">
+      <h2 id="tc-samples">Teaching samples</h2>
+      <article class="tc-sample reveal">
+        <div class="tc-sample__text"><p class="eyebrow eyebrow--plain">Watch me teach</p><h3>Design Systems Workshop</h3><p>A workshop at ArtCenter College of Design where we practice using Figma color variables to advance modalities in a design system.</p></div>
+        <div class="tc-sample__media"><div class="tc-frame"><button class="vf" type="button" data-provider="youtube" data-id="vnZZECMF1-w" data-title="Design Systems Workshop at ArtCenter" data-watch="https://www.youtube.com/watch?v=vnZZECMF1-w" style="background-image:url(images/teaching/yt-vnZZECMF1-w.jpg)" aria-label="Play video: Design Systems Workshop at ArtCenter"><span class="vf__play" aria-hidden="true"></span></button></div></div>
+      </article>
+      <article class="tc-sample reveal">
+        <div class="tc-sample__text"><p class="eyebrow eyebrow--plain">Review the lecture slides</p><h3>Figma Design Systems Workshop</h3><p>The lecture slides for the ArtCenter workshop, plus the final Figma style guide the students built toward.</p><p class="tc-sample__btn"><a class="btn btn--ghost" href="https://www.figma.com/design/ncRIjmJWBUgiZ3hcXTr9xa/ACCD-Final-DS-Workshop-Style-Guide-Final?node-id=16757-167&amp;t=17qPk8WlDQ9kYsqW-1" rel="noopener" target="_blank">View the final Figma file</a> <a class="btn btn--ghost" href="https://www.figma.com/slides/FjsSUETmXtGmZcUNIsWKPs/Workshop-ACCD-Design-Systems-Lecture?node-id=2-53" rel="noopener" target="_blank">Open the slides</a></p></div>
+        <div class="tc-sample__media"><div class="tc-frame"><button class="vf vf--figma" type="button" data-provider="figma" data-id="FjsSUETmXtGmZcUNIsWKPs/Workshop-ACCD-Design-Systems-Lecture?node-id=2-53" data-title="Figma Design Systems Workshop slides" data-watch="https://www.figma.com/slides/FjsSUETmXtGmZcUNIsWKPs/Workshop-ACCD-Design-Systems-Lecture?node-id=2-53" aria-label="Load the lecture slides"><span class="vf__label">ACCD Design Systems Lecture<small>Click to load the slides</small></span><span class="vf__play" aria-hidden="true"></span></button></div></div>
+      </article>
+      <article class="tc-sample reveal">
+        <div class="tc-sample__text"><p class="eyebrow eyebrow--plain">Watch me teach</p><h3>Introduction to the UX/UI Boot Camp</h3><p>An introduction lecture for the UX/UI Boot Camp at UC Irvine Extension.</p><p class="tc-sample__btn"><a class="btn btn--ghost" href="case-study-curriculum.html" rel="noopener" target="_blank">Read the boot camp case study</a></p></div>
+        <div class="tc-sample__media"><div class="tc-frame"><button class="vf" type="button" data-provider="vimeo" data-id="497552679" data-title="Introduction to UX/UI Boot Camp lecture at UCI" data-watch="https://vimeo.com/497552679" style="background-image:url(images/teaching/vimeo-497552679.jpg)" aria-label="Play video: Introduction to UX/UI Boot Camp lecture at UCI"><span class="vf__play" aria-hidden="true"></span></button></div></div>
+      </article>
+      <article class="tc-sample reveal">
+        <div class="tc-sample__text"><p class="eyebrow eyebrow--plain">Watch me teach</p><h3>Sketching First Ideation with AI</h3><p>A Designlab workshop on starting ideation with a pen, then bringing AI in to extend the ideas.</p><p class="tc-sample__btn"><a class="btn btn--ghost" href="case-study-designlab.html">Read the Designlab case study</a></p></div>
+        <div class="tc-sample__media"><div class="tc-frame"><button class="vf" type="button" data-provider="youtube" data-id="JONoK6XClJc" data-title="Sketching First Ideation with AI" data-watch="https://www.youtube.com/watch?v=JONoK6XClJc" style="background-image:url(images/teaching/yt-JONoK6XClJc.jpg)" aria-label="Play video: Sketching First Ideation with AI"><span class="vf__play" aria-hidden="true"></span></button></div></div>
+      </article>
+    </div></section>
+
+    <section class="section tc-section" aria-labelledby="tc-talks"><div class="wrap">
+      <h2 id="tc-talks">Speaking + workshop engagements</h2>
+      <ul class="tc-talks">
+        <li><a class="tc-talk" href="https://youtu.be/n7mLSqxGCfw?si=v8yevH2S2UYZxY9Q&amp;t=57" rel="noopener" target="_blank"><img src="images/teaching/UX-Scenarios-Youtube.jpg" alt="YouTube thumbnail for the Designlab UX scenarios workshop" width="900" height="506" loading="lazy"><span class="tc-talk__body"><h3>Designlab Workshop: Using AI to improve UX scenarios</h3><p>Sketching-first ideation with AI, recorded for Designlab.</p><span class="tc-talk__cta">Watch the recording <span aria-hidden="true">↗</span></span></span></a></li>
+        <li><a class="tc-talk" href="https://youtu.be/XI8y3AOTZ9w?si=CqEtj2KpkNHhmMwN" rel="noopener" target="_blank"><img src="images/teaching/AICAD-2024-preview.jpg" alt="Title slide from the AICAD 2024 generative AI lecture" width="900" height="506" loading="lazy"><span class="tc-talk__body"><h3>Leveraging Generative AI at AICAD 2024</h3><p>A lecture and workshop for the symposium "Teach for Tomorrow: Redesigning the Future," on using generative AI with design students.</p><span class="tc-talk__cta">Watch the recording <span aria-hidden="true">↗</span></span></span></a></li>
+        <li><a class="tc-talk" href="https://lu.ma/cjf24tog" rel="noopener" target="_blank"><img src="images/teaching/Luma-DesignLab-Sketching-First.jpg" alt="Luma page for the Designlab sketching first workshop" width="900" height="506" loading="lazy"><span class="tc-talk__body"><h3>Designlab Workshop: Sketching First with AI</h3><p>Why starting with a pen still wins when you add AI to the process.</p><span class="tc-talk__cta">See the talk <span aria-hidden="true">↗</span></span></span></a></li>
+        <li><a class="tc-talk" href="https://lu.ma/mbrcnund" rel="noopener" target="_blank"><img src="images/teaching/Luma-DesignLab-Laddering.jpg" alt="Luma page for the Designlab laddering talk" width="900" height="506" loading="lazy"><span class="tc-talk__body"><h3>Designlab Talk: Why Lives in the Deep</h3><p>The laddering technique, for getting past what users say to why they say it.</p><span class="tc-talk__cta">See the talk <span aria-hidden="true">↗</span></span></span></a></li>
+        <li><a class="tc-talk" href="https://www.figma.com/file/xPP4Rgk86u3PyHVuLe2C4j/Collaboration-Group-Mind-Map-Jam-Activity?type=whiteboard&amp;node-id=0%3A1&amp;t=hjXG7LKnbq8rLAJv-1" rel="noopener" target="_blank"><img src="images/teaching/Growic-Collaborative-Design.jpg" alt="Growic collaborative design workshop announcement" width="900" height="506" loading="lazy"><span class="tc-talk__body"><h3>Collaborative Design Workshop</h3><p>July 20, 2021. A free, interactive workshop and conversation about the role of collaboration in design, hosted by Growic.</p><span class="tc-talk__cta">Open the FigJam <span aria-hidden="true">↗</span></span></span></a></li>
+      </ul>
+      <p class="tc-note">Want a talk or workshop for your team or school? <a href="mailto:crbecker1@gmail.com">Email me</a>.</p>
+    </div></section>
+
+    <section class="section tc-section tc-section--alt" aria-labelledby="tc-mentor"><div class="wrap">
+      <h2 id="tc-mentor">Mentoring + reviews</h2>
+      <div class="tc-rating">
+        <p class="tc-rating__score"><strong>4.7</strong><span aria-hidden="true"> ★</span><span class="visually-hidden"> out of 5</span></p>
+        <p>Average from 35 ratings on ADPList, where I mentor designers on portfolios, career moves and practice. Sessions are 30 minutes.</p>
+        <p class="tc-rating__btn"><a class="btn btn--primary" href="https://adplist.org/mentors/chris-becker" rel="noopener" target="_blank">Book a session on ADPList</a></p>
+      </div>
+      <ul class="tc-reviews">
+        <li><figure class="tc-review"><blockquote><p>&ldquo;Chris gave me thoughtful, practical feedback that helped me see my portfolio from a more strategic perspective. He questioned my assumptions and gave me clear direction on how to better communicate my design thinking and impact.&rdquo;</p></blockquote><figcaption><strong>Alexis Ha</strong><span>ADPList mentee, August 2026</span></figcaption></figure></li>
+        <li><figure class="tc-review"><blockquote><p>&ldquo;Chris helped me think through how to approach a new Customer Success role. He shared his experience and concrete examples on how to design a better customer journey through small experiments and spending sufficient time with the end user which was super helpful to get some inspiration on what to focus on in my first weeks.&rdquo;</p></blockquote><figcaption><strong>Natascha</strong><span>ADPList mentee, November 2025</span></figcaption></figure></li>
+        <li><figure class="tc-review"><blockquote><p>&ldquo;Chris provided invaluable guidance on expanding my practice beyond corporate design. His communication, motivation, and guidance help me clarify my next steps. Looking forward to our next chat later this summer.&rdquo;</p></blockquote><figcaption><strong>Wig Mezo-Gadia</strong><span>ADPList mentee, May 2025</span></figcaption></figure></li>
+      </ul>
+      <p class="tc-note">Reviews are public on <a href="https://adplist.org/mentors/chris-becker" rel="noopener" target="_blank">my ADPList profile</a>.</p>
+    </div></section>
+
+    <section class="pj-cta" aria-labelledby="tc-cta-title"><div class="wrap pj-cta__inner">
+      <div>
+        <p class="eyebrow eyebrow--plain">Work together</p>
+        <h2 id="tc-cta-title">Need a teacher, facilitator or mentor?</h2>
+        <p>I design courses, run workshops and review portfolios.</p>
+      </div>
+      <p class="pj-cta__btns"><a class="btn btn--primary btn--lg" href="index.html#contact">Work with me</a> <a class="btn btn--ghost" href="case-study-curriculum.html">See the curriculum case study</a></p>
     </div></section>
   </main>
   <footer class="site-footer"><div class="wrap">

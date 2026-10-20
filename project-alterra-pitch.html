@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alterra Pitch Work — Chris R. Becker</title>
+  <meta name="description" content="Project highlight: UX sketches, storyboards, and a multimedia prototype for an Alterra Mountain Company pitch.">
+  <meta name="theme-color" content="#1a5bc4">
+  <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Andada+Pro:wght@400&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/deck.js" defer></script>
+</head>
+<body>
+  <!-- Nav icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" id="nav-sprite">
+    <symbol id="n-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+    <symbol id="n-palette" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".6"/><circle cx="17.5" cy="10.5" r=".6"/><circle cx="8.5" cy="7.5" r=".6"/><circle cx="6.5" cy="12.5" r=".6"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.84-.44-1.12-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.55-2.5 5.55-5.55C21.97 6.01 17.46 2 12 2Z"/></symbol>
+    <symbol id="n-feather" viewBox="0 0 24 24"><path d="M12.67 19a2 2 0 0 0 1.42-.59l6.15-6.17a6 6 0 0 0-8.49-8.49L5.59 9.91A2 2 0 0 0 5 11.33V18a1 1 0 0 0 1 1h6.67Z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></symbol>
+    <symbol id="n-books" viewBox="0 0 24 24"><rect x="3" y="16.5" width="18" height="4.5" rx="1"/><rect x="5" y="11.5" width="15" height="4.5" rx="1"/><rect x="4" y="6.5" width="16" height="4.5" rx="1"/><path d="M7 18.75h2M9 13.75h2M8 8.75h2"/></symbol>
+    <symbol id="n-podium" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2"/><path d="M12 6.5V10"/><path d="M4 10h16"/><path d="M6.5 10l1 11h9l1-11"/></symbol>
+    <symbol id="n-stopwatch" viewBox="0 0 24 24"><circle cx="12" cy="14" r="8"/><path d="M12 10v4l2.5 2"/><path d="M10 2h4"/><path d="M12 2v4"/><path d="m19 6 1.5-1.5"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Icon sprite (placeholder icons) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-product" viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/><path d="m3 17.5 9 5 9-5" opacity=".5"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5v-16Z"/><path d="M4 21.5A2.5 2.5 0 0 1 6.5 19H20"/></symbol>
+    <symbol id="i-teach" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+    <symbol id="i-now" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></symbol>
+  </svg>
+  <header class="site-header">
+    <nav class="wrap nav" aria-label="Primary">
+      <a class="logo" href="index.html" aria-label="Chris R. Becker — home"><img class="logo__img" src="images/logo/Logo.svg" alt="" width="237" height="83"><span class="logo__text">Chris R. Becker</span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu"><span></span></button>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__links nav__primary">
+          <li><a href="product-work.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-palette"/></svg>UX/Product Work</a></li>
+          <li><a href="writing.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-feather"/></svg>Desk</a></li>
+          <li><a href="books.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-books"/></svg>Books</a></li>
+          <li><a href="teaching.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-podium"/></svg>Teaching</a></li>
+          <li><a href="now.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-stopwatch"/></svg>Now</a></li>
+          <li><a href="about.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-user"/></svg>About</a></li>
+          <li><a class="btn btn--primary" href="index.html#contact">Work with me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <header class="cs-hero"><div class="wrap">
+      <p class="eyebrow cs-back"><a href="product-work.html#more-work" style="text-decoration:none">← More work</a></p>
+      <div class="cs-hero__grid">
+        <div class="cs-hero__text">
+          <p class="eyebrow eyebrow--plain">Project highlight</p>
+          <h1>Alterra Pitch Work</h1>
+          <p class="lede">A speculative mobile app for a mountain resort company, pitched as a film, and the pitch that won the work.</p>
+          <ul class="tags" aria-label="Type of work"><li>UX</li><li>Product</li><li>Prototyping</li><li>Vision</li></ul>
+        </div>
+        <figure class="cs-hero__img cs-hero__img--fit cs-hero__img--phone"><img src="images/projects/Alterra-Pitch-Work/Alterra-Cover-Pitch.png" alt="A phone showing the Mammoth Mountain screen of the app concept, with weather, snow stats, and a navigation bar" width="600" height="1067"></figure>
+      </div>
+      <dl class="cs-meta">
+        <div><dt>My role</dt><dd>Sr. UX/Product Designer<br><span>Pitch UX, storyboards, and prototype</span></dd></div>
+        <div><dt>Client</dt><dd>Alterra Mountain Company<br><span>Pitched with the Bttr team</span></dd></div>
+        <div><dt>When</dt><dd>Q4 2023<br><span>3 sprints - ~6 weeks</span></dd></div>
+        <div><dt>Deliverable</dt><dd>Prototype, Vision film, and Pitch Deck<br><span>UX sketches, storyboards, narrative strategy, prototype, pitch deck structure</span></dd></div>
+      </dl>
+    </div></header>
+
+    <section class="pj-section pj-section--video" aria-labelledby="pj-film"><div class="wrap">
+      <h2 id="pj-film" class="visually-hidden">The pitch film</h2>
+      <figure class="pj-video pj-video--lead reveal">
+        <div class="pj-video__frame pj-video__frame--16x9"><iframe title="Alterra pitch film" src="https://player.vimeo.com/video/1219033702" loading="lazy" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe></div>
+        <figcaption><strong>The pitch film.</strong> A speculative app vision told as a day in the life on the hill at Mammoth Mountain. [Add the film length.]</figcaption>
+      </figure>
+    </div></section>
+
+    <section class="pj-section" aria-labelledby="pj-why"><div class="wrap pj-grid">
+      <div><h2 id="pj-why">The quick version</h2></div>
+      <div class="pj-body">
+        <p class="cs-lead">A pitch has to make people feel the product before it exists. As a Sr. UX/Product Designer at Bttr, I helped answer an RFP from Alterra Mountain Company with a speculative app vision, told as a day in the life on the hill at Mammoth. We won the work.</p>
+        <p>The pitch ran in Q4 of 2023. I worked on the sketches that found the idea, the storyboards that paced the film, and the multimedia prototype that brought it to life. [Add one line on what Alterra was looking for.]</p>
+      </div>
+    </div></section>
+
+    <section class="pj-section pj-section--alt" aria-labelledby="pj-work"><div class="wrap">
+      <h2 id="pj-work">The work</h2>
+      <div class="pj-grid-2">
+        <figure class="pj-shot pj-shot--light reveal"><img src="images/projects/Alterra-Pitch-Work/01-UX-sketches-web.png" alt="A wide board of UX sketches organized in three colored rows of screens and flows" loading="lazy"><figcaption><strong>Sketching the idea.</strong> Rows of rough screens and flows, grouped by theme. [Add a line on what you explored.]</figcaption></figure>
+        <figure class="pj-shot pj-shot--light reveal"><img src="images/projects/Alterra-Pitch-Work/02-Storyboard-Process.png" alt="A storyboard board with scenes, shot frames, and notes for the pitch film" loading="lazy"><figcaption><strong>Storyboarding the film.</strong> Scene by scene, from the first frame to the last. [Add a line on how the story was paced.]</figcaption></figure>
+        <figure class="pj-shot reveal"><img src="images/projects/Alterra-Pitch-Work/03-multimedia-prototype.png" alt="A frame from the prototype film showing the Community and Social screen next to a woman using her phone" loading="lazy"><figcaption><strong>Community and social.</strong> A prototype frame that pairs the interface with the person using it.</figcaption></figure>
+        <figure class="pj-shot reveal"><img src="images/projects/Alterra-Pitch-Work/04-Alterra-screens.png" alt="A frame from the prototype film showing a stack of resort cards behind the app" loading="lazy"><figcaption><strong>One pass, many mountains.</strong> Resort cards that let a skier move between mountains. [Confirm what this screen shows.]</figcaption></figure>
+      </div>
+    </div></section>
+
+    <section class="pj-section" aria-labelledby="pj-deck"><div class="wrap">
+      <h2 id="pj-deck">The pitch deck</h2>
+      <p class="pj-deck__intro">Flip through all 17 slides of the Ikon 2.0 deck. Use the arrows, your keyboard's left and right keys, or swipe.</p>
+      <div class="deck" id="deck" role="region" aria-roledescription="carousel" aria-label="Ikon 2.0 pitch deck" tabindex="0">
+        <div class="deck__stage">
+          <ol class="deck__slides"><li data-caption="Ikon 2.0: a new digital experience to help mountain sports enthusiasts get to the fun faster."><img src="images/projects/Alterra-Pitch-Work/deck/01-title.jpg" alt="Slide 1: Ikon 2.0: a new digital experience to help mountain sports enthusiasts get to the fun faster." width="1800" height="1014" loading="eager"></li><li data-caption="The vision: set a new standard for the industry with a platform that connects every step of the rider&#x27;s journey."><img src="images/projects/Alterra-Pitch-Work/deck/02-vision.jpg" alt="Slide 2: The vision: set a new standard for the industry with a platform that connects every step of the rider&#x27;s journey." width="1800" height="1014" loading="eager"></li><li data-caption="Dynamic dashboard and wallet: location-based conditions, quick pass access and the day&#x27;s plan in one place."><img src="images/projects/Alterra-Pitch-Work/deck/03-dynamic-dashboard-wallet.jpg" alt="Slide 3: Dynamic dashboard and wallet: location-based conditions, quick pass access and the day&#x27;s plan in one place." width="1800" height="1014" loading="lazy"></li><li data-caption="Quick meetup with friends: respond to a request or suggest a place to meet without taking off your gloves."><img src="images/projects/Alterra-Pitch-Work/deck/04-quick-meetup-with-friends.jpg" alt="Slide 4: Quick meetup with friends: respond to a request or suggest a place to meet without taking off your gloves." width="1800" height="1014" loading="lazy"></li><li data-caption="Product recommendations and purchasing: gear suggested from the rider&#x27;s profile, with pickup and a map to the shop."><img src="images/projects/Alterra-Pitch-Work/deck/05-product-reco-purchasing.jpg" alt="Slide 5: Product recommendations and purchasing: gear suggested from the rider&#x27;s profile, with pickup and a map to the shop." width="1800" height="1014" loading="lazy"></li><li data-caption="Personalization and widgets: riders choose what their dashboard shows and how it looks."><img src="images/projects/Alterra-Pitch-Work/deck/06-personalization-widgets.jpg" alt="Slide 6: Personalization and widgets: riders choose what their dashboard shows and how it looks." width="1800" height="1014" loading="lazy"></li><li data-caption="Park pass and resort credit: the pass, funds and rewards in one wallet, with no physical card."><img src="images/projects/Alterra-Pitch-Work/deck/07-park-pass-resort-credit.jpg" alt="Slide 7: Park pass and resort credit: the pass, funds and rewards in one wallet, with no physical card." width="1800" height="1014" loading="lazy"></li><li data-caption="Tickets and equipment: day tickets, rentals and gear for riders who aren&#x27;t season pass holders."><img src="images/projects/Alterra-Pitch-Work/deck/08-tickets-equipment.jpg" alt="Slide 8: Tickets and equipment: day tickets, rentals and gear for riders who aren&#x27;t season pass holders." width="1800" height="1014" loading="lazy"></li><li data-caption="Live maps and orientation: see where you are, where your crew is, and which lifts and runs are open."><img src="images/projects/Alterra-Pitch-Work/deck/09-live-maps-orientation.jpg" alt="Slide 9: Live maps and orientation: see where you are, where your crew is, and which lifts and runs are open." width="1800" height="1014" loading="lazy"></li><li data-caption="Metrics and achievements: vertical feet, speed and milestones that bring riders back."><img src="images/projects/Alterra-Pitch-Work/deck/10-metrics-achievements.jpg" alt="Slide 10: Metrics and achievements: vertical feet, speed and milestones that bring riders back." width="1800" height="1014" loading="lazy"></li><li data-caption="Planning and reservations: dinner, lodging and resort plans, managed alongside the ride."><img src="images/projects/Alterra-Pitch-Work/deck/11-planning-reservations.jpg" alt="Slide 11: Planning and reservations: dinner, lodging and resort plans, managed alongside the ride." width="1800" height="1014" loading="lazy"></li><li data-caption="Community and social: share runs, group messages and the activity feed from the day."><img src="images/projects/Alterra-Pitch-Work/deck/12-community-social.jpg" alt="Slide 12: Community and social: share runs, group messages and the activity feed from the day." width="1800" height="1014" loading="lazy"></li><li data-caption="Onboarding and rider personalization: rider type and equipment details set up the experience."><img src="images/projects/Alterra-Pitch-Work/deck/13-onboarding-rider-personalization.jpg" alt="Slide 13: Onboarding and rider personalization: rider type and equipment details set up the experience." width="1800" height="1014" loading="lazy"></li><li data-caption="The same system, themed per resort: Winter Park, Colorado."><img src="images/projects/Alterra-Pitch-Work/deck/14-resort-winter-park.jpg" alt="Slide 14: The same system, themed per resort: Winter Park, Colorado." width="1800" height="1014" loading="lazy"></li><li data-caption="The same system, themed per resort: Eldora Mountain, Colorado."><img src="images/projects/Alterra-Pitch-Work/deck/15-resort-eldora-mountain.jpg" alt="Slide 15: The same system, themed per resort: Eldora Mountain, Colorado." width="1800" height="1014" loading="lazy"></li><li data-caption="The same system, themed per resort: June Mountain, California."><img src="images/projects/Alterra-Pitch-Work/deck/16-resort-june-mountain.jpg" alt="Slide 16: The same system, themed per resort: June Mountain, California." width="1800" height="1014" loading="lazy"></li><li data-caption="Heads-up display: the dashboard carried into goggles for a hands-free day on the hill."><img src="images/projects/Alterra-Pitch-Work/deck/17-heads-up-display.jpg" alt="Slide 17: Heads-up display: the dashboard carried into goggles for a hands-free day on the hill." width="1800" height="1014" loading="lazy"></li></ol>
+          <button class="deck__nav deck__nav--prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+          <button class="deck__nav deck__nav--next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+        </div>
+        <p class="deck__caption" aria-live="polite"></p>
+        <div class="deck__bar">
+          <span class="deck__count" aria-live="polite"><b>1</b> / 17</span>
+          <input class="deck__range" type="range" min="1" max="17" value="1" aria-label="Slide number">
+          <button class="deck__full" type="button">Full screen</button>
+        </div>
+        <div class="deck__strip">
+          <button class="deck__scroll deck__scroll--prev" type="button" aria-label="Scroll previews left"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+          <ul class="deck__thumbs" aria-label="Slide previews"></ul>
+          <button class="deck__scroll deck__scroll--next" type="button" aria-label="Scroll previews right"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="pj-section" aria-labelledby="pj-took"><div class="wrap pj-grid">
+      <div><h2 id="pj-took">What it shows</h2></div>
+      <div class="pj-body">
+        <ul class="cs-outcomes">
+          <li><strong>Product vision.</strong> A day on the hill, told as a story, made the product easy to believe in.</li>
+          <li><strong>Fast UX thinking.</strong> [How the sketches moved quickly from idea to interface.]</li>
+          <li><strong>Multimedia prototyping.</strong> [How motion and sound made the concept feel real.] The result: we won the work.</li>
+        </ul>
+      </div>
+    </div></section>
+
+    <section class="pj-cta" aria-labelledby="pj-cta-title"><div class="wrap pj-cta__inner">
+      <div>
+        <p class="eyebrow eyebrow--plain">Want the full story?</p>
+        <h2 id="pj-cta-title">See a vision prototype from start to finish.</h2>
+        <p>The Allē Grow case study shows how I used UX strategy and a speculative prototype to help executives, teams, and partners believe in a new product.</p>
+      </div>
+      <p class="pj-cta__btns"><a class="btn btn--primary btn--lg" href="case-study-alle-grow.html">Read the Allē Grow case study</a> <a class="btn btn--ghost" href="product-work.html">See all work</a></p>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap">
+    <div class="footer__top">
+      <a class="logo" href="index.html"><img class="logo__img" src="images/logo/Logo.svg" alt="" width="237" height="83"><span class="logo__text">Chris R. Becker</span></a>
+      <ul class="social" aria-label="Social links">
+          <li><a href="https://www.linkedin.com/in/chrisrbecker/" rel="noopener" target="_blank" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+          <li><a href="https://medium.com/@cbecker" rel="noopener" target="_blank" aria-label="Medium" title="Medium"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg></a></li>
+           <li><a href="https://www.instagram.com/sketchesbychrisrbecker/" rel="noopener" target="_blank" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.25"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a></li>
+          <li><a href="https://twitter.com/cbecker" rel="noopener" target="_blank" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></li>
+          <li><a href="https://github.com/chrisrbecker" rel="noopener" target="_blank" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
+          <li><a href="mailto:crbecker1@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li>
+          <li><a href="https://linktr.ee/crbecker1" rel="noopener" target="_blank" aria-label="Linktree" title="Linktree"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M13.736 5.853 17.5 2.1l2.4 2.44-3.85 3.64h5.4v3.4h-5.45l3.85 3.76-2.4 2.43-5.77-5.8-5.77 5.8-2.4-2.4 3.85-3.79H2.4v-3.4h5.4L3.95 4.54l2.4-2.44 3.76 3.75V0h3.63zm-3.63 10.67h3.63V24h-3.63z"/></svg></a></li>
+          <li><a href="https://www.youtube.com/@crbecker1" rel="noopener" target="_blank" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
+        </ul>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="year">2026</span> Chris R. Becker. All rights reserved.</p>
+      <p>Site created <time datetime="2026-10-02">October 2, 2026</time></p>
+    </div>
+      <p class="footer__credit">Made with love by Chris R. Becker with help from Claude Code + friends.</p>
+  </div></footer>
+</body>
+</html>
