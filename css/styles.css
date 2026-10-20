@@ -830,3 +830,10 @@ html.reader-open { overflow: hidden; }
 .cs-awards img { display: block; width: 100%; height: auto; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .5rem; }
 .cs-awards figcaption { margin-top: .5rem; font-size: .85rem; color: var(--ink-soft); }
 @media (max-width: 767px) { .cs-awards { grid-template-columns: 1fr; } }
+
+/* Case study hero: image to the right of the title */
+.cs-hero__grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 4rem); align-items: center; margin-bottom: 2rem; }
+.cs-hero__text .tags { margin-bottom: 0; }
+.cs-hero__img { margin: 0; }
+.cs-hero__img img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); background: var(--blue-100); box-shadow: var(--shadow-md); }
+@media (max-width: 860px) { .cs-hero__grid { grid-template-columns: 1fr; } .cs-hero__img { order: 2; } }
