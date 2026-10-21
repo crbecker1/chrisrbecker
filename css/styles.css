@@ -599,13 +599,16 @@ dialog::backdrop { background: rgba(11, 42, 91, .55); backdrop-filter: blur(3px)
 .tags { list-style: none; margin: 0 0 1.5rem; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
 .tags li { padding: .3rem .8rem; border-radius: 999px; background: var(--blue-100); color: var(--blue-700); font-size: .82rem; font-weight: 500; }
 .workcards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-.workcard { display: block; height: 100%; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; text-decoration: none; color: inherit; box-shadow: var(--shadow-sm); transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
+.workcard { display: flex; flex-direction: column; height: 100%; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; text-decoration: none; color: inherit; box-shadow: var(--shadow-sm); transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
 .workcard:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .workcard img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: center 60%; background: var(--blue-50); border-bottom: 1px solid var(--line); }
-.workcard__body { display: block; padding: .8rem 1.1rem 1rem; }
+.workcard__body { display: flex; flex-direction: column; flex: 1; padding: .8rem 1.1rem 1rem; }
 .workcard h3 { font-size: 1.1rem; margin-bottom: .25em; }
 .workcard p { margin: 0 0 .5rem; color: var(--ink-soft); font-size: .95rem; }
-.workcard__cta { color: var(--blue-600); font-weight: 600; font-size: .92rem; }
+.workcard__cta { display: inline-flex; align-items: center; gap: .35rem; align-self: flex-end; margin-top: auto; padding-top: .5rem; color: var(--blue-600); font-weight: 600; font-size: .92rem; }
+.workcard__cta-text { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; transition: text-decoration-thickness .15s; }
+.workcard:hover .workcard__cta-text { text-decoration-thickness: 3px; }
+.workcard:hover .workcard__cta { color: var(--blue-700); }
 @media (max-width: 900px) { .workcards { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 767px) {
   .case__grid { grid-template-columns: 1fr; }
@@ -1084,3 +1087,33 @@ html.reader-open { overflow: hidden; }
 .about-car__note { margin: .6rem 0 0; text-align: center; font-size: .95rem; color: var(--blue-900); }
 .about-car__note a { color: var(--blue-600); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .about-car__note a:hover { color: var(--orange-600); }
+
+/* About page */
+.prose-wide { max-width: 72ch; }
+.prose-wide h2 { margin: 0 0 .75rem; }
+.about__links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.elsewhere { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+.elsewhere__card { position: relative; display: flex; align-items: center; gap: 1rem; height: 100%; padding: 1.25rem 1.4rem; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); color: inherit; text-decoration: none; transition: box-shadow .2s, border-color .2s; }
+.elsewhere__card:hover { border-color: var(--blue-500); box-shadow: 0 4px 10px rgba(11, 42, 91, .5), 0 1px 3px rgba(11, 42, 91, .4); }
+.elsewhere__card:focus-visible { outline: 3px solid var(--blue-600); outline-offset: 3px; }
+.elsewhere__icon { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 12px; background: var(--blue-900); color: var(--logo-blue, #00aeef); }
+.elsewhere__icon svg { width: 26px; height: 26px; }
+.elsewhere__body { display: flex; flex-direction: column; gap: .1rem; min-width: 0; }
+.elsewhere__body strong { color: var(--blue-900); font-family: var(--font-display); font-size: 1.2rem; font-weight: 400; }
+.elsewhere__handle { font-family: var(--font-mono); font-size: .78rem; color: var(--orange-600); overflow-wrap: anywhere; }
+.elsewhere__desc { font-size: .9rem; color: var(--ink-soft, #4a5568); }
+.elsewhere__go { margin-left: auto; font-size: 1.2rem; color: var(--blue-600); }
+.elsewhere__card:hover .elsewhere__go { color: var(--orange-600); }
+.about__portrait { margin: 0; justify-self: center; width: min(100%, 440px); }
+.about__portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; border-radius: var(--radius); box-shadow: var(--shadow-md); }
+.about__sketch { margin: 0; }
+.about__sketch img { display: block; width: 100%; height: auto; border-radius: var(--radius); background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow-md); }
+.about__contact .eyebrow { margin-bottom: .5rem; }
+.about__contact h2 { margin-top: 0; }
+
+/* Product work: featured case studies heading + arrow on case CTAs */
+.cs-intro { padding-block: clamp(2.5rem, 5vw, 4rem) 0; }
+.cs-intro .section-head { margin-bottom: 0; }
+.cs-intro h2 { margin: 0 0 .4rem; }
+.btn__arrow { flex: none; width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .2s var(--ease); }
+.btn:hover .btn__arrow { transform: translateX(4px); }

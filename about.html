@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Me — Chris R. Becker</title>
-  <meta name="description" content="My background, philosophy, and the work behind the work.">
+  <meta name="description" content="Chris R. Becker is a design educator, product design leader, and author in Los Angeles. Background, teaching, writing, and where to find me online.">
   <meta name="theme-color" content="#1a5bc4">
   <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Andada+Pro:wght@400&family=Space+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/script.js" defer></script>
+  <script src="js/hero-carousel.js" defer></script>
 </head>
 <body>
   <!-- Nav icon sprite -->
@@ -57,18 +58,85 @@
     </nav>
   </header>
   <main id="main">
-    <section class="page-hero"><div class="wrap">
+    <section class="page-hero page-hero--bar"><div class="wrap">
       <p class="eyebrow"><a href="index.html#services" style="text-decoration:none">← All services</a></p>
       <h1>About Me</h1>
-      <p class="lede">My background, philosophy, and the work behind the work.</p>
+      <p class="lede">Design educator, product design leader, and author.</p>
     </div></section>
+
     <section class="section"><div class="wrap">
-<div class="split"><div class="prose">
-<p>I’m Chris, a senior UX and product designer and educator based in Los Angeles. I move between shipping products and teaching the designers who will build what comes next.</p>
-<p>My approach is simple: understand people, make the problem visible, and test small ideas quickly. I care about craft, clarity, and kindness in critique.</p>
-<p>Outside of work I write, read, and mentor designers at the start of their careers.</p></div>
-<div class="placeholder-img" role="img" aria-label="Placeholder portrait"><div><svg viewBox="0 0 24 24"><use href="#i-image"/></svg>Portrait placeholder</div></div></div>
-      <p style="margin-top:3rem"><a class="btn btn--primary" href="index.html#contact">Work with me</a></p>
+      <div class="split">
+        <div class="prose">
+          <p>I’m Chris, a senior UX and product designer, educator, and author based in Los Angeles. I move between shipping products and teaching the designers who will build what comes next. That loop keeps my work honest: what I teach has to survive contact with real teams, and what I build has to be explainable to a first-year student.</p>
+          <p>I studied painting at Colorado State University and media design at ArtCenter College of Design, and I still think like a maker. I draw to think, and I believe design is a making practice: what you make at first will likely not be very good, and that means you are learning to make it better.</p>
+          <p>Today I teach interaction design at Santa Monica College, teach at Otis College of Art and Design and ArtCenter, and mentor designers through Designlab and ADPList. Before that I taught at UCLA Extension, UC Irvine Extension, Loyola Marymount, and UT Austin, and designed the UX/UI bootcamp curriculum for Trilogy and 2U.</p>
+          <p>My approach is simple: understand people, make the problem visible, and test small ideas quickly. I care about craft, clarity, and kindness in critique.</p>
+          <ul class="stats">
+            <li><strong>15+</strong><span>years in UX &amp; product</span></li>
+            <li><strong>1,000+</strong><span>students taught</span></li>
+            <li><strong>3</strong><span>books &amp; guides</span></li>
+          </ul>
+        </div>
+        <figure class="about__portrait">
+          <img src="images/about/web/CRB-Trees-profile.jpg" alt="Portrait of Chris R. Becker smiling in a checked shirt, with yellow leaves and blue sky behind" width="1200" height="1600">
+        </figure>
+      </div>
+    </div></section>
+
+    <section class="section section--tint" aria-labelledby="writing-h"><div class="wrap">
+      <div class="split">
+        <div class="prose">
+          <h2 id="writing-h">Books, writing, and speaking</h2>
+          <p>I wrote <em>Learn Human-Computer Interaction</em> and <em>Effective UX Design Strategies</em>, and recorded UX design video courses for Packt. I publish on Medium, including pieces picked up by UX Collective, and I’ve contributed to UXmatters, UXPA, ZURB Glare, Optimal Workshop, and ProtoPie. I also speak and run workshops on AI, design systems, and sketching-first design.</p>
+          <p class="about__links"><a class="btn btn--ghost" href="books.html">See the books</a> <a class="btn btn--ghost" href="writing.html">Read my writing</a> <a class="btn btn--ghost" href="teaching.html">Teaching and talks</a></p>
+        </div>
+        <div>
+          <figure class="hcar about-car" id="about-car" role="region" aria-roledescription="carousel" aria-label="Sketches by Chris R. Becker" tabindex="0" data-interval="4500" style="--hcar-ratio: 2388 / 1668">
+            <div class="hcar__stage"><ol class="hcar__slides"><li class="is-active" data-caption="Thinking: inputs, the senses and outputs, after Descartes"><img src="images/sketches/web/Descartesthinking-CRB2025.jpg" alt="Pen sketch: Thinking: inputs, the senses and outputs, after Descartes" width="1400" height="978"></li><li data-caption="Design is a way of life, a point of view, after Paul Rand"><img src="images/sketches/web/DesignPOV-CRB-2025.jpg" alt="Pen sketch: Design is a way of life, a point of view, after Paul Rand" width="1400" height="978" loading="lazy"></li><li data-caption="Richard Feynman on how students should learn"><img src="images/sketches/web/Richard-Feynman-Quote-crb2023-01.jpg" alt="Pen sketch: Richard Feynman on how students should learn" width="1400" height="978" loading="lazy"></li><li data-caption="Mental models: beliefs, schema, assumptions and expectations"><img src="images/sketches/web/Meanly-model-crb2026.jpg" alt="Pen sketch: Mental models: beliefs, schema, assumptions and expectations" width="1400" height="978" loading="lazy"></li><li data-caption="Gestalt, in a glass"><img src="images/sketches/web/Gestalt-cheers-crb2026.jpg" alt="Pen sketch: Gestalt, in a glass" width="1400" height="978" loading="lazy"></li><li data-caption="Marshall McLuhan in a room of machines"><img src="images/sketches/web/McLuhan-AI-crb2026.jpg" alt="Pen sketch: Marshall McLuhan in a room of machines" width="1400" height="978" loading="lazy"></li><li data-caption="Nietzsche takes a punch"><img src="images/sketches/web/Neitsche-facepunch-crb2026.jpg" alt="Pen sketch: Nietzsche takes a punch" width="1400" height="978" loading="lazy"></li><li data-caption="The AI sausage factory"><img src="images/sketches/web/AIShit-sausage-crb-2026.jpg" alt="Pen sketch: The AI sausage factory" width="1400" height="978" loading="lazy"></li><li data-caption="Bootlicking AI"><img src="images/sketches/web/Bootlicking-AI-crb2026.jpg" alt="Pen sketch: Bootlicking AI" width="1400" height="978" loading="lazy"></li><li data-caption="If a logo is made bigger, after Kohan"><img src="images/sketches/web/CRB-Tree-logo_Kohan.jpg" alt="Pen sketch: If a logo is made bigger, after Kohan" width="1400" height="978" loading="lazy"></li></ol>
+              <button class="hcar__nav hcar__nav--prev" type="button" aria-label="Previous sketch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+              <button class="hcar__nav hcar__nav--next" type="button" aria-label="Next sketch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+            </div>
+            <div class="hcar__dots"><button type="button" aria-label="Show sketch 1"></button><button type="button" aria-label="Show sketch 2"></button><button type="button" aria-label="Show sketch 3"></button><button type="button" aria-label="Show sketch 4"></button><button type="button" aria-label="Show sketch 5"></button><button type="button" aria-label="Show sketch 6"></button><button type="button" aria-label="Show sketch 7"></button><button type="button" aria-label="Show sketch 8"></button><button type="button" aria-label="Show sketch 9"></button><button type="button" aria-label="Show sketch 10"></button></div>
+            <figcaption class="hcar__caption" aria-live="off"></figcaption>
+          </figure>
+          <p class="about-car__note">Sketches and Illustrations from my articles on <a href="https://medium.com/@cbecker" rel="noopener" target="_blank">Medium</a></p>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="section" aria-labelledby="elsewhere-h"><div class="wrap">
+      <h2 id="elsewhere-h">Find me online</h2>
+      <ul class="elsewhere">
+        <li><a class="elsewhere__card" href="https://www.linkedin.com/in/chrisrbecker/" rel="noopener" target="_blank">
+          <span class="elsewhere__icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+          <span class="elsewhere__body"><strong>LinkedIn</strong><span class="elsewhere__handle">in/chrisrbecker</span><span class="elsewhere__desc">Experience, teaching, and publications.</span></span>
+          <span class="elsewhere__go" aria-hidden="true">↗</span>
+        </a></li>
+        <li><a class="elsewhere__card" href="https://medium.com/@cbecker" rel="noopener" target="_blank">
+          <span class="elsewhere__icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="currentColor"><path d="M4.21 0A4.201 4.201 0 0 0 0 4.21v15.58A4.201 4.201 0 0 0 4.21 24h15.58A4.201 4.201 0 0 0 24 19.79v-1.093c-.137.013-.278.02-.422.02-2.577 0-4.027-2.146-4.09-4.832a7.592 7.592 0 0 1 .022-.708c.093-1.186.475-2.241 1.105-3.022a3.885 3.885 0 0 1 1.395-1.1c.468-.237 1.127-.367 1.664-.367h.023c.101 0 .202.004.303.01V4.211A4.201 4.201 0 0 0 19.79 0Zm.198 5.583h4.165l3.588 8.435 3.59-8.435h3.864v.146l-.019.004c-.705.16-1.063.397-1.063 1.254h-.003l.003 10.274c.06.676.424.885 1.063 1.03l.02.004v.145h-4.923v-.145l.019-.005c.639-.144.994-.353 1.054-1.03V7.267l-4.745 11.15h-.261L6.15 7.569v9.445c0 .857.358 1.094 1.063 1.253l.02.004v.147H4.405v-.147l.019-.004c.705-.16 1.065-.397 1.065-1.253V6.987c0-.857-.358-1.094-1.064-1.254l-.018-.004zm19.25 3.668c-1.086.023-1.733 1.323-1.813 3.124H24V9.298a1.378 1.378 0 0 0-.342-.047Zm-1.862 3.632c-.1 1.756.86 3.239 2.204 3.634v-3.634z"/></svg></span>
+          <span class="elsewhere__body"><strong>Medium</strong><span class="elsewhere__handle">@cbecker</span><span class="elsewhere__desc">Articles on design, AI, and education, with my illustrations.</span></span>
+          <span class="elsewhere__go" aria-hidden="true">↗</span>
+        </a></li>
+        <li><a class="elsewhere__card" href="https://www.instagram.com/sketchesbychrisrbecker/" rel="noopener" target="_blank">
+          <span class="elsewhere__icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.25"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></span>
+          <span class="elsewhere__body"><strong>Instagram</strong><span class="elsewhere__handle">@sketchesbychrisrbecker</span><span class="elsewhere__desc">Sketches and drawings.</span></span>
+          <span class="elsewhere__go" aria-hidden="true">↗</span>
+        </a></li>
+      </ul>
+    </div></section>
+
+    <section class="section section--tint" aria-labelledby="contact-h"><div class="wrap">
+      <div class="split about__contact">
+        <figure class="about__sketch reveal">
+          <img src="images/about/web/Not-the-user-crb2021.jpg" alt="Pen sketch of a person standing on a desk shouting through a megaphone: I am not the user!" width="1400" height="978" loading="lazy">
+        </figure>
+        <div class="prose">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-h">Tell me about the problem.</h2>
+          <p>I’m not the user, and neither are you. If you have a product that needs a clearer direction, a class that needs a guest, or a team that needs a workshop, tell me what you’re working on and I’ll reply within a few business days with next steps.</p>
+          <p class="about__links"><a class="btn btn--primary" href="index.html#contact">Work with me</a> <a class="btn btn--ghost" href="mailto:crbecker1@gmail.com">Email me</a></p>
+        </div>
+      </div>
     </div></section>
   </main>
   <footer class="site-footer"><div class="wrap">
