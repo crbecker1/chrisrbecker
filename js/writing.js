@@ -47,7 +47,7 @@
   };
   const newTab = () => el('span', { class: 'visually-hidden' }, ' (opens in a new tab)');
   // Every article leaves the site for Medium, so the CTA says so.
-  const cta = () => el('span', { class: 'article__cta' }, 'Read on Medium', icon('i-external'), newTab());
+  const cta = () => el('span', { class: 'article__cta' }, el('span', { class: 'article__cta-text' }, 'Read on Medium'), icon('i-external'), newTab());
   /* ---------- Filter buttons ---------- */
   const count = (name) => (name === ALL ? articles.length : articles.filter((a) => a.tags.includes(name)).length);
 
@@ -73,42 +73,52 @@
 
   /* ---------- Cards ---------- */
   function featuredCard(a) {
-    const link = el('a', { class: 'article__link', href: a.url, target: '_blank', rel: 'noopener' },
+    const t = tagInfo(a.tags[0]);
+    const link = el('a', { class: 'article__link', href: a.url, target: '_blank', rel: 'noopener', title: a.tags.join(' · ') },
       a.image ? el('img', { class: 'article__img', src: a.image, alt: '', loading: 'lazy' }) : '',
-      el('div', { class: 'article__body' },
-        el('p', { class: 'article__meta' }, el('span', { class: 'article__badge' }, 'Latest'), el('time', { datetime: a.date }, fmtDate(a.date))),
+      el('div', { class: 'article__head' },
+        el('span', { class: 'article__icon' }, icon(t.icon)),
+        el('time', { class: 'article__date', datetime: a.date }, fmtDate(a.date))
+      ),
+      el('div', { class: 'article__content' },
         el('h3', { class: 'article__title' }, a.title),
         a.excerpt ? el('p', { class: 'article__excerpt' }, a.excerpt) : '',
-        cta()
+        el('span', { class: 'visually-hidden' }, 'Read on Medium (opens in a new tab)')
       )
     );
     const tags = el('ul', { class: 'article__tags', 'aria-label': 'Tags' },
       a.tags.map((name) => {
-        const t = tagInfo(name);
-        return el('li', {}, el('button', { class: 'chip tone-' + t.tone, type: 'button', 'data-tag': name, 'aria-label': 'Show ' + name + ' articles' }, icon(t.icon), name));
+        const tg = tagInfo(name);
+        return el('li', {}, el('button', { class: 'chip tone-' + tg.tone, type: 'button', 'data-tag': name, 'aria-label': 'Show ' + name + ' articles' }, icon(tg.icon), name));
       })
     );
     tags.addEventListener('click', (e) => {
       const chip = e.target.closest('.chip');
       if (chip) { setFilter(chip.dataset.tag); filters.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
-    return el('li', { class: 'article article--featured' }, link, tags);
+    // Same CTA box as the small cards; the main link above already covers it for keyboard and screen reader users
+    const bar = el('a', { class: 'article__cta', href: a.url, target: '_blank', rel: 'noopener', 'aria-hidden': 'true', tabindex: '-1' },
+      el('span', { class: 'article__cta-text' }, 'Read on Medium'), icon('i-external'));
+    return el('li', { class: 'article article--featured article--flagged' },
+      el('span', { class: 'article__tab' }, 'Latest'), link, tags, bar);
   }
 
   function smallCard(a) {
     const t = tagInfo(a.tags[0]);
     const flag = a.featured ? (a.featured === true ? 'Featured' : String(a.featured)) : (a.topRated ? 'Top rated' : '');
     return el('li', { class: 'article' + (flag ? ' article--flagged' : '') },
-      flag ? el('span', { class: 'article__strip' + (!a.featured ? ' article__strip--top' : '') }, flag) : '',
+      flag ? el('span', { class: 'article__tab' + (!a.featured ? ' article__tab--top' : '') }, flag) : '',
       el('a', { class: 'article__link', href: a.url, target: '_blank', rel: 'noopener', title: a.tags.join(' · ') },
-        el('span', { class: 'article__icon tone-' + t.tone }, icon(t.icon)),
+        el('div', { class: 'article__head' },
+          el('span', { class: 'article__icon' }, icon(t.icon)),
+          el('time', { class: 'article__date', datetime: a.date }, fmtDate(a.date))
+        ),
         el('div', { class: 'article__content' },
-          el('time', { class: 'article__date', datetime: a.date }, fmtDate(a.date)),
           el('h3', { class: 'article__title' }, a.title),
           a.excerpt ? el('p', { class: 'article__excerpt' }, a.excerpt) : '',
-          el('span', { class: 'visually-hidden' }, 'Tags: ' + a.tags.join(', ')),
-          cta()
-        )
+          el('span', { class: 'visually-hidden' }, 'Tags: ' + a.tags.join(', '))
+        ),
+        cta()
       )
     );
   }
