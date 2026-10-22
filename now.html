@@ -13,7 +13,7 @@
   <link rel="manifest" href="images/favicon/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Andada+Pro:wght@400&family=Space+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Andada+Pro:wght@400&family=Space+Mono&family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/script.js" defer></script>
 </head>
@@ -57,32 +57,60 @@
     </nav>
   </header>
   <main id="main">
-    <section class="page-hero"><div class="wrap">
-      <p class="eyebrow"><a href="index.html#services" style="text-decoration:none">← All services</a></p>
-      <h1>Now</h1>
-      <p class="lede">What I am doing now...
-I'm living in Los Feliz, Los Angeles, working at OTIS College of Art and Design, Santa Monica College Interaction Design Program, and Art Center College of Design, and designing UX/UI curriculum and mentoring student projects. I'm focusing on sharing more of my experience as the time goes on.
+    <section class="now" aria-labelledby="now-title">
+      <div class="wrap">
+        <header class="now__head">
+          <div class="now__title">
+            <p class="eyebrow cs-back"><a href="index.html#services" style="text-decoration:none">← All services</a></p>
+            <h1 id="now-title">Now</h1>
+            <p class="lede">What I’m up to these days. Updated October 2, 2026.</p>
+          </div>
+          <p class="now__month" aria-hidden="true"><span>October</span><span>2026</span></p>
+        </header>
+        <div class="now__intro">
+          <dl class="now__facts">
+            <div><dt>Living</dt><dd>In Los Feliz, Los Angeles. Out in the surf from El Porto to County Line whenever I can get there.</dd></div>
+            <div><dt>Teaching</dt><dd>At Otis College of Art and Design, the Santa Monica College Interaction Design program, and ArtCenter College of Design. Designing UX/UI curriculum and mentoring student projects.</dd></div>
+            <div><dt>Building</dt><dd>Experimenting with AI coding and tools like Tailwind CSS, React, and Figma MCP, to explore software development with my students.</dd></div>
+            <div><dt>Home</dt><dd>Dad to two awesome kids, Helios (7) and Ophelia (5).</dd></div>
+            <div><dt>Open to</dt><dd>Tinkering with projects that advance UX design and education. If you have one you’d like to talk about, reach out.</dd></div>
+          </dl>
+          <p class="now__inspired">This is a /now page, inspired by <a href="https://sive.rs/" rel="noopener" target="_blank">Derek Sivers</a> (sive.rs) and the directory of /now pages at <a href="https://nownownow.com/" rel="noopener" target="_blank">nownownow.com</a>.</p>
+        </div>
+        <div class="now__dow" aria-hidden="true"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+        <div class="now__stage">
+          <div class="now-cal" aria-hidden="true"><span class="now-cal__d now-cal__d--blank"></span><span class="now-cal__d now-cal__d--blank"></span><span class="now-cal__d now-cal__d--blank"></span><span class="now-cal__d">1</span><span class="now-cal__d now-cal__d--mark">2</span><span class="now-cal__d">3</span><span class="now-cal__d">4</span><span class="now-cal__d">5</span><span class="now-cal__d">6</span><span class="now-cal__d">7</span><span class="now-cal__d">8</span><span class="now-cal__d">9</span><span class="now-cal__d">10</span><span class="now-cal__d">11</span><span class="now-cal__d">12</span><span class="now-cal__d">13</span><span class="now-cal__d">14</span><span class="now-cal__d">15</span><span class="now-cal__d">16</span><span class="now-cal__d">17</span><span class="now-cal__d">18</span><span class="now-cal__d">19</span><span class="now-cal__d">20</span><span class="now-cal__d">21</span><span class="now-cal__d">22</span><span class="now-cal__d">23</span><span class="now-cal__d">24</span><span class="now-cal__d">25</span><span class="now-cal__d">26</span><span class="now-cal__d">27</span><span class="now-cal__d">28</span><span class="now-cal__d">29</span><span class="now-cal__d">30</span><span class="now-cal__d">31</span><span class="now-cal__d now-cal__d--blank"></span></div>
+          <div class="now__notes">
+            <article class="note note--green note--g"><p>Make rad shit...</p></article>
+            <a class="clip" href="https://medium.com/user-experience-design-1/the-next-larger-context-4dd0c91a7c5b?sk=e54977f11de339abbe2b618e98ef4ce8" target="_blank" rel="noopener">
+              <span class="clip__tape" aria-hidden="true"></span>
+              <img src="images/now/next-larger-context.png" alt="Pen sketch of a person sitting in a chair in a room full of detail" width="1200" height="838" loading="lazy">
+              <span class="clip__body">
+                <span class="clip__eyebrow">Writing · UX Collective editor’s pick</span>
+                <strong class="clip__title">The next larger context</strong>
+                <span class="clip__text">Designing beyond the interface, the product, and the prompt.</span>
+                <span class="clip__cta"><span class="clip__cta-text">Read on Medium</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
+              </span>
+            </a>
+            <article class="note note--yellow note--y"><p>Practice, have fun, and don’t stop</p></article>
+            <article class="note note--blue note--b"><p>Be a sponge: watch, read, write, make, repeat!</p></article>
+            <article class="note note--pink note--p"><p>Listen to your users&hellip; more!</p></article>
+          </div>
+        </div>
+        <p class="now__credit">Calendar page inspired by Massimo Vignelli’s Stendig calendar.</p>
+      </div>
+    </section>
 
-
-I've been writing articles on Medium with UX Design Collective: The Next Largest Context I am designing and experimenting with AI coding and using libraries like Twitter bootstrap, Tailwind CSS, React, and Figma MCP to explore the possibilities of software development with students. Outside of work, I'm a dad to 2 awesome kids, Helios (7) and Ophelia (5), and when I can I get out in the surf from el porto to countyline.
-
-
-I am currently tinkering with several projects that focus on advancing the field of UX design and education. If you have a project you'd like to discuss, feel free to reach out.
-
-
-Updated... October 2, 2026.</p>
+    <section class="pj-cta" aria-labelledby="now-cta-title"><div class="wrap pj-cta__inner">
+      <div>
+        <p class="eyebrow eyebrow--plain">Let’s talk</p>
+        <h2 id="now-cta-title">Have a project, a class, or a team that needs help?</h2>
+        <p>Tell me what you’re working on and I’ll reply within a few business days.</p>
+      </div>
+      <p class="pj-cta__btns"><a class="btn btn--primary btn--lg" href="index.html#contact">Work with me</a></p>
     </div></section>
-    <section class="section"><div class="wrap">
-<div class="cards">
-<article class="card"><span class="tag">Working on</span><h3>Product engagements</h3><p>Placeholder: a discovery project for an education technology team.</p></article>
-<article class="card"><span class="tag">Teaching</span><h3>This term</h3><p>Placeholder: studio courses in UX and interaction design.</p></article>
-<article class="card"><span class="tag">Writing</span><h3>In progress</h3><p>Placeholder: a new essay series and the next book outline.</p></article>
-<article class="card"><span class="tag">Reading</span><h3>On my desk</h3><p>Placeholder: books on systems thinking and learning design.</p></article>
-</div>
-<p style="margin-top:1.5rem;color:var(--ink-soft)">Last updated October 2026.</p>
-      <p style="margin-top:3rem"><a class="btn btn--primary" href="index.html#contact">Work with me</a></p>
-    </div></section>
-  </main>
+  
+</main>
   <footer class="site-footer"><div class="wrap">
     <div class="footer__top">
       <a class="logo" href="index.html"><img class="logo__img" src="images/logo/Logo.svg" alt="" width="237" height="83"><span class="logo__text">Chris R. Becker</span></a>
@@ -97,6 +125,53 @@ Updated... October 2, 2026.</p>
           <li><a href="https://www.youtube.com/@crbecker1" rel="noopener" target="_blank" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
         </ul>
     </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <div class="footer__col">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="product-work.html">UX/Product Work</a></li>
+            <li><a href="writing.html">Desk</a></li>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="now.html">Now</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="experiment-inspo.html">Experiments + Inspiration</a></li>
+            <li><a href="friends.html">Friends</a></li>
+            <li><a href="index.html#contact">Work with me</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2>Books</h2>
+          <ul>
+            <li><a href="https://a.co/d/052BLiZA" rel="noopener" target="_blank">Effective UX Design Strategies</a></li>
+            <li><a href="https://a.co/d/05B65Ku3" rel="noopener" target="_blank">Learn Human-Computer Interaction</a></li>
+            <li><a href="books.html">All books</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2>Recent on Medium</h2>
+          <ul>
+            <li><a href="https://medium.com/user-experience-design-1/the-next-larger-context-4dd0c91a7c5b?sk=e54977f11de339abbe2b618e98ef4ce8" rel="noopener" target="_blank">The next larger context</a></li>
+            <li><a href="https://medium.com/user-experience-design-1/users-dont-see-your-design-system-d6abd51c18fc?sk=f10c877ab93bb1bb7329bad9063a7575" rel="noopener" target="_blank">Users don’t see your design system</a></li>
+            <li><a href="https://medium.com/user-experience-design-1/the-aggressively-mediocre-fight-ed47b3f9f8f4?sk=4d7ea5ca7989687d012a1c6901e1c198" rel="noopener" target="_blank">The aggressively mediocre fight</a></li>
+            <li><a href="https://medium.com/user-experience-design-1/ai-meets-sturgeons-law-21d17488fc48?sk=4e54892f8d5ed1d10aeed59f465ad3a3" rel="noopener" target="_blank">AI meets Sturgeon’s Law</a></li>
+            <li><a href="https://medium.com/@cbecker" rel="noopener" target="_blank">More on Medium</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2>Friends + resources</h2>
+          <ul>
+            <li><a href="https://uxdesign.cc" rel="noopener" target="_blank">UX Collective</a></li>
+            <li><a href="https://www.uxmatters.com" rel="noopener" target="_blank">UXmatters</a></li>
+            <li><a href="https://designlab.com" rel="noopener" target="_blank">Designlab</a></li>
+            <li><a href="https://adplist.org/mentors/chris-becker" rel="noopener" target="_blank">ADPList</a></li>
+            <li><a href="https://glare.zurb.com" rel="noopener" target="_blank">ZURB Glare</a></li>
+            <li><a href="https://www.optimalworkshop.com" rel="noopener" target="_blank">Optimal Workshop</a></li>
+            <li><a href="https://www.protopie.io" rel="noopener" target="_blank">ProtoPie</a></li>
+            <li><a href="friends.html">All friends</a></li>
+          </ul>
+        </div>
+      </nav>
     <div class="footer__bottom">
       <p>&copy; <span id="year">2026</span> Chris R. Becker. All rights reserved.</p>
       <p>Site created <time datetime="2026-10-02">October 2, 2026</time></p>

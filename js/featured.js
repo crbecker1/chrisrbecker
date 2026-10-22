@@ -118,6 +118,22 @@
     "kind": "project"
   },
   {
+    "href": "project-waid-folksonomy.html",
+    "img": "images/projects/WAID-Taxonomy-workshop/web/WAID-23.jpg",
+    "title": "AI Folksonomy Workshop: WIAD 2026",
+    "sub": "A 50-minute lecture and workshop with 55+ designers",
+    "tags": ["Facilitation", "Information Architecture", "Workshops", "Teaching"],
+    "kind": "project"
+  },
+  {
+    "href": "project-ladwp-workshop.html",
+    "img": "images/projects/LADWP-DT-workshop/web/LADWP-day1-ICF-user-persona.jpg",
+    "title": "LADWP Design Thinking Workshop",
+    "sub": "A 2½-day, hands-on workshop for LADWP employees",
+    "tags": ["Design Thinking", "Workshop", "Ideation", "Facilitation"],
+    "kind": "project"
+  },
+  {
     "href": "project-ideation-workshop.html",
     "img": "images/projects/Deutsch-Inc-5-hat-ideation-workshop/09-Deutsch-5hat-ideas.png",
     "title": "Five Hats Ideation Workshop",

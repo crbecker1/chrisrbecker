@@ -6,7 +6,9 @@
     btn.addEventListener('click', function () {
       var id = btn.getAttribute('data-id'), provider = btn.getAttribute('data-provider');
       if (local) { window.open(btn.getAttribute('data-watch'), '_blank', 'noopener'); return; }
-      var src = provider === 'figma'
+      var src = provider === 'figma-deck'
+        ? 'https://embed.figma.com/deck/' + id + '&embed-host=share'
+        : provider === 'figma'
         ? 'https://embed.figma.com/slides/' + id + (id.indexOf('?') > -1 ? '&' : '?') + 'embed-host=share'
         : provider === 'wistia'
         ? 'https://fast.wistia.net/embed/iframe/' + id + '?autoPlay=true'
