@@ -1203,3 +1203,7 @@ a.friends__name:hover { color: var(--orange-600); text-decoration-thickness: 3px
 .friends--compact .friends__desc { font-family: var(--font-mono); font-size: .75rem; color: var(--ink-soft, #4a5568); overflow-wrap: anywhere; }
 .pj-grid-2--crop .pj-shot img { aspect-ratio: 4 / 3; height: auto; object-fit: cover; object-position: center 40%; width: 100%; }
 .pj-sub { margin: 2.5rem 0 1rem; font-size: clamp(1.25rem, 2.2vw, 1.6rem); color: var(--blue-900); }
+.cs-hero__img--poster { justify-self: center; width: min(100%, 400px); }
+.cs-hero__img--poster a { display: block; }
+.cs-hero__img--poster img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow-md); background: #fff; }
+.pj-steps { margin: 1.25rem 0 2rem; padding-left: 1.4rem; display: grid; gap: .6rem; max-width: 70ch; line-height: 1.6; }

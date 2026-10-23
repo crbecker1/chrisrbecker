@@ -118,6 +118,14 @@
     "kind": "project"
   },
   {
+    "href": "project-uxpa-poster.html",
+    "img": "images/projects/UXPA-2023-Poster/web/UXPA-01-poster.jpg",
+    "title": "Facilitating Fun: UXPA 2023 Poster",
+    "sub": "How UX helps teams collaborate and have more fun",
+    "tags": ["UX", "Facilitation", "Creative Management", "Collaboration"],
+    "kind": "project"
+  },
+  {
     "href": "project-waid-folksonomy.html",
     "img": "images/projects/WAID-Taxonomy-workshop/web/WAID-23.jpg",
     "title": "AI Folksonomy Workshop: WIAD 2026",
