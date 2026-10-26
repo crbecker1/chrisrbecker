@@ -1213,3 +1213,5 @@ a.friends__name:hover { color: var(--orange-600); text-decoration-thickness: 3px
 .cs-hero__img--poster img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow-md); background: #fff; }
 .pj-steps { margin: 1.25rem 0 2rem; padding-left: 1.4rem; display: grid; gap: .6rem; max-width: 70ch; line-height: 1.6; }
 .cs-natural .cs-fig img { aspect-ratio: auto; height: auto; object-fit: contain; background: #fff; border: 1px solid var(--line); }
+.cs-fig--natural img { aspect-ratio: auto; height: auto; object-fit: contain; background: #fff; border: 1px solid var(--line); }
+.cs-fig--natural img { width: auto; max-width: 100%; height: auto; max-height: 720px; }
