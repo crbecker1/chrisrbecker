@@ -81,7 +81,7 @@
       : `<li><span class="is-placeholder">${esc(l.label)}</span></li>`)).join('');
     return `<article class="spread" data-i="${i}" aria-label="Spread ${i + 1} of ${total}">
       <header class="spread__head"><span class="spread__num">${String(i + 1).padStart(2, '0')}</span><h3>${esc(s.title || 'Spread ' + (i + 1))}</h3>${shareHtml(b, i)}</header>
-      <div class="spread__pages n${n}">${imgs}</div>
+      <div class="spread__pages ${s.layout === 'row' ? 'nrow' : 'n' + n}" style="--c:${s.images.length}">${imgs}</div>
       <footer class="spread__foot"><p>${esc(s.caption || '')}</p>${links ? `<ul class="spread__links">${links}</ul>` : ''}<span class="spread__pp">pp. ${i * 2 + 1}–${i * 2 + 2}</span></footer>
     </article>`;
   }

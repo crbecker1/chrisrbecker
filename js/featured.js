@@ -118,8 +118,16 @@
     "kind": "project"
   },
   {
+    "href": "case-study-du-ia.html",
+    "img": "images/case-studies/du-ia/web/DU-22-nav-desktop.jpg",
+    "title": "DU.edu: Information Architecture",
+    "sub": "Card sorting and navigation for the University of Denver website redesign",
+    "tags": ["Information Architecture", "UX", "UI Design", "User Research"],
+    "kind": "case"
+  },
+  {
     "href": "project-uxpa-poster.html",
-    "img": "images/projects/UXPA-2023-Poster/web/UXPA-01-poster.jpg",
+    "img": "images/projects/UXPA-2023-Poster/web/UXPA-08-exquisite-corpse-diagram.jpg",
     "title": "Facilitating Fun: UXPA 2023 Poster",
     "sub": "How UX helps teams collaborate and have more fun",
     "tags": ["UX", "Facilitation", "Creative Management", "Collaboration"],

@@ -798,6 +798,10 @@ dialog::backdrop { background: rgba(11, 42, 91, .55); backdrop-filter: blur(3px)
 /* Layouts: 1 | 2 | 2+1 | 2+2 | 3+2 | 3+3 | 4+4 */
 .spread__pages > figure { grid-column: span 6; position: relative; margin: 0; min-height: 0; overflow: hidden; border-radius: 3px; background: var(--blue-100); box-shadow: 0 2px 8px rgba(11, 42, 91, .2); }
 .spread__pages.n1, .spread__pages.n2 { --rows: 1; }
+/* Sketchbook pages: one row, each page fills its column (cropped to the column width) */
+.spread__pages.nrow { --rows: 1; grid-template-columns: repeat(var(--c, 4), minmax(0, 1fr)); }
+.spread__pages.nrow > figure { grid-column: auto; }
+.spread__pages.nrow img { object-position: 62% 35%; }
 .spread__pages.n1 > figure { grid-column: span 12; }
 .spread__pages.n3 > figure:nth-child(3) { grid-column: span 12; }
 .spread__pages.n5 > figure:nth-child(-n+3), .spread__pages.n6 > figure { grid-column: span 4; }
@@ -825,6 +829,7 @@ html.reader-open { overflow: hidden; }
   .spread { padding: .75rem .9rem 1rem; }
   .spread__head { flex-wrap: wrap; }
   .spread__pages > figure { grid-column: span 6 !important; }
+  .spread__pages.nrow { grid-template-columns: repeat(2, minmax(0, 1fr)); --rows: 2; } .spread__pages.nrow > figure { grid-column: auto !important; aspect-ratio: 3 / 4; }
   .spread__pages.n1 > figure, .spread__pages.n2 > figure, .spread__pages.n3 > figure, .spread__pages.n5 > figure:last-child { grid-column: span 12 !important; }
   .spread__pages.n2 { --rows: 2; } .spread__pages.n3 { --rows: 3; } .spread__pages.n5 { --rows: 3; }
   .spread__pages.n6 { --rows: 3; } .spread__pages.n8 { --rows: 4; }
@@ -1207,3 +1212,4 @@ a.friends__name:hover { color: var(--orange-600); text-decoration-thickness: 3px
 .cs-hero__img--poster a { display: block; }
 .cs-hero__img--poster img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow-md); background: #fff; }
 .pj-steps { margin: 1.25rem 0 2rem; padding-left: 1.4rem; display: grid; gap: .6rem; max-width: 70ch; line-height: 1.6; }
+.cs-natural .cs-fig img { aspect-ratio: auto; height: auto; object-fit: contain; background: #fff; border: 1px solid var(--line); }

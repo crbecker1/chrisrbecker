@@ -31,16 +31,541 @@
 
     /* ---- Top shelf: sketchbooks, newest on the left. Q3/4 = second half, Q1/2 = first half. ---- */
     sketchbooks: [
-      { id: 'sketch-2026-h2', year: 2026, label: 'Q3/4', width: 42, spreads: [] },
-      { id: 'sketch-2026-h1', year: 2026, label: 'Q1/2', width: 45, spreads: [] },
-      { id: 'sketch-2025-h2', year: 2025, label: 'Q3/4', width: 48, spreads: [] },
-      { id: 'sketch-2025-h1', year: 2025, label: 'Q1/2', width: 42, spreads: [] },
-      { id: 'sketch-2024-h2', year: 2024, label: 'Q3/4', width: 45, spreads: [] },
-      { id: 'sketch-2024-h1', year: 2024, label: 'Q1/2', width: 48, spreads: [] },
-      { id: 'sketch-2023-h2', year: 2023, label: 'Q3/4', width: 42, spreads: [] },
-      { id: 'sketch-2023-h1', year: 2023, label: 'Q1/2', width: 45, spreads: [] },
-      { id: 'sketch-2022-h2', year: 2022, label: 'Q3/4', width: 48, spreads: [] },
-      { id: 'sketch-2022-h1', year: 2022, label: 'Q1/2', width: 42, spreads: [] }
+      { id: 'sketch-2026-h2', year: 2026, label: 'Q3/4', width: 42, spreads: [
+        {
+          title: 'World IA Day 2026',
+          caption: 'Sketchnotes from World IA Day, March 7, 2026.',
+          layout: 'row',
+          images: [
+            pic('sketch-2026-h2', 'page-01.jpg', 'Sketchnote page headed World IA Day 2026', 'World IA Day 2026'),
+            pic('sketch-2026-h2', 'page-02.jpg', 'Sketchnote page on naming and meaning in design systems', 'Naming and meaning'),
+            pic('sketch-2026-h2', 'page-03.jpg', 'Sketchnote page with a showcase of ideas and a portrait', 'Making meaning'),
+            pic('sketch-2026-h2', 'page-04.jpg', 'Sketchnote page on essentials and slowing down', 'Slow design')
+          ]
+        },
+        {
+          title: 'Ed 2.0 conference',
+          caption: 'Sketchnotes from the Ed 2.0 conference.',
+          layout: 'row',
+          images: [
+            pic('sketch-2026-h2', 'page-05.jpg', 'Sketchnote page headed Ed 2.0 conference', 'Ed 2.0 conference'),
+            pic('sketch-2026-h2', 'page-06.jpg', 'Sketchnote page on AI literacy and tech', 'AI literacy'),
+            pic('sketch-2026-h2', 'page-07.jpg', 'Sketchnote page on the intelligence economy', 'The intelligence economy'),
+            pic('sketch-2026-h2', 'page-08.jpg', 'Sketchnote page from a panel on AI', 'Panel on AI')
+          ]
+        },
+        {
+          title: 'AI and education',
+          caption: 'More from the Ed 2.0 conference.',
+          layout: 'row',
+          images: [
+            pic('sketch-2026-h2', 'page-09.jpg', 'Sketchnote page on dynamic AI needs and teaching', 'Teaching and AI'),
+            pic('sketch-2026-h2', 'page-10.jpg', 'Sketchnote page on the next best answer', 'The next best answer'),
+            pic('sketch-2026-h2', 'page-11.jpg', 'Sketchnote page on a gateway transition and the future of AI in practice', 'AI in practice'),
+            pic('sketch-2026-h2', 'page-12.jpg', 'Sketchnote page with a portrait and notes on curriculum', 'Curriculum')
+          ]
+        },
+        {
+          title: 'Classroom sketches',
+          caption: 'Sketches for teaching and demos.',
+          layout: 'row',
+          images: [
+            pic('sketch-2026-h2', 'page-13.jpg', 'Notebook page of three desk scene sketches', 'Desk scenes'),
+            pic('sketch-2026-h2', 'page-14.jpg', 'Notebook page of desk and device sketches with the words AI as a third hand', 'AI as a third hand'),
+            pic('sketch-2026-h2', 'page-15.jpg', 'Notebook page on professional personas and teaching ideas', 'Teaching ideas')
+          ]
+        },
+        {
+          title: 'Character drawings',
+          caption: 'A page of characters, drawn by hand.',
+          layout: 'row',
+          images: [
+            pic('sketch-2026-h2', 'page-16.jpg', 'Hand-drawn character with arms stretched wide', 'Character drawing'),
+            pic('sketch-2026-h2', 'page-17.jpg', 'Hand-drawn cat character labeled Pete the Cat', 'Pete the cat'),
+            pic('sketch-2026-h2', 'page-18.jpg', 'Hand-drawn character with long hair', 'Character drawing'),
+            pic('sketch-2026-h2', 'page-19.jpg', 'Hand-drawn building character with arms and legs', 'Building character')
+          ]
+        },
+        {
+          title: 'Character drawings, continued',
+          caption: 'More characters, drawn by hand.',
+          images: [
+            pic('sketch-2026-h2', 'page-20.jpg', 'Hand-drawn character with a cat head labeled flippy', 'Flippy'),
+            pic('sketch-2026-h2', 'page-21.jpg', 'Hand-drawn character with a wide smile', 'Character drawing')
+          ]
+        },
+        {
+          title: 'More notes',
+          caption: 'A character drawing, and research notes.',
+          images: [
+            pic('sketch-2026-h2', 'page-22.jpg', 'Hand-drawn character with a speech bubble', 'Character drawing'),
+            pic('sketch-2026-h2', 'page-23.jpg', 'Notebook page of UX research database review notes', 'UXR database review')
+          ]
+        }
+      ] },
+      { id: 'sketch-2026-h1', year: 2026, label: 'Q1/2', width: 45, spreads: [
+        {
+          title: 'Admin planning',
+          caption: 'Notes and sketches for the Allē admin work.',
+          layout: 'row',
+          images: [
+            pic('sketch-2026-h1', 'page-01.jpg', 'Notebook page of admin phase two planning notes', 'Admin: phase two planning'),
+            pic('sketch-2026-h1', 'page-02.jpg', 'Notebook page with a character sketch and admin notes', 'Admin squad notes'),
+            pic('sketch-2026-h1', 'page-03.jpg', 'Notebook page with admin wireframe boxes', 'Admin wireframes'),
+            pic('sketch-2026-h1', 'page-04.jpg', 'Notebook page with diagrams of roles and service design', 'Roles and service design')
+          ]
+        },
+        {
+          title: 'Roadmap, and UXPA 2026',
+          caption: 'Planning notes, then sketchnotes from UXPA 2026.',
+          layout: 'row',
+          images: [
+            pic('sketch-2026-h1', 'page-05.jpg', 'Notebook page about the Q3 roadmap with a portrait sketch', 'Q3 roadmap'),
+            pic('sketch-2026-h1', 'page-06.jpg', 'Sketchnote page headed UXPA 26 with a portrait', 'UXPA 2026 sketchnotes'),
+            pic('sketch-2026-h1', 'page-07.jpg', 'Sketchnote page on liminal spaces and brainstorming', 'Liminal spaces'),
+            pic('sketch-2026-h1', 'page-08.jpg', 'Sketchnote page on role play and getting perspective', 'Role play and perspective')
+          ]
+        },
+        {
+          title: 'Talks on AI and design',
+          caption: 'Sketchnotes from talks about AI, design, and teams.',
+          layout: 'row',
+          images: [
+            pic('sketch-2026-h1', 'page-09.jpg', 'Sketchnote page on breathing, presentation structure, and design thinking', 'Presenting with calm'),
+            pic('sketch-2026-h1', 'page-10.jpg', 'Sketchnote page headed AI with a robot drawing', 'AI and design systems'),
+            pic('sketch-2026-h1', 'page-11.jpg', 'Sketchnote page on AI in the design process and participatory design', 'AI in the process'),
+            pic('sketch-2026-h1', 'page-12.jpg', 'Sketchnote page on designers and AI partners', 'Designers and AI partners')
+          ]
+        },
+        {
+          title: 'Teams and design systems',
+          caption: 'Notes on hiring, design systems, and user roles.',
+          layout: 'row',
+          images: [
+            pic('sketch-2026-h1', 'page-13.jpg', 'Sketchnote page with a panel drawing and the words always be educating', 'Always be educating'),
+            pic('sketch-2026-h1', 'page-14.jpg', 'Notebook page on design systems and KPIs', 'Design systems and KPIs'),
+            pic('sketch-2026-h1', 'page-15.jpg', 'Notebook page on design system maturity', 'Design system maturity'),
+            pic('sketch-2026-h1', 'page-16.jpg', 'Notebook page on personas and user roles', 'Personas and user roles')
+          ]
+        },
+        {
+          title: 'UXPA sketchnotes: hiring and education',
+          caption: 'More talks from UXPA 2026.',
+          layout: 'row',
+          images: [
+            pic('sketch-2026-h1', 'page-17.jpg', 'Sketchnote page on UX hiring with a portrait', 'UX hiring'),
+            pic('sketch-2026-h1', 'page-18.jpg', 'Sketchnote page on UX education and the post-secondary landscape', 'UX education'),
+            pic('sketch-2026-h1', 'page-19.jpg', 'Sketchnote page with the words QA and accreditation', 'Accreditation'),
+            pic('sketch-2026-h1', 'page-20.jpg', 'Sketchnote page with UX icons and lettering', 'UX, in icons')
+          ]
+        },
+        {
+          title: 'Research and closing',
+          caption: 'Research methods, and the closing session.',
+          layout: 'row',
+          images: [
+            pic('sketch-2026-h1', 'page-21.jpg', 'Sketchnote page on research requests and a portrait', 'Research requests'),
+            pic('sketch-2026-h1', 'page-22.jpg', 'Notebook page on hypotheses and research decisions', 'Hypotheses and decisions'),
+            pic('sketch-2026-h1', 'page-23.jpg', 'Sketchnote page on UX tracking and mixed methods', 'UX tracking'),
+            pic('sketch-2026-h1', 'page-24.jpg', 'Sketchnote page headed UXPA closing', 'UXPA closing')
+          ]
+        },
+        {
+          title: 'A day in the life',
+          caption: 'Journey, app, and admin sketches.',
+          layout: 'row',
+          images: [
+            pic('sketch-2026-h1', 'page-25.jpg', 'Notebook page sketching a day in the life', 'Day in the life'),
+            pic('sketch-2026-h1', 'page-26.jpg', 'Notebook page of app screen sketches', 'App sketches'),
+            pic('sketch-2026-h1', 'page-27.jpg', 'Notebook page of a node diagram for an offer builder', 'Offer builder'),
+            pic('sketch-2026-h1', 'page-28.jpg', 'Notebook page with two wireframes', 'Wireframes')
+          ]
+        },
+        {
+          title: 'Planning',
+          caption: 'Notes for classes and a team exercise.',
+          layout: 'row',
+          images: [
+            pic('sketch-2026-h1', 'page-29.jpg', 'Notebook page of conference planning notes', 'Planning notes'),
+            pic('sketch-2026-h1', 'page-30.jpg', 'Notebook page of class planning notes', 'Class planning'),
+            pic('sketch-2026-h1', 'page-31.jpg', 'Notebook page sketching two teams and a bed', 'Team exercise')
+          ]
+        }
+      ] },
+      { id: 'sketch-2025-h2', year: 2025, label: 'Q3/4', width: 48, spreads: [
+        {
+          title: 'Pages 1–4',
+          caption: '2025 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2025-h2', 'page-01.jpg', 'Sketchbook page 1 from 2025 Q3/4', 'Page 1'),
+            pic('sketch-2025-h2', 'page-02.jpg', 'Sketchbook page 2 from 2025 Q3/4', 'Page 2'),
+            pic('sketch-2025-h2', 'page-03.jpg', 'Sketchbook page 3 from 2025 Q3/4', 'Page 3'),
+            pic('sketch-2025-h2', 'page-04.jpg', 'Sketchbook page 4 from 2025 Q3/4', 'Page 4')
+          ]
+        },
+        {
+          title: 'Pages 5–8',
+          caption: '2025 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2025-h2', 'page-05.jpg', 'Sketchbook page 5 from 2025 Q3/4', 'Page 5'),
+            pic('sketch-2025-h2', 'page-06.jpg', 'Sketchbook page 6 from 2025 Q3/4', 'Page 6'),
+            pic('sketch-2025-h2', 'page-07.jpg', 'Sketchbook page 7 from 2025 Q3/4', 'Page 7'),
+            pic('sketch-2025-h2', 'page-08.jpg', 'Sketchbook page 8 from 2025 Q3/4', 'Page 8')
+          ]
+        },
+        {
+          title: 'Pages 9–12',
+          caption: '2025 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2025-h2', 'page-09.jpg', 'Sketchbook page 9 from 2025 Q3/4', 'Page 9'),
+            pic('sketch-2025-h2', 'page-10.jpg', 'Sketchbook page 10 from 2025 Q3/4', 'Page 10'),
+            pic('sketch-2025-h2', 'page-11.jpg', 'Sketchbook page 11 from 2025 Q3/4', 'Page 11'),
+            pic('sketch-2025-h2', 'page-12.jpg', 'Sketchbook page 12 from 2025 Q3/4', 'Page 12')
+          ]
+        },
+        {
+          title: 'Pages 13–14',
+          caption: '2025 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2025-h2', 'page-13.jpg', 'Sketchbook page 13 from 2025 Q3/4', 'Page 13'),
+            pic('sketch-2025-h2', 'page-14.jpg', 'Sketchbook page 14 from 2025 Q3/4', 'Page 14')
+          ]
+        }
+      ] },
+      { id: 'sketch-2025-h1', year: 2025, label: 'Q1/2', width: 42, spreads: [
+        {
+          title: 'Pages 1–4',
+          caption: '2025 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2025-h1', 'page-01.jpg', 'Sketchbook page 1 from 2025 Q1/2', 'Page 1'),
+            pic('sketch-2025-h1', 'page-02.jpg', 'Sketchbook page 2 from 2025 Q1/2', 'Page 2'),
+            pic('sketch-2025-h1', 'page-03.jpg', 'Sketchbook page 3 from 2025 Q1/2', 'Page 3'),
+            pic('sketch-2025-h1', 'page-04.jpg', 'Sketchbook page 4 from 2025 Q1/2', 'Page 4')
+          ]
+        },
+        {
+          title: 'Pages 5–8',
+          caption: '2025 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2025-h1', 'page-05.jpg', 'Sketchbook page 5 from 2025 Q1/2', 'Page 5'),
+            pic('sketch-2025-h1', 'page-06.jpg', 'Sketchbook page 6 from 2025 Q1/2', 'Page 6'),
+            pic('sketch-2025-h1', 'page-07.jpg', 'Sketchbook page 7 from 2025 Q1/2', 'Page 7'),
+            pic('sketch-2025-h1', 'page-08.jpg', 'Sketchbook page 8 from 2025 Q1/2', 'Page 8')
+          ]
+        },
+        {
+          title: 'Pages 9–13',
+          caption: '2025 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2025-h1', 'page-09.jpg', 'Sketchbook page 9 from 2025 Q1/2', 'Page 9'),
+            pic('sketch-2025-h1', 'page-10.jpg', 'Sketchbook page 10 from 2025 Q1/2', 'Page 10'),
+            pic('sketch-2025-h1', 'page-11.jpg', 'Sketchbook page 11 from 2025 Q1/2', 'Page 11'),
+            pic('sketch-2025-h1', 'page-12.jpg', 'Sketchbook page 12 from 2025 Q1/2', 'Page 12'),
+            pic('sketch-2025-h1', 'page-13.jpg', 'Sketchbook page 13 from 2025 Q1/2', 'Page 13')
+          ]
+        }
+      ] },
+      { id: 'sketch-2024-h2', year: 2024, label: 'Q3/4', width: 45, spreads: [
+        {
+          title: 'Pages 1–4',
+          caption: '2024 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2024-h2', 'page-01.jpg', 'Sketchbook page 1 from 2024 Q3/4', 'Page 1'),
+            pic('sketch-2024-h2', 'page-02.jpg', 'Sketchbook page 2 from 2024 Q3/4', 'Page 2'),
+            pic('sketch-2024-h2', 'page-03.jpg', 'Sketchbook page 3 from 2024 Q3/4', 'Page 3'),
+            pic('sketch-2024-h2', 'page-04.jpg', 'Sketchbook page 4 from 2024 Q3/4', 'Page 4')
+          ]
+        },
+        {
+          title: 'Pages 5–8',
+          caption: '2024 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2024-h2', 'page-05.jpg', 'Sketchbook page 5 from 2024 Q3/4', 'Page 5'),
+            pic('sketch-2024-h2', 'page-06.jpg', 'Sketchbook page 6 from 2024 Q3/4', 'Page 6'),
+            pic('sketch-2024-h2', 'page-07.jpg', 'Sketchbook page 7 from 2024 Q3/4', 'Page 7'),
+            pic('sketch-2024-h2', 'page-08.jpg', 'Sketchbook page 8 from 2024 Q3/4', 'Page 8')
+          ]
+        },
+        {
+          title: 'Pages 9–12',
+          caption: '2024 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2024-h2', 'page-09.jpg', 'Sketchbook page 9 from 2024 Q3/4', 'Page 9'),
+            pic('sketch-2024-h2', 'page-10.jpg', 'Sketchbook page 10 from 2024 Q3/4', 'Page 10'),
+            pic('sketch-2024-h2', 'page-11.jpg', 'Sketchbook page 11 from 2024 Q3/4', 'Page 11'),
+            pic('sketch-2024-h2', 'page-12.jpg', 'Sketchbook page 12 from 2024 Q3/4', 'Page 12')
+          ]
+        },
+        {
+          title: 'Pages 13–16',
+          caption: '2024 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2024-h2', 'page-13.jpg', 'Sketchbook page 13 from 2024 Q3/4', 'Page 13'),
+            pic('sketch-2024-h2', 'page-14.jpg', 'Sketchbook page 14 from 2024 Q3/4', 'Page 14'),
+            pic('sketch-2024-h2', 'page-15.jpg', 'Sketchbook page 15 from 2024 Q3/4', 'Page 15'),
+            pic('sketch-2024-h2', 'page-16.jpg', 'Sketchbook page 16 from 2024 Q3/4', 'Page 16')
+          ]
+        }
+      ] },
+      { id: 'sketch-2024-h1', year: 2024, label: 'Q1/2', width: 48, spreads: [
+        {
+          title: 'Pages 1–4',
+          caption: '2024 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2024-h1', 'page-01.jpg', 'Sketchbook page 1 from 2024 Q1/2', 'Page 1'),
+            pic('sketch-2024-h1', 'page-02.jpg', 'Sketchbook page 2 from 2024 Q1/2', 'Page 2'),
+            pic('sketch-2024-h1', 'page-03.jpg', 'Sketchbook page 3 from 2024 Q1/2', 'Page 3'),
+            pic('sketch-2024-h1', 'page-04.jpg', 'Sketchbook page 4 from 2024 Q1/2', 'Page 4')
+          ]
+        },
+        {
+          title: 'Pages 5–8',
+          caption: '2024 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2024-h1', 'page-05.jpg', 'Sketchbook page 5 from 2024 Q1/2', 'Page 5'),
+            pic('sketch-2024-h1', 'page-06.jpg', 'Sketchbook page 6 from 2024 Q1/2', 'Page 6'),
+            pic('sketch-2024-h1', 'page-07.jpg', 'Sketchbook page 7 from 2024 Q1/2', 'Page 7'),
+            pic('sketch-2024-h1', 'page-08.jpg', 'Sketchbook page 8 from 2024 Q1/2', 'Page 8')
+          ]
+        },
+        {
+          title: 'Pages 9–12',
+          caption: '2024 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2024-h1', 'page-09.jpg', 'Sketchbook page 9 from 2024 Q1/2', 'Page 9'),
+            pic('sketch-2024-h1', 'page-10.jpg', 'Sketchbook page 10 from 2024 Q1/2', 'Page 10'),
+            pic('sketch-2024-h1', 'page-11.jpg', 'Sketchbook page 11 from 2024 Q1/2', 'Page 11'),
+            pic('sketch-2024-h1', 'page-12.jpg', 'Sketchbook page 12 from 2024 Q1/2', 'Page 12')
+          ]
+        },
+        {
+          title: 'Pages 13–16',
+          caption: '2024 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2024-h1', 'page-13.jpg', 'Sketchbook page 13 from 2024 Q1/2', 'Page 13'),
+            pic('sketch-2024-h1', 'page-14.jpg', 'Sketchbook page 14 from 2024 Q1/2', 'Page 14'),
+            pic('sketch-2024-h1', 'page-15.jpg', 'Sketchbook page 15 from 2024 Q1/2', 'Page 15'),
+            pic('sketch-2024-h1', 'page-16.jpg', 'Sketchbook page 16 from 2024 Q1/2', 'Page 16')
+          ]
+        }
+      ] },
+      { id: 'sketch-2023-h2', year: 2023, label: 'Q3/4', width: 42, spreads: [
+        {
+          title: 'Pages 1–4',
+          caption: '2023 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2023-h2', 'page-01.jpg', 'Sketchbook page 1 from 2023 Q3/4', 'Page 1'),
+            pic('sketch-2023-h2', 'page-02.jpg', 'Sketchbook page 2 from 2023 Q3/4', 'Page 2'),
+            pic('sketch-2023-h2', 'page-03.jpg', 'Sketchbook page 3 from 2023 Q3/4', 'Page 3'),
+            pic('sketch-2023-h2', 'page-04.jpg', 'Sketchbook page 4 from 2023 Q3/4', 'Page 4')
+          ]
+        },
+        {
+          title: 'Pages 5–8',
+          caption: '2023 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2023-h2', 'page-05.jpg', 'Sketchbook page 5 from 2023 Q3/4', 'Page 5'),
+            pic('sketch-2023-h2', 'page-06.jpg', 'Sketchbook page 6 from 2023 Q3/4', 'Page 6'),
+            pic('sketch-2023-h2', 'page-07.jpg', 'Sketchbook page 7 from 2023 Q3/4', 'Page 7'),
+            pic('sketch-2023-h2', 'page-08.jpg', 'Sketchbook page 8 from 2023 Q3/4', 'Page 8')
+          ]
+        },
+        {
+          title: 'Pages 9–10',
+          caption: '2023 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2023-h2', 'page-09.jpg', 'Sketchbook page 9 from 2023 Q3/4', 'Page 9'),
+            pic('sketch-2023-h2', 'page-10.jpg', 'Sketchbook page 10 from 2023 Q3/4', 'Page 10')
+          ]
+        }
+      ] },
+      { id: 'sketch-2023-h1', year: 2023, label: 'Q1/2', width: 45, spreads: [
+        {
+          title: 'Pages 1–4',
+          caption: '2023 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2023-h1', 'page-01.jpg', 'Sketchbook page 1 from 2023 Q1/2', 'Page 1'),
+            pic('sketch-2023-h1', 'page-02.jpg', 'Sketchbook page 2 from 2023 Q1/2', 'Page 2'),
+            pic('sketch-2023-h1', 'page-03.jpg', 'Sketchbook page 3 from 2023 Q1/2', 'Page 3'),
+            pic('sketch-2023-h1', 'page-04.jpg', 'Sketchbook page 4 from 2023 Q1/2', 'Page 4')
+          ]
+        },
+        {
+          title: 'Pages 5–9',
+          caption: '2023 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2023-h1', 'page-05.jpg', 'Sketchbook page 5 from 2023 Q1/2', 'Page 5'),
+            pic('sketch-2023-h1', 'page-06.jpg', 'Sketchbook page 6 from 2023 Q1/2', 'Page 6'),
+            pic('sketch-2023-h1', 'page-07.jpg', 'Sketchbook page 7 from 2023 Q1/2', 'Page 7'),
+            pic('sketch-2023-h1', 'page-08.jpg', 'Sketchbook page 8 from 2023 Q1/2', 'Page 8'),
+            pic('sketch-2023-h1', 'page-09.jpg', 'Sketchbook page 9 from 2023 Q1/2', 'Page 9')
+          ]
+        }
+      ] },
+      { id: 'sketch-2022-h2', year: 2022, label: 'Q3/4', width: 48, spreads: [
+        {
+          title: 'Pages 1–4',
+          caption: '2022 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2022-h2', 'page-01.jpg', 'Sketchbook page 1 from 2022 Q3/4', 'Page 1'),
+            pic('sketch-2022-h2', 'page-02.jpg', 'Sketchbook page 2 from 2022 Q3/4', 'Page 2'),
+            pic('sketch-2022-h2', 'page-03.jpg', 'Sketchbook page 3 from 2022 Q3/4', 'Page 3'),
+            pic('sketch-2022-h2', 'page-04.jpg', 'Sketchbook page 4 from 2022 Q3/4', 'Page 4')
+          ]
+        },
+        {
+          title: 'Pages 5–8',
+          caption: '2022 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2022-h2', 'page-05.jpg', 'Sketchbook page 5 from 2022 Q3/4', 'Page 5'),
+            pic('sketch-2022-h2', 'page-06.jpg', 'Sketchbook page 6 from 2022 Q3/4', 'Page 6'),
+            pic('sketch-2022-h2', 'page-07.jpg', 'Sketchbook page 7 from 2022 Q3/4', 'Page 7'),
+            pic('sketch-2022-h2', 'page-08.jpg', 'Sketchbook page 8 from 2022 Q3/4', 'Page 8')
+          ]
+        },
+        {
+          title: 'Pages 9–12',
+          caption: '2022 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2022-h2', 'page-09.jpg', 'Sketchbook page 9 from 2022 Q3/4', 'Page 9'),
+            pic('sketch-2022-h2', 'page-10.jpg', 'Sketchbook page 10 from 2022 Q3/4', 'Page 10'),
+            pic('sketch-2022-h2', 'page-11.jpg', 'Sketchbook page 11 from 2022 Q3/4', 'Page 11'),
+            pic('sketch-2022-h2', 'page-12.jpg', 'Sketchbook page 12 from 2022 Q3/4', 'Page 12')
+          ]
+        },
+        {
+          title: 'Pages 13–16',
+          caption: '2022 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2022-h2', 'page-13.jpg', 'Sketchbook page 13 from 2022 Q3/4', 'Page 13'),
+            pic('sketch-2022-h2', 'page-14.jpg', 'Sketchbook page 14 from 2022 Q3/4', 'Page 14'),
+            pic('sketch-2022-h2', 'page-15.jpg', 'Sketchbook page 15 from 2022 Q3/4', 'Page 15'),
+            pic('sketch-2022-h2', 'page-16.jpg', 'Sketchbook page 16 from 2022 Q3/4', 'Page 16')
+          ]
+        },
+        {
+          title: 'Pages 17–18',
+          caption: '2022 Q3/4 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2022-h2', 'page-17.jpg', 'Sketchbook page 17 from 2022 Q3/4', 'Page 17'),
+            pic('sketch-2022-h2', 'page-18.jpg', 'Sketchbook page 18 from 2022 Q3/4', 'Page 18')
+          ]
+        }
+      ] },
+      { id: 'sketch-2022-h1', year: 2022, label: 'Q1/2', width: 42, spreads: [
+        {
+          title: 'Pages 1–4',
+          caption: '2022 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2022-h1', 'page-01.jpg', 'Sketchbook page 1 from 2022 Q1/2', 'Page 1'),
+            pic('sketch-2022-h1', 'page-02.jpg', 'Sketchbook page 2 from 2022 Q1/2', 'Page 2'),
+            pic('sketch-2022-h1', 'page-03.jpg', 'Sketchbook page 3 from 2022 Q1/2', 'Page 3'),
+            pic('sketch-2022-h1', 'page-04.jpg', 'Sketchbook page 4 from 2022 Q1/2', 'Page 4')
+          ]
+        },
+        {
+          title: 'Pages 5–8',
+          caption: '2022 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2022-h1', 'page-05.jpg', 'Sketchbook page 5 from 2022 Q1/2', 'Page 5'),
+            pic('sketch-2022-h1', 'page-06.jpg', 'Sketchbook page 6 from 2022 Q1/2', 'Page 6'),
+            pic('sketch-2022-h1', 'page-07.jpg', 'Sketchbook page 7 from 2022 Q1/2', 'Page 7'),
+            pic('sketch-2022-h1', 'page-08.jpg', 'Sketchbook page 8 from 2022 Q1/2', 'Page 8')
+          ]
+        },
+        {
+          title: 'Pages 9–12',
+          caption: '2022 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2022-h1', 'page-09.jpg', 'Sketchbook page 9 from 2022 Q1/2', 'Page 9'),
+            pic('sketch-2022-h1', 'page-10.jpg', 'Sketchbook page 10 from 2022 Q1/2', 'Page 10'),
+            pic('sketch-2022-h1', 'page-11.jpg', 'Sketchbook page 11 from 2022 Q1/2', 'Page 11'),
+            pic('sketch-2022-h1', 'page-12.jpg', 'Sketchbook page 12 from 2022 Q1/2', 'Page 12')
+          ]
+        },
+        {
+          title: 'Pages 13–16',
+          caption: '2022 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2022-h1', 'page-13.jpg', 'Sketchbook page 13 from 2022 Q1/2', 'Page 13'),
+            pic('sketch-2022-h1', 'page-14.jpg', 'Sketchbook page 14 from 2022 Q1/2', 'Page 14'),
+            pic('sketch-2022-h1', 'page-15.jpg', 'Sketchbook page 15 from 2022 Q1/2', 'Page 15'),
+            pic('sketch-2022-h1', 'page-16.jpg', 'Sketchbook page 16 from 2022 Q1/2', 'Page 16')
+          ]
+        },
+        {
+          title: 'Pages 17–20',
+          caption: '2022 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2022-h1', 'page-17.jpg', 'Sketchbook page 17 from 2022 Q1/2', 'Page 17'),
+            pic('sketch-2022-h1', 'page-18.jpg', 'Sketchbook page 18 from 2022 Q1/2', 'Page 18'),
+            pic('sketch-2022-h1', 'page-19.jpg', 'Sketchbook page 19 from 2022 Q1/2', 'Page 19'),
+            pic('sketch-2022-h1', 'page-20.jpg', 'Sketchbook page 20 from 2022 Q1/2', 'Page 20')
+          ]
+        },
+        {
+          title: 'Pages 21–24',
+          caption: '2022 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2022-h1', 'page-21.jpg', 'Sketchbook page 21 from 2022 Q1/2', 'Page 21'),
+            pic('sketch-2022-h1', 'page-22.jpg', 'Sketchbook page 22 from 2022 Q1/2', 'Page 22'),
+            pic('sketch-2022-h1', 'page-23.jpg', 'Sketchbook page 23 from 2022 Q1/2', 'Page 23'),
+            pic('sketch-2022-h1', 'page-24.jpg', 'Sketchbook page 24 from 2022 Q1/2', 'Page 24')
+          ]
+        },
+        {
+          title: 'Pages 25–28',
+          caption: '2022 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2022-h1', 'page-25.jpg', 'Sketchbook page 25 from 2022 Q1/2', 'Page 25'),
+            pic('sketch-2022-h1', 'page-26.jpg', 'Sketchbook page 26 from 2022 Q1/2', 'Page 26'),
+            pic('sketch-2022-h1', 'page-27.jpg', 'Sketchbook page 27 from 2022 Q1/2', 'Page 27'),
+            pic('sketch-2022-h1', 'page-28.jpg', 'Sketchbook page 28 from 2022 Q1/2', 'Page 28')
+          ]
+        },
+        {
+          title: 'Pages 29–31',
+          caption: '2022 Q1/2 sketchbook.',
+          layout: 'row',
+          images: [
+            pic('sketch-2022-h1', 'page-29.jpg', 'Sketchbook page 29 from 2022 Q1/2', 'Page 29'),
+            pic('sketch-2022-h1', 'page-30.jpg', 'Sketchbook page 30 from 2022 Q1/2', 'Page 30'),
+            pic('sketch-2022-h1', 'page-31.jpg', 'Sketchbook page 31 from 2022 Q1/2', 'Page 31')
+          ]
+        }
+      ] }
     ],
 
     /* ---- Bottom shelf: books that inspire me. bg = spine background (any CSS), fg = text color. ---- */
