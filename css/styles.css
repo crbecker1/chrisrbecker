@@ -1215,3 +1215,13 @@ a.friends__name:hover { color: var(--orange-600); text-decoration-thickness: 3px
 .cs-natural .cs-fig img { aspect-ratio: auto; height: auto; object-fit: contain; background: #fff; border: 1px solid var(--line); }
 .cs-fig--natural img { aspect-ratio: auto; height: auto; object-fit: contain; background: #fff; border: 1px solid var(--line); }
 .cs-fig--natural img { width: auto; max-width: 100%; height: auto; max-height: 720px; }
+.cs-stats--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 900px) { .cs-stats--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.cs-stats--1 { grid-template-columns: minmax(0, 20rem); }
+.pj-grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+@media (max-width: 767px) { .pj-grid-3 { grid-template-columns: 1fr; } }
+.pj-grid-2--natural { align-items: start; }
+.pj-grid-2--natural .pj-shot img { width: 100%; height: auto; max-height: 720px; object-fit: contain; }
+.pj-grid-3--photos { align-items: start; }
+.pj-grid-3--photos .pj-shot img { aspect-ratio: 4 / 3; width: 100%; height: auto; object-fit: contain; }

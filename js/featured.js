@@ -126,6 +126,22 @@
     "kind": "case"
   },
   {
+    "href": "project-okgo-this-too-shall-pass.html",
+    "img": "images/projects/OKGO-IxD/web/P2110312.jpg",
+    "title": "OK Go “This Too Shall Pass”: Rube Goldberg Video",
+    "sub": "Fabricating chairs and dominos for a one-shot music video with Syyn Labs",
+    "tags": ["Interaction Design", "Fabrication", "Prototyping", "Collaboration"],
+    "kind": "project"
+  },
+  {
+    "href": "project-cb2-door-promotion.html",
+    "img": "images/projects/CB2-Door-Promotion/web/CB2-instore-ux.jpg",
+    "title": "CB2 National Unlock Door Promotion",
+    "sub": "A national drive-to-store campaign, 2010–2011",
+    "tags": ["Campaign", "Retail", "Game", "Interaction Strategy"],
+    "kind": "project"
+  },
+  {
     "href": "project-uxpa-poster.html",
     "img": "images/projects/UXPA-2023-Poster/web/UXPA-08-exquisite-corpse-diagram.jpg",
     "title": "Facilitating Fun: UXPA 2023 Poster",

@@ -1,6 +1,6 @@
 (function () {
-  var deck = document.getElementById('deck');
-  if (!deck) return;
+  [].forEach.call(document.querySelectorAll('.deck'), initDeck);
+  function initDeck(deck) {
   var slides = [].slice.call(deck.querySelectorAll('.deck__slides li'));
   var count = deck.querySelector('.deck__count b');
   var range = deck.querySelector('.deck__range');
@@ -78,4 +78,5 @@
 
   go(0);
   edges();
+  }
 })();

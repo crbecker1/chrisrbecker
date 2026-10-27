@@ -13,7 +13,7 @@
         : provider === 'wistia'
         ? 'https://fast.wistia.net/embed/iframe/' + id + '?autoPlay=true'
         : provider === 'vimeo'
-        ? 'https://player.vimeo.com/video/' + id + '?autoplay=1'
+        ? 'https://player.vimeo.com/video/' + id + (id.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1'
         : 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';
       var f = document.createElement('iframe');
       f.src = src;
