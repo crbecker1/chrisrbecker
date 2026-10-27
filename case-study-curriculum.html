@@ -16,6 +16,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Andada+Pro:wght@400&family=Space+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/script.js" defer></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R164HSVFSW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied' });
+    try { if (localStorage.getItem('crb-consent') === 'granted') gtag('consent', 'update', { analytics_storage: 'granted' }); } catch (e) {}
+    gtag('js', new Date());
+
+    gtag('config', 'G-R164HSVFSW');
+  </script>
 </head>
 <body>
   <!-- Nav icon sprite -->
@@ -270,9 +281,11 @@
       </nav>
     <div class="footer__bottom">
       <p>&copy; <span id="year">2026</span> Chris R. Becker. All rights reserved.</p>
+      <p><a href="privacy.html">Privacy + cookies</a> · <button class="linklike" type="button" data-cookie-settings>Cookie settings</button></p>
       <p>Site created <time datetime="2026-10-02">October 2, 2026</time></p>
     </div>
       <p class="footer__credit">Made with love by Chris R. Becker with help from Claude Code + friends.</p>
   </div></footer>
+  <script src="js/consent.js" defer></script>
 </body>
 </html>

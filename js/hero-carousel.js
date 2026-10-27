@@ -16,7 +16,23 @@
       if (slides[cur + 1]) { var im = slides[cur + 1].querySelector('img'); if (im) im.loading = 'eager'; }
     }
     function stop() { clearInterval(timer); timer = null; }
-    function start() { if (!reduce && !timer) timer = setInterval(function () { go(cur + 1); }, every); }
+    var paused = false;
+    function start() { if (!reduce && !paused && !timer) timer = setInterval(function () { go(cur + 1); }, every); }
+
+    var stage = car.querySelector('.hcar__stage');
+    if (!reduce && n > 1 && stage) {
+      var pb = document.createElement('button');
+      pb.type = 'button'; pb.className = 'hcar__pause';
+      pb.setAttribute('aria-pressed', 'false'); pb.setAttribute('aria-label', 'Pause slideshow');
+      pb.innerHTML = '<svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg>';
+      pb.addEventListener('click', function () {
+        paused = !paused;
+        pb.setAttribute('aria-pressed', String(paused));
+        pb.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
+        if (paused) stop(); else start();
+      });
+      stage.appendChild(pb);
+    }
 
     car.querySelector('.hcar__nav--prev').addEventListener('click', function () { stop(); go(cur - 1); });
     car.querySelector('.hcar__nav--next').addEventListener('click', function () { stop(); go(cur + 1); });

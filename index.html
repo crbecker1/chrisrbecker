@@ -19,6 +19,17 @@
   <script src="js/featured.js" defer></script>
   <script src="js/hero-carousel.js" defer></script>
   <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R164HSVFSW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied' });
+    try { if (localStorage.getItem('crb-consent') === 'granted') gtag('consent', 'update', { analytics_storage: 'granted' }); } catch (e) {}
+    gtag('js', new Date());
+
+    gtag('config', 'G-R164HSVFSW');
+  </script>
 </head>
 <body>
   <!-- Nav icon sprite -->
@@ -125,7 +136,7 @@
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="wrap">
         <div class="hero__intro">
-          <h2 id="hero-title">A Designer/educator whose curiosity drives human-centered design practices</h2>
+          <h1 id="hero-title">A Designer/educator whose curiosity drives human-centered design practices</h1>
             <p>Designing and educating about systems that are useful, usable, accessible, and delightful user experiences for all users. Extending the ethos of human-centered design and empathy based software development.</p>
           <p class="hero__roles">Sr. UX/Product <b>/</b> Educator <b>/</b> Author <b>/</b> Mentor</p>
         
@@ -273,25 +284,25 @@
         <div class="quotes">
           <figure class="quote reveal">
             <span class="quote__tag">Client</span>
-            <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <div class="quote__stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
             <blockquote>“Chris reframed our onboarding problem in a single workshop. We left with a prioritized roadmap and a research plan the whole team believed in.”</blockquote>
             <figcaption><span class="avatar" aria-hidden="true">AM</span><span><strong>Alex Morgan</strong>VP Product, Fintech Startup</span></figcaption>
           </figure>
           <figure class="quote quote--book reveal">
             <span class="quote__tag">Book review</span>
-            <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <div class="quote__stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
             <blockquote>“The clearest, most practical guide to UX careers I’ve read. I’ve assigned it to every junior designer on my team.”</blockquote>
             <figcaption><span class="avatar" aria-hidden="true">JR</span><span><strong>Jordan Reyes</strong>Design Manager, Verified Reader</span></figcaption>
           </figure>
           <figure class="quote quote--teal reveal">
             <span class="quote__tag">Student</span>
-            <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <div class="quote__stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
             <blockquote>“Chris’s critique style changed how I see my own work. Direct, kind, and always tied back to the user. I landed my first product role in the spring.”</blockquote>
             <figcaption><span class="avatar" aria-hidden="true">SK</span><span><strong>Sam Kim</strong>Former Student, UX/UI Course</span></figcaption>
           </figure>
           <figure class="quote quote--book reveal">
             <span class="quote__tag">Book review</span>
-            <div class="quote__stars" aria-label="4 out of 5 stars">★★★★☆</div>
+            <div class="quote__stars" role="img" aria-label="4 out of 5 stars">★★★★☆</div>
             <blockquote>“Equal parts craft manual and pep talk. The exercises alone are worth the price — I keep coming back to them.”</blockquote>
             <figcaption><span class="avatar" aria-hidden="true">TP</span><span><strong>Taylor Price</strong>Product Designer</span></figcaption>
           </figure>
@@ -433,10 +444,12 @@
       </nav>
       <div class="footer__bottom">
         <p>&copy; <span id="year">2026</span> Chris R. Becker. All rights reserved.</p>
+      <p><a href="privacy.html">Privacy + cookies</a> · <button class="linklike" type="button" data-cookie-settings>Cookie settings</button></p>
         <p>Site created <time datetime="2026-10-02">October 2, 2026</time></p>
       </div>
       <p class="footer__credit">Made with love by Chris R. Becker with help from Claude Code + friends.</p>
     </div>
   </footer>
+  <script src="js/consent.js" defer></script>
 </body>
 </html>
