@@ -127,7 +127,7 @@
   },
   {
     "href": "project-okgo-this-too-shall-pass.html",
-    "img": "images/projects/OKGO-IxD/web/P2110312.jpg",
+    "img": "images/projects/OKGO-IxD/web/OKGO-08.jpg",
     "title": "OK Go “This Too Shall Pass”: Rube Goldberg Video",
     "sub": "Fabricating chairs and dominos for a one-shot music video with Syyn Labs",
     "tags": ["Interaction Design", "Fabrication", "Prototyping", "Collaboration"],
