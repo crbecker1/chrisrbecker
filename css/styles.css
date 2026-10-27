@@ -503,11 +503,10 @@ dialog::backdrop { background: rgba(11, 42, 91, .55); backdrop-filter: blur(3px)
   .nav__primary .btn { margin: .5rem 0 0; justify-content: center; }
   .nav__secondary { flex-direction: row; align-items: center; gap: 1.1rem; }
   .nav__secondary .nav__label { display: none; }
-  .device { max-width: 380px; margin-inline: auto; border-radius: 34px; border: 8px solid var(--blue-900); }
-  .device__bar { justify-content: center; padding: .55rem; background: var(--blue-900); border: 0; }
-  .device__bar i, .device__url { display: none; }
-  .device__bar::before { content: ""; width: 70px; height: 6px; border-radius: 6px; background: rgba(255, 255, 255, .35); }
-  .device__canvas { aspect-ratio: 9 / 16; max-height: 68vh; }
+  /* Drawing area runs edge to edge on phones */
+  .device { width: 100vw; max-width: none; margin-inline: calc(50% - 50vw); border: 0; border-radius: 0; border-block: 1px solid var(--line); box-shadow: none; }
+  .device__bar { display: none; }
+  .device__canvas { width: 100%; aspect-ratio: 9 / 16; max-height: 72vh; }
   .sketch__sep { display: none; }
   .tool { padding: .5rem .75rem; font-size: .85rem; }
   .service { gap: .9rem; padding: 1rem; }
