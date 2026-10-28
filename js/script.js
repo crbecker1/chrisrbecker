@@ -64,6 +64,14 @@
     el.classList.toggle('is-error', kind === 'error');
   };
   const validEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+  // Show or clear an inline error tied to the field (aria-describedby points at #<id>-error).
+  const setFieldError = (input, msg) => {
+    const err = $('#' + input.id + '-error');
+    input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    if (!err) return;
+    err.textContent = msg || '';
+    err.hidden = !msg;
+  };
 
   /* ---------- Contact form ---------- */
   const contactForm = $('#contact-form');
@@ -73,9 +81,15 @@
       e.preventDefault();
       const data = new FormData(contactForm);
       if (data.get('_honey')) return;
-      if (!data.get('name').trim() || !validEmail(data.get('email').trim()) || !data.get('message').trim()) {
-        setStatus(status, 'Please add your name, a valid email, and a message.', 'error');
-        contactForm.reportValidity();
+      const fName = $('#c-name'), fEmail = $('#c-email'), fMsg = $('#c-message');
+      const bad = [];
+      const check = (input, ok, msg) => { setFieldError(input, ok ? '' : msg); if (!ok) bad.push(input); };
+      check(fName, fName.value.trim(), 'Please enter your name.');
+      check(fEmail, validEmail(fEmail.value.trim()), 'Please enter a valid email address, like you@example.com.');
+      check(fMsg, fMsg.value.trim(), 'Please add a message.');
+      if (bad.length) {
+        setStatus(status, bad.length === 1 ? 'Please fix the field below.' : 'Please fix the ' + bad.length + ' fields below.', 'error');
+        bad[0].focus();
         return;
       }
       data.append('_subject', 'New message from chrisrbecker.com');
@@ -274,7 +288,14 @@
     const data = new FormData(pForm);
     if (data.get('_honey')) return;
     const email = String(data.get('email')).trim();
-    if (!validEmail(email)) { setStatus(pStatus, 'Please enter a valid email address.', 'error'); return; }
+    const pEmail = $('#p-email');
+    if (!validEmail(email)) {
+      setFieldError(pEmail, 'Please enter a valid email address, like you@example.com.');
+      setStatus(pStatus, 'Please fix the email address.', 'error');
+      pEmail.focus();
+      return;
+    }
+    setFieldError(pEmail, '');
 
     // Visitor is cc'd on the message sent to the site owner; both receive the drawing.
     data.set('_cc', email);

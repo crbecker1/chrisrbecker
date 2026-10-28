@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Andada+Pro:wght@400&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/hero/01-hero-crb.jpg" fetchpriority="high">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/script.js" defer></script>
   <script src="js/featured.js" defer></script>
@@ -66,8 +67,8 @@
       <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu"><span></span></button>
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__links nav__primary">
-          <li><a href="product-work.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-palette"/></svg>UX/Product Work</a></li>
-          <li><a href="writing.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-feather"/></svg>Desk</a></li>
+          <li><a href="product-work.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-palette"/></svg>Product Work</a></li>
+          <li><a href="writing.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-feather"/></svg>My Desk</a></li>
           <li><a href="books.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-books"/></svg>Books</a></li>
           <li><a href="teaching.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-podium"/></svg>Teaching</a></li>
           <li><a href="now.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#n-stopwatch"/></svg>Now</a></li>
@@ -83,16 +84,16 @@
     <!-- HERO: full-bleed pen sketch carousel, title and image credit -->
     <section class="hero" id="top" aria-labelledby="hero-title">
       <figure class="hcar hero__car" id="hero-car" role="region" aria-roledescription="carousel" aria-label="Pen sketches by Chris R. Becker" tabindex="0" data-autoplay="off">
-        <div class="hcar__stage"><ol class="hcar__slides"><li class="is-active" data-caption="Context, 5W1H and the elephant"><img src="images/hero/01-hero-crb.jpg" alt="Context for AI: a seated man imagines an elephant seen through a grid of windows, an AI model, and the 5W1H questions" width="1440" height="600"></li><li data-caption="The bear and the bull: is the glass half empty or half full?"><img src="images/hero/02-hero-crb.jpg" alt="Pen sketch: a bear in a half-empty glass says AI will kill us all, a bull in a half-full glass says AI will save us all" width="1440" height="600" loading="lazy"></li><li data-caption="Gestalt design systems"><img src="images/hero/03-hero-crb.jpg" alt="Pen sketch: an exploded view of a car beside the words gestalt design systems" width="1440" height="600" loading="lazy"></li><li data-caption="Thinking: inputs, the senses and outputs, after Descartes"><img src="images/hero/04-hero-crb.jpg" alt="Pen sketch: Thinking, inputs, the senses and outputs, after Descartes" width="1440" height="600" loading="lazy"></li><li data-caption="Richard Feynman on how students should learn"><img src="images/hero/05-hero-crb.jpg" alt="Pen sketch: Richard Feynman with a finger to his lips beside his quote on how students should learn" width="1440" height="600" loading="lazy"></li><li data-caption="Marshall McLuhan in a room of machines"><img src="images/hero/06-hero-crb.jpg" alt="Pen sketch: Marshall McLuhan in a chair in a room of machines" width="1440" height="600" loading="lazy"></li><li data-caption="The chair, in its room"><img src="images/hero/07-hero-crb.jpg" alt="Pen sketch: a man seated in an armchair in a parlor beside a dimensioned drawing of the chair" width="1440" height="600" loading="lazy"></li></ol>
+        <div class="hcar__stage"><ol class="hcar__slides"><li class="is-active" data-caption="Context, 5W1H and the elephant"><img src="images/hero/01-hero-crb.jpg" fetchpriority="high" alt="Context for AI: a seated man imagines an elephant seen through a grid of windows, an AI model, and the 5W1H questions" width="1440" height="600"></li><li data-caption="The bear and the bull: is the glass half empty or half full?"><img src="images/hero/02-hero-crb.jpg" alt="Pen sketch: a bear in a half-empty glass says AI will kill us all, a bull in a half-full glass says AI will save us all" width="1440" height="600" loading="lazy"></li><li data-caption="Gestalt design systems"><img src="images/hero/03-hero-crb.jpg" alt="Pen sketch: an exploded view of a car beside the words gestalt design systems" width="1440" height="600" loading="lazy"></li><li data-caption="Thinking: inputs, the senses and outputs, after Descartes"><img src="images/hero/04-hero-crb.jpg" alt="Pen sketch: Thinking, inputs, the senses and outputs, after Descartes" width="1440" height="600" loading="lazy"></li><li data-caption="Richard Feynman on how students should learn"><img src="images/hero/05-hero-crb.jpg" alt="Pen sketch: Richard Feynman with a finger to his lips beside his quote on how students should learn" width="1440" height="600" loading="lazy"></li><li data-caption="Marshall McLuhan in a room of machines"><img src="images/hero/06-hero-crb.jpg" alt="Pen sketch: Marshall McLuhan in a chair in a room of machines" width="1440" height="600" loading="lazy"></li><li data-caption="The chair, in its room"><img src="images/hero/07-hero-crb.jpg" alt="Pen sketch: a man seated in an armchair in a parlor beside a dimensioned drawing of the chair" width="1440" height="600" loading="lazy"></li></ol>
           <button class="hcar__nav hcar__nav--prev" type="button" aria-label="Previous sketch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
           <button class="hcar__nav hcar__nav--next" type="button" aria-label="Next sketch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
           <div class="hcar__dots"><button type="button" aria-label="Show sketch 1"></button><button type="button" aria-label="Show sketch 2"></button><button type="button" aria-label="Show sketch 3"></button><button type="button" aria-label="Show sketch 4"></button><button type="button" aria-label="Show sketch 5"></button><button type="button" aria-label="Show sketch 6"></button><button type="button" aria-label="Show sketch 7"></button></div>
+          <p class="hero__credit">Images from <a href="https://www.instagram.com/sketchesbychrisrbecker/" rel="noopener" target="_blank">Instagram @sketchesbychrisrbecker</a></p>
         </div>
       </figure>
       <div class="hero__strip">
         <div class="wrap">
           <h1 class="hero__title" id="hero-title">Curious by nature. Designer by practice. Educator by choice.</h1>
-          <p class="hero__credit">Images from <a href="https://www.instagram.com/sketchesbychrisrbecker/" rel="noopener" target="_blank">Instagram @sketchesbychrisrbecker</a></p>
         </div>
       </div>
     </section>
@@ -102,8 +103,8 @@
       <ul class="wrap nav__links nav__secondary">
         <li class="nav__label" aria-hidden="true">On the home page</li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#draw">Draw</a></li>
         <li><a href="#featured">Featured</a></li>
+        <li><a href="#draw">Try the sketch tool</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -155,8 +156,33 @@
       </div>
     </section>
 
-        <hr>
     
+
+    <!-- FEATURED WORK -->
+        <section class="section section--tint" id="featured" aria-labelledby="featured-title">
+      <div class="wrap">
+        <div class="section-head section-head--list featured-head reveal">
+          <div>
+            <p class="eyebrow">Work samples</p>
+            <h2 id="featured-title">Featured work</h2>
+          </div>
+          <button class="roulette" id="roulette" type="button" aria-label="Work roulette: pull the lever to shuffle the featured work">
+            <span class="roulette__text"><span class="roulette__title">Work roulette</span><span class="roulette__hint">Pull to spin</span></span>
+            <span class="roulette__machine" aria-hidden="true"><span class="roulette__track"></span><span class="roulette__stick"></span><span class="roulette__knob"></span></span>
+          </button>
+        </div>
+        <ul class="feat-grid" id="feat-grid">
+          <li class="feat feat--big"><a class="feat__link" href="case-study-alle-grow.html"><span class="feat__media"><img src="images/featured/Alle-Outro.jpg" alt="" loading="lazy"></span><span class="feat__body"><span class="feat__type">Case study</span><h3>Allē Grow: Product Design Vision</h3><p class="feat__sub">UX strategy and a speculative prototype for the early vision of Allē for Business</p><ul class="feat__tags" aria-label="Type of work"><li>UX</li><li>Product Design</li><li>Strategy</li></ul><span class="featured__more">Read case study<span class="visually-hidden">: Allē Grow: Product Design Vision</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></span></a></li>
+          <li class="feat feat--big"><a class="feat__link" href="case-study-alle-user-journey.html"><span class="feat__media"><img src="images/featured/01-User-Journey-Alle-Patient-Support.jpg" alt="" loading="lazy"></span><span class="feat__body"><span class="feat__type">Case study</span><h3>Allē Admin: User Journey Maps</h3><p class="feat__sub">User research and journey mapping for a 150+ person customer support team</p><ul class="feat__tags" aria-label="Type of work"><li>UX</li><li>User Research</li><li>Strategy</li><li>Facilitation</li></ul><span class="featured__more">Read case study<span class="visually-hidden">: Allē Admin: User Journey Maps</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></span></a></li>
+          <li class="feat feat--big"><a class="feat__link" href="case-study-curriculum.html"><span class="feat__media"><img src="images/featured/UX-UI-Classroom.jpg" alt="" loading="lazy"></span><span class="feat__body"><span class="feat__type">Case study</span><h3>UX/UI Bootcamp: A 24-Week Curriculum</h3><p class="feat__sub">Designing a bootcamp for career changers with Trilogy and 2U</p><ul class="feat__tags" aria-label="Type of work"><li>EdTech</li><li>UX</li><li>Strategy</li><li>Facilitation</li></ul><span class="featured__more">Read case study<span class="visually-hidden">: UX/UI Bootcamp: A 24-Week Curriculum</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></span></a></li>
+          <li class="feat feat--small"><a class="feat__link" href="project-alterra-pitch.html"><span class="feat__media"><img src="images/featured/03-multimedia-prototype.jpg" alt="" loading="lazy"></span><span class="feat__body"><span class="feat__type">Project</span><h3>Alterra Pitch Work</h3><p class="feat__sub">A speculative app vision that won the RFP</p><ul class="feat__tags" aria-label="Type of work"><li>UX</li><li>Product</li><li>Prototyping</li><li>Vision</li></ul><span class="featured__more">See project<span class="visually-hidden">: Alterra Pitch Work</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></span></a></li>
+          <li class="feat feat--small"><a class="feat__link" href="project-kering-retail.html"><span class="feat__media"><img src="images/featured/User-Persona-1-Madelyn-55.jpg" alt="" loading="lazy"></span><span class="feat__body"><span class="feat__type">Project</span><h3>Kering Retail Strategy Deck</h3><p class="feat__sub">A pitch deck and omnichannel strategy for a SoHo boutique</p><ul class="feat__tags" aria-label="Type of work"><li>UX/Product</li><li>Retail</li><li>UX Strategy</li><li>Personas</li></ul><span class="featured__more">See project<span class="visually-hidden">: Kering Retail Strategy Deck</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></span></a></li>
+        </ul>
+        <p class="visually-hidden" id="feat-status" aria-live="polite"></p>
+        <p class="services__cta reveal"><a class="btn btn--ghost" href="product-work.html">See more work</a></p>
+      </div>
+    </section>
+
     <!-- SKETCH: wireframe sketch tool -->
     <section class="sketch" id="draw" aria-labelledby="sketch-title">
       <div class="wrap">
@@ -172,6 +198,7 @@
 
         
 
+        <a class="sketch__skip" href="#experiments">Skip the sketch tool (it needs a mouse, finger or stylus)</a>
         <div class="sketch__board" id="sketch">
           <div class="sketch__tools" role="toolbar" aria-label="Wireframe tools">
             <button class="tool" type="button" data-tool="pen" aria-pressed="true">
@@ -201,7 +228,7 @@
           <div class="device">
             <div class="device__bar" aria-hidden="true"><i></i><i></i><i></i><span class="device__url">yourproblem.app/sketch</span></div>
             <div class="device__canvas" id="canvas-wrap">
-              <canvas id="board" role="img" aria-label="Drawing canvas. Use your mouse or finger to sketch your problem."></canvas>
+              <canvas id="board" role="img" aria-label="Drawing canvas. Use your mouse, finger or stylus to sketch your problem. This tool is not available by keyboard."></canvas>
               <div class="sketch__hint" id="hint">Click and drag to sketch your problem</div>
             </div>
           </div>
@@ -213,31 +240,6 @@
             <button class="btn btn--primary" type="button" id="print-btn">Print + Share</button>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- FEATURED WORK -->
-        <section class="section section--tint" id="featured" aria-labelledby="featured-title">
-      <div class="wrap">
-        <div class="section-head section-head--list featured-head reveal">
-          <div>
-            <p class="eyebrow">Work samples</p>
-            <h2 id="featured-title">Featured work</h2>
-          </div>
-          <button class="roulette" id="roulette" type="button" aria-label="Work roulette: pull the lever to shuffle the featured work">
-            <span class="roulette__text"><span class="roulette__title">Work roulette</span><span class="roulette__hint">Pull to spin</span></span>
-            <span class="roulette__machine" aria-hidden="true"><span class="roulette__track"></span><span class="roulette__stick"></span><span class="roulette__knob"></span></span>
-          </button>
-        </div>
-        <ul class="feat-grid" id="feat-grid">
-          <li class="feat feat--big"><a class="feat__link" href="case-study-alle-grow.html"><span class="feat__media"><img src="images/case-studies/alle-grow/Alle-Outro.png" alt="" loading="lazy"></span><span class="feat__body"><span class="feat__type">Case study</span><h3>Allē Grow: Product Design Vision</h3><p class="feat__sub">UX strategy and a speculative prototype for the early vision of Allē for Business</p><ul class="feat__tags" aria-label="Type of work"><li>UX</li><li>Product Design</li><li>Strategy</li></ul><span class="featured__more">Read case study<span class="visually-hidden">: Allē Grow: Product Design Vision</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></span></a></li>
-          <li class="feat feat--big"><a class="feat__link" href="case-study-alle-user-journey.html"><span class="feat__media"><img src="images/case-studies/Alle-User-Journey/01-User-Journey-Alle-Patient-Support.png" alt="" loading="lazy"></span><span class="feat__body"><span class="feat__type">Case study</span><h3>Allē Admin: User Journey Maps</h3><p class="feat__sub">User research and journey mapping for a 150+ person customer support team</p><ul class="feat__tags" aria-label="Type of work"><li>UX</li><li>User Research</li><li>Strategy</li><li>Facilitation</li></ul><span class="featured__more">Read case study<span class="visually-hidden">: Allē Admin: User Journey Maps</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></span></a></li>
-          <li class="feat feat--big"><a class="feat__link" href="case-study-curriculum.html"><span class="feat__media"><img src="images/case-studies/ux-ui-bootcamp/UX-UI-Classroom.png" alt="" loading="lazy"></span><span class="feat__body"><span class="feat__type">Case study</span><h3>UX/UI Bootcamp: A 24-Week Curriculum</h3><p class="feat__sub">Designing a bootcamp for career changers with Trilogy and 2U</p><ul class="feat__tags" aria-label="Type of work"><li>EdTech</li><li>UX</li><li>Strategy</li><li>Facilitation</li></ul><span class="featured__more">Read case study<span class="visually-hidden">: UX/UI Bootcamp: A 24-Week Curriculum</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></span></a></li>
-          <li class="feat feat--small"><a class="feat__link" href="project-alterra-pitch.html"><span class="feat__media"><img src="images/projects/Alterra-Pitch-Work/03-multimedia-prototype.png" alt="" loading="lazy"></span><span class="feat__body"><span class="feat__type">Project</span><h3>Alterra Pitch Work</h3><p class="feat__sub">A speculative app vision that won the RFP</p><ul class="feat__tags" aria-label="Type of work"><li>UX</li><li>Product</li><li>Prototyping</li><li>Vision</li></ul><span class="featured__more">See project<span class="visually-hidden">: Alterra Pitch Work</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></span></a></li>
-          <li class="feat feat--small"><a class="feat__link" href="project-kering-retail.html"><span class="feat__media"><img src="images/projects/SYT-Kering-Retail/User-Persona-1-Madelyn-55.png" alt="" loading="lazy"></span><span class="feat__body"><span class="feat__type">Project</span><h3>Kering Retail Strategy Deck</h3><p class="feat__sub">A pitch deck and omnichannel strategy for a SoHo boutique</p><ul class="feat__tags" aria-label="Type of work"><li>UX/Product</li><li>Retail</li><li>UX Strategy</li><li>Personas</li></ul><span class="featured__more">See project<span class="visually-hidden">: Kering Retail Strategy Deck</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></span></a></li>
-        </ul>
-        <p class="visually-hidden" id="feat-status" aria-live="polite"></p>
-        <p class="services__cta reveal"><a class="btn btn--ghost" href="product-work.html">See more work</a></p>
       </div>
     </section>
 
@@ -274,7 +276,7 @@
           <p class="eyebrow">About me</p>
           <h2 id="about-title">Design is a making praxis. What you make at first will likely not be very good and that means you are learning to make it better. Just Keep Making!</h2>
           <p>I’m a senior UX/product designer, and design educator who has spent my career moving between shipping products and teaching the people who will design the next ones. That loop keeps my work honest: what I teach has to survive contact with real teams, and what I build has to be explainable to a first-year student.</p>
-          <p>I believe in small, evidence-led steps, clear critique, and craft that serves people before it serves a portfolio. Whether I’m leading a discovery sprint or mentoring a career-changer, the goal is the same — better questions, clearer decisions, and work you’re proud to explain.</p>
+          <p>I believe in small, evidence-led steps, clear critique, and craft that serves people before it serves a portfolio. Whether I’m leading a discovery sprint or mentoring a career-changer, the goal is the same: better questions, clearer decisions, and work you’re proud to explain.</p>
           <ul class="stats">
             <li><strong>15+</strong><span>years in UX &amp; product</span></li>
             <li><strong>1,000+</strong><span>students taught</span></li>
@@ -296,7 +298,6 @@
       </div>
     </section>
 
-    <hr>
 
     <!-- TESTIMONIALS 
     <section class="section" id="testimonials" aria-labelledby="testimonials-title">
@@ -351,15 +352,18 @@
         <form class="form reveal" id="contact-form" novalidate>
           <div class="field">
             <label for="c-name">Name</label>
-            <input id="c-name" name="name" type="text" autocomplete="name" required placeholder="Your name">
+            <input id="c-name" name="name" type="text" autocomplete="name" required placeholder="Your name" aria-describedby="c-name-error">
+            <p class="field__error" id="c-name-error" hidden></p>
           </div>
           <div class="field">
             <label for="c-email">Email</label>
-            <input id="c-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+            <input id="c-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" aria-describedby="c-email-error">
+            <p class="field__error" id="c-email-error" hidden></p>
           </div>
           <div class="field">
             <label for="c-message">Message</label>
-            <textarea id="c-message" name="message" required placeholder="What are you working on?"></textarea>
+            <textarea id="c-message" name="message" required placeholder="What are you working on?" aria-describedby="c-message-error"></textarea>
+            <p class="field__error" id="c-message-error" hidden></p>
           </div>
           <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button class="btn btn--primary btn--lg" type="submit">Send message</button>
@@ -369,7 +373,6 @@
     </section>
   </main>
 
-  <hr>
 
   <!-- Print / email dialog -->
   <dialog id="print-dialog" aria-labelledby="print-title">
@@ -384,7 +387,8 @@
         </div>
         <div class="field">
           <label for="p-email">Your email</label>
-          <input id="p-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          <input id="p-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" aria-describedby="p-email-error">
+          <p class="field__error" id="p-email-error" hidden></p>
         </div>
         <div class="field">
           <label for="p-note">Note (optional)</label>
@@ -424,8 +428,8 @@
         <div class="footer__col">
           <h2>Explore</h2>
           <ul>
-            <li><a href="product-work.html">UX/Product Work</a></li>
-            <li><a href="writing.html">Desk</a></li>
+            <li><a href="product-work.html">Product Work</a></li>
+            <li><a href="writing.html">My Desk</a></li>
             <li><a href="books.html">Books</a></li>
             <li><a href="teaching.html">Teaching</a></li>
             <li><a href="now.html">Now</a></li>

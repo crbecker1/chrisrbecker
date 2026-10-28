@@ -4,7 +4,7 @@
   var WORK = [
   {
     "href": "case-study-alle-grow.html",
-    "img": "images/case-studies/alle-grow/Alle-Outro.png",
+    "img": "images/featured/Alle-Outro.jpg",
     "title": "Allē Grow: Product Design Vision",
     "sub": "UX strategy and a speculative prototype for the early vision of Allē for Business",
     "tags": [
@@ -16,7 +16,7 @@
   },
   {
     "href": "case-study-alle-user-journey.html",
-    "img": "images/case-studies/Alle-User-Journey/01-User-Journey-Alle-Patient-Support.png",
+    "img": "images/featured/01-User-Journey-Alle-Patient-Support.jpg",
     "title": "Allē Admin: User Journey Maps",
     "sub": "User research and journey mapping for a 150+ person customer support team",
     "tags": [
@@ -41,7 +41,7 @@
   },
   {
     "href": "case-study-curriculum.html",
-    "img": "images/case-studies/ux-ui-bootcamp/UX-UI-Classroom.png",
+    "img": "images/featured/UX-UI-Classroom.jpg",
     "title": "UX/UI Bootcamp: A 24-Week Curriculum",
     "sub": "Designing a bootcamp for career changers with Trilogy and 2U",
     "tags": [
@@ -67,7 +67,7 @@
   },
   {
     "href": "project-alle-responsive.html",
-    "img": "images/projects/alle-responsive/Alle-crb-IA-mockup.png",
+    "img": "images/featured/Alle-crb-IA-mockup.jpg",
     "title": "Allē Responsive Navigation",
     "sub": "One navigation system across desktop, tablet, and mobile",
     "tags": [
@@ -81,7 +81,7 @@
   },
   {
     "href": "project-osu-robotics.html",
-    "img": "images/projects/OSU-robotics-shirt-icon-system/OSU-model-back-man.png",
+    "img": "images/featured/OSU-model-back-man.jpg",
     "title": "OSU Robotics Icon System",
     "sub": "A family of badges, from concept to a shirt",
     "tags": [
@@ -93,7 +93,7 @@
   },
   {
     "href": "project-alterra-pitch.html",
-    "img": "images/projects/Alterra-Pitch-Work/03-multimedia-prototype.png",
+    "img": "images/featured/03-multimedia-prototype.jpg",
     "title": "Alterra Pitch Work",
     "sub": "A speculative app vision that won the RFP",
     "tags": [
@@ -106,7 +106,7 @@
   },
   {
     "href": "project-kering-retail.html",
-    "img": "images/projects/SYT-Kering-Retail/User-Persona-1-Madelyn-55.png",
+    "img": "images/featured/User-Persona-1-Madelyn-55.jpg",
     "title": "Kering Retail Strategy Deck",
     "sub": "A pitch deck and omnichannel strategy for a SoHo boutique",
     "tags": [
@@ -167,7 +167,7 @@
   },
   {
     "href": "project-ideation-workshop.html",
-    "img": "images/projects/Deutsch-Inc-5-hat-ideation-workshop/09-Deutsch-5hat-ideas.png",
+    "img": "images/featured/09-Deutsch-5hat-ideas.jpg",
     "title": "Five Hats Ideation Workshop",
     "sub": "Two 90-minute remote sessions for Open Door Consulting",
     "tags": [
