@@ -7,6 +7,7 @@
     var cap = car.querySelector('.hcar__caption');
     var n = slides.length, cur = 0, timer = null;
     var every = +car.getAttribute('data-interval') || 5000;
+    var auto = car.getAttribute('data-autoplay') !== 'off';
 
     function go(i) {
       cur = (i + n) % n;
@@ -17,10 +18,10 @@
     }
     function stop() { clearInterval(timer); timer = null; }
     var paused = false;
-    function start() { if (!reduce && !paused && !timer) timer = setInterval(function () { go(cur + 1); }, every); }
+    function start() { if (auto && !reduce && !paused && !timer) timer = setInterval(function () { go(cur + 1); }, every); }
 
     var stage = car.querySelector('.hcar__stage');
-    if (!reduce && n > 1 && stage) {
+    if (auto && !reduce && n > 1 && stage) {
       var pb = document.createElement('button');
       pb.type = 'button'; pb.className = 'hcar__pause';
       pb.setAttribute('aria-pressed', 'false'); pb.setAttribute('aria-label', 'Pause slideshow');

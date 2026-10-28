@@ -76,21 +76,46 @@
         </ul>
       </div>
     </nav>
-    <div class="subnav">
-      <ul class="wrap nav__links nav__secondary" aria-label="On this page">
-        <li class="nav__label" aria-hidden="true">On the home page</li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#top">Draw</a></li>
-        <li><a href="#featured">Featured</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
   </header>
 
   <main id="main">
 
-  
+    <!-- HERO: full-bleed pen sketch carousel, title and image credit -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <figure class="hcar hero__car" id="hero-car" role="region" aria-roledescription="carousel" aria-label="Pen sketches by Chris R. Becker" tabindex="0" data-autoplay="off">
+        <div class="hcar__stage"><ol class="hcar__slides"><li class="is-active" data-caption="Context, 5W1H and the elephant"><img src="images/hero/01-hero-crb.jpg" alt="Context for AI: a seated man imagines an elephant seen through a grid of windows, an AI model, and the 5W1H questions" width="1440" height="600"></li><li data-caption="The bear and the bull: is the glass half empty or half full?"><img src="images/hero/02-hero-crb.jpg" alt="Pen sketch: a bear in a half-empty glass says AI will kill us all, a bull in a half-full glass says AI will save us all" width="1440" height="600" loading="lazy"></li><li data-caption="Gestalt design systems"><img src="images/hero/03-hero-crb.jpg" alt="Pen sketch: an exploded view of a car beside the words gestalt design systems" width="1440" height="600" loading="lazy"></li><li data-caption="Thinking: inputs, the senses and outputs, after Descartes"><img src="images/hero/04-hero-crb.jpg" alt="Pen sketch: Thinking, inputs, the senses and outputs, after Descartes" width="1440" height="600" loading="lazy"></li><li data-caption="Richard Feynman on how students should learn"><img src="images/hero/05-hero-crb.jpg" alt="Pen sketch: Richard Feynman with a finger to his lips beside his quote on how students should learn" width="1440" height="600" loading="lazy"></li><li data-caption="Marshall McLuhan in a room of machines"><img src="images/hero/06-hero-crb.jpg" alt="Pen sketch: Marshall McLuhan in a chair in a room of machines" width="1440" height="600" loading="lazy"></li><li data-caption="The chair, in its room"><img src="images/hero/07-hero-crb.jpg" alt="Pen sketch: a man seated in an armchair in a parlor beside a dimensioned drawing of the chair" width="1440" height="600" loading="lazy"></li></ol>
+          <button class="hcar__nav hcar__nav--prev" type="button" aria-label="Previous sketch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+          <button class="hcar__nav hcar__nav--next" type="button" aria-label="Next sketch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+          <div class="hcar__dots"><button type="button" aria-label="Show sketch 1"></button><button type="button" aria-label="Show sketch 2"></button><button type="button" aria-label="Show sketch 3"></button><button type="button" aria-label="Show sketch 4"></button><button type="button" aria-label="Show sketch 5"></button><button type="button" aria-label="Show sketch 6"></button><button type="button" aria-label="Show sketch 7"></button></div>
+        </div>
+      </figure>
+      <div class="hero__strip">
+        <div class="wrap">
+          <h1 class="hero__title" id="hero-title">Curious by nature. Designer by practice. Educator by choice.</h1>
+          <p class="hero__credit">Images from <a href="https://www.instagram.com/sketchesbychrisrbecker/" rel="noopener" target="_blank">Instagram @sketchesbychrisrbecker</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ON-PAGE NAV: sticks under the primary bar once the hero scrolls away -->
+    <nav class="subnav" aria-label="On this page">
+      <ul class="wrap nav__links nav__secondary">
+        <li class="nav__label" aria-hidden="true">On the home page</li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#draw">Draw</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="home-intro" aria-label="Introduction">
+      <div class="wrap">
+        <p class="home-intro__text"><strong>I’m Chris R. Becker.</strong> </p>
+          <p class="home-intro__text"> An award-winning UX/Product Designer, educator, author, and mentor with experience spanning product strategy, interaction design, research, and emerging technologies. My work brings together systems thinking, human-centered design, and a belief that the best solutions start with understanding people.</p>
+      </div>
+    </section>
+
     <!-- SERVICES -->
     <section class="section" id="services" aria-labelledby="services-title">
       <div class="wrap">
@@ -132,13 +157,13 @@
 
         <hr>
     
-          <!-- HERO: wireframe sketch tool -->
-    <section class="hero" id="top" aria-labelledby="hero-title">
+    <!-- SKETCH: wireframe sketch tool -->
+    <section class="sketch" id="draw" aria-labelledby="sketch-title">
       <div class="wrap">
-        <div class="hero__intro">
-          <h1 id="hero-title">A Designer/educator whose curiosity drives human-centered design practices</h1>
+        <div class="sketch__intro">
+          <h2 id="sketch-title">A Designer/educator whose curiosity drives human-centered design practices</h2>
             <p>Designing and educating about systems that are useful, usable, accessible, and delightful user experiences for all users. Extending the ethos of human-centered design and empathy based software development.</p>
-          <p class="hero__roles">Sr. UX/Product <b>/</b> Educator <b>/</b> Author <b>/</b> Mentor</p>
+          <p class="sketch__roles">Sr. UX/Product <b>/</b> Educator <b>/</b> Author <b>/</b> Mentor</p>
         
           <p class="sketch__prompt">Sketch your <span>current problem</span></p>
           <p> In our AI-driven development arena, sketching matters more than ever. It slows us down just enough to think, explore, and make intentional decisions before AI turns a vague idea into something worth building. Let me help you visualize it before you burn more tokens and create more slop.</p>
@@ -147,7 +172,7 @@
 
         
 
-        <div class="sketch" id="sketch">
+        <div class="sketch__board" id="sketch">
           <div class="sketch__tools" role="toolbar" aria-label="Wireframe tools">
             <button class="tool" type="button" data-tool="pen" aria-pressed="true">
               <svg viewBox="0 0 24 24"><use href="#i-pen"/></svg>Sketch
