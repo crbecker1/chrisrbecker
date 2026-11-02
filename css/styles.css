@@ -1275,3 +1275,11 @@ a.friends__name:hover { color: var(--orange-600); text-decoration-thickness: 3px
 .legal { max-width: 46rem; }
 .legal h2 { font-size: 1.35rem; margin-top: 2rem; }
 .legal p { max-width: 65ch; }
+
+/* Portrait hero image (a tall object, like a surfboard) and cropped photo grids */
+.cs-hero__img--portrait { justify-self: center; width: min(100%, 420px); }
+.cs-hero__img--portrait img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow-md); }
+.pj-grid-3--cover { align-items: start; }
+.pj-grid-3--cover .pj-shot img { aspect-ratio: 4 / 3; width: 100%; height: auto; object-fit: cover; }
+.pj-grid-3--natural { align-items: start; }
+.pj-grid-3--natural .pj-shot img { width: 100%; height: auto; }

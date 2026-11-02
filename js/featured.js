@@ -80,6 +80,18 @@
     "kind": "project"
   },
   {
+    "href": "project-surf-board.html",
+    "img": "images/featured/CRB-surf-board.jpg",
+    "title": "CRB|40: Shaping My Own Surfboard",
+    "sub": "A 40th birthday present: designing and shaping a custom board",
+    "tags": [
+      "Graphic Design",
+      "Making",
+      "Surf"
+    ],
+    "kind": "project"
+  },
+  {
     "href": "project-osu-robotics.html",
     "img": "images/featured/OSU-model-back-man.jpg",
     "title": "OSU Robotics Icon System",
