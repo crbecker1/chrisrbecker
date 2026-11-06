@@ -1,0 +1,44 @@
+# Chris R. Becker
+
+> Senior UX and product designer, educator, author, and mentor based in Los Angeles. Work spans product strategy, interaction design, research, and design education; teaches at Otis College of Art and Design, with teaching affiliations at ArtCenter College of Design and Santa Monica College.
+
+This is the personal site of Chris R. Becker. Pages are static HTML with semantic headings and JSON-LD structured data. Profiles: [LinkedIn](https://www.linkedin.com/in/chrisrbecker/), [Medium](https://medium.com/@cbecker), [Instagram sketches](https://www.instagram.com/sketchesbychrisrbecker/).
+
+## Main
+
+- [About Me](https://www.chrisrbecker.com/about.html): Chris R. Becker is a design educator, product design leader, and author in Los Angeles. Background, teaching, writing, and where to find me online.
+- [My Books](https://www.chrisrbecker.com/books.html): Practical guides for designers building careers and craft.
+- [Experiments + Inspiration](https://www.chrisrbecker.com/experiment-inspo.html): Web experiments and a shelf of sketchbooks and inspiring books. Open one and scroll through the pages.
+- [Friends](https://www.chrisrbecker.com/friends.html): People and places I like and admire: friends, people I follow, and the communities I write, teach, and mentor with.
+- [Chris R. Becker — Sr. UX/Product, Educator, Author, Mentor](https://www.chrisrbecker.com/): Chris R. Becker is a senior UX and product designer, educator, author, and mentor helping teams and emerging designers solve real problems.
+- [Now](https://www.chrisrbecker.com/now.html): What I’m focused on this season.
+- [Product Work](https://www.chrisrbecker.com/product-work.html): Research, strategy, and interaction design for digital products.
+- [My Teaching & Workshops](https://www.chrisrbecker.com/teaching.html): Teaching, workshops and mentoring in UX, UI, design systems and AI: samples, institutions, speaking and ADPList reviews.
+- [Articles + UX Writing](https://www.chrisrbecker.com/writing.html): Essays on design practice, plus microcopy and content strategy.
+
+## Case studies
+
+- [Allē Grow Product Design Vision](https://www.chrisrbecker.com/case-study-alle-grow.html): Case study: UX strategy and prototype ideation for Allē Grow, the early vision for Allē for Business, delivered with Bttr and Allergan Aesthetics in eight sprints.
+- [Allē Admin User Journey Maps](https://www.chrisrbecker.com/case-study-alle-user-journey.html): Case study: user research and user journey maps for the Allē Admin customer support team, and a template that scaled across a 45+ person UX and product design organization.
+- [UX/UI 24 week Bootcamp Curriculum](https://www.chrisrbecker.com/case-study-curriculum.html): Case study: designing a 24-week UX/UI bootcamp curriculum from 0 to 1 with Trilogy Education Services and 2U, taught at 25 institutions.
+- [Designlab Accessibility Course](https://www.chrisrbecker.com/case-study-designlab.html): Case study: co-creating Designlab's 4-week Advanced Usability and Accessibility short course, built on the book Learn Human-Computer Interaction.
+- [DU.edu Information Architecture](https://www.chrisrbecker.com/case-study-du-ia.html): Case study: information architecture for the University of Denver website redesign, from card sorting and sitemap strategy to final desktop and mobile navigation.
+- [Macintosh 30-Year Anniversary](https://www.chrisrbecker.com/case-study-mac-30.html): An interactive marketing website experience for Apple Macintosh 30 year anniversary.
+
+## Project highlights
+
+- [Allē Responsive Navigation](https://www.chrisrbecker.com/project-alle-responsive.html): Project highlight: a responsive navigation system for the Allē platform across desktop, tablet, and mobile.
+- [Alterra Pitch Work](https://www.chrisrbecker.com/project-alterra-pitch.html): Project highlight: UX sketches, storyboards, and a multimedia prototype for an Alterra Mountain Company pitch.
+- [CB2 National Unlock Door Promotion](https://www.chrisrbecker.com/project-cb2-door-promotion.html): Project highlight: CB2’s national “Unlock Affordable Modern” door promotion, 2010–2011, with street teams, an online microsite, social media and an in-store game.
+- [Five Hats Ideation Workshop](https://www.chrisrbecker.com/project-ideation-workshop.html): Project highlight: two 90-minute remote ideation sessions, What If and Five Hats, for Open Door Consulting and Deutsch Inc.
+- [Kering Retail Strategy Deck](https://www.chrisrbecker.com/project-kering-retail.html): Project highlight: a 36-slide pitch deck and omnichannel retail strategy for Kering Eyewear and Studio Young Taste, flip through it slide by slide.
+- [LADWP Design Thinking Workshop](https://www.chrisrbecker.com/project-ladwp-workshop.html): Project highlight: a 2½-day design thinking workshop for LADWP employees, facilitated with Enterprise U. Empathy and define on day one, ideate, prototype and test on day two.
+- [OK Go This Too Shall Pass: Rube Goldberg Music Video](https://www.chrisrbecker.com/project-okgo-this-too-shall-pass.html): Project highlight: interaction fabrication for OK Go’s one-shot Rube Goldberg music video “This Too Shall Pass,” built with Syyn Labs.
+- [OSU Robotics Icon System](https://www.chrisrbecker.com/project-osu-robotics.html): Project highlight: an icon system of badges for OSU Robotics, from concept to a shirt.\
+- [CRB|40: Shaping My Own Surfboard](https://www.chrisrbecker.com/project-surf-board.html): Personal project: for my 40th birthday I shaped my own surfboard with FoamEZ and used my graphic design background to customize it.
+- [Facilitating Fun: UXPA 2023 Poster](https://www.chrisrbecker.com/project-uxpa-poster.html): Project highlight: Facilitating Fun, a poster accepted to the UXPA 2023 International Conference in Austin on how UX helps teams collaborate and have more fun.
+- [AI Folksonomy Workshop: WIAD 2026](https://www.chrisrbecker.com/project-waid-folksonomy.html): Project highlight: a short lecture on folksonomy and a group workshop with 55+ designers at World IA Day 2026, creating folksonomic icons together.
+
+## Other
+
+- [Privacy + cookies](https://www.chrisrbecker.com/privacy.html): How chrisrbecker.com uses analytics cookies, forms and embedded media, and how to change your consent.

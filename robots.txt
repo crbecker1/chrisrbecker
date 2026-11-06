@@ -1,0 +1,6 @@
+# Content on this site may be crawled, indexed and used by search engines and AI assistants.
+User-agent: *
+Allow: /
+Disallow: /z-crb-archieve/
+
+Sitemap: https://www.chrisrbecker.com/sitemap.xml
