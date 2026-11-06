@@ -18,6 +18,16 @@
   const year = $('#year');
   if (year) year.textContent = new Date().getFullYear();
 
+
+  /* ---------- Warn that external links open a new tab (WCAG 3.2.5) ---------- */
+  $$('a[target="_blank"]').forEach((a) => {
+    if (a.hasAttribute('aria-label') || a.querySelector('.visually-hidden')) return;
+    const s = document.createElement('span');
+    s.className = 'visually-hidden';
+    s.textContent = ' (opens in a new tab)';
+    a.appendChild(s);
+  });
+
   /* ---------- Mobile nav ---------- */
   const toggle = $('.nav__toggle');
   const links = $('#nav-menu');

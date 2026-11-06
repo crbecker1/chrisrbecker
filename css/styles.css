@@ -11,7 +11,7 @@
   --blue-500: #2f74e0;
   --blue-100: #e4eefc;
   --blue-50:  #f2f7fe;
-  --teal-600: #0e8c8a;
+  --teal-600: #0a6f6d;
   --teal-500: #14a5a1;
   --teal-100: #dcf4f2;
   --orange-600: #c23b17;  /* blood orange */
@@ -46,18 +46,19 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + var(--su
 body {
   margin: 0;
   font-family: var(--font-body);
-  font-size: 1 rem;
+  font-size: 1rem;
   line-height: 1.4;
   color: var(--ink);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
 }
 img, svg, canvas { display: block; max-width: 100%; }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; margin: 0 0 .5em; color: var(--blue-900); letter-spacing: -.01em; }
+img { height: auto; }
+h1, h2, h3 { text-wrap: balance; font-family: var(--font-display); font-weight: 400; line-height: 1.15; margin: 0 0 .5em; color: var(--blue-900); letter-spacing: -.01em; }
 h1 { font-size: clamp(2rem, 5vw + .5rem, 3.75rem); font-weight: 400; }
 h2 { font-size: clamp(1.3rem, 2.5vw + 1rem, 2.5rem); font-weight: 400; }
 h3 { font-size: 1.25rem; font-weight: 600; }
-p { margin: 0 0 1em; }
+p { margin: 0 0 1em; text-wrap: pretty; }
 a { color: var(--blue-600); text-underline-offset: 3px; }
 a:hover { color: var(--blue-700); }
 :focus-visible { outline: 3px solid var(--blue-500); outline-offset: 3px; border-radius: 4px; }
@@ -1283,3 +1284,7 @@ a.friends__name:hover { color: var(--orange-600); text-decoration-thickness: 3px
 .pj-grid-3--cover .pj-shot img { aspect-ratio: 4 / 3; width: 100%; height: auto; object-fit: cover; }
 .pj-grid-3--natural { align-items: start; }
 .pj-grid-3--natural .pj-shot img { width: 100%; height: auto; }
+
+/* Modern defaults ---------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) { @view-transition { navigation: auto; } }
+@media (forced-colors: active) { :focus-visible { outline-color: Highlight; } .btn { border: 2px solid ButtonText; } }
